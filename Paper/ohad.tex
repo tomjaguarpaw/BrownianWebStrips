@@ -1,56 +1,118 @@
 {
 \section{Suitable title}
-Let $\xi_\epsilon=(X,Y,\epsilon)$ be a couple of $\epsilon$ resampled Brownian webs as defined in ?????. We denoted by $e_\epsilon(t)$ a sample of $\xi_\epsilon$ starting at some given point at time $0$. $x(t)$ will denote a sample of $X$ starting at the same point. Our goal in this section is to prove the following theorem:
+Let $\xi_\epsilon=(X,Y,\epsilon)$ be a couple of $\epsilon$ resampled
+Brownian webs as defined in ?????. We denoted by $e_\epsilon(t)$ a
+sample of $\xi_\epsilon$ starting at some given point at time
+$0$. $x(t)$ will denote a sample of $X$ starting at the same
+point. Our goal in this section is to prove the following theorem:
 
 \begin{theorem}\label{thm:main1}
-under the previous notations, $\lim_{\epsilon \rightarrow 0} |e_\epsilon(1)- x(1)| = 0$ where the convergence is in probability.
+under the previous notations, $\lim_{\epsilon \rightarrow 0}
+|e_\epsilon(1)- x(1)| = 0$ where the convergence is in probability.
 \end{theorem}
 
-In order to prove this it will be easier to prove the following stronger claim:
+In order to prove this it will be easier to prove the following
+stronger claim:
 \begin{propos}\label{prop:main2}
-For every $t\in[0,1]$ and every $\delta>0$ it is true that $lim_{\epsilon \rightarrow 0}P\left(\text{either } x(t)=e_\epsilon(t) \text{ or } x(t)^2+(e_\epsilon(t)-x(t))^2<\delta\right)=1$. Equivalently the two dimensional process 
-$(x(t),(e_\epsilon(t)-x(t)))$ a.s. leaves the $\sqrt\delta$ ball only through $(\sqrt\delta,0)$ or through $(-\sqrt\delta,0)$.
+For every $t\in[0,1]$ and every $\delta>0$ it is true that
+$lim_{\epsilon \rightarrow 0}P\left(\text{either } x(t)=e_\epsilon(t)
+\text{ or }
+x(t)^2+(e_\epsilon(t)-x(t))^2<\delta\right)=1$. Equivalently the two
+dimensional process $(x(t),(e_\epsilon(t)-x(t)))$ a.s. leaves the
+$\sqrt\delta$ ball only through $(\sqrt\delta,0)$ or through
+$(-\sqrt\delta,0)$.
 \end{propos}
 
-One can easily see from the definition of $\epsilon$ resampled Brownian webs that proposition \ref{prop:main2} infers theorem \ref{thm:main1}.
-We begin by presenting a handy theorem whose proof we delay to subsection \ref{sec:conformal map}:
+One can easily see from the definition of $\epsilon$ resampled
+Brownian webs that proposition \ref{prop:main2} infers theorem
+\ref{thm:main1}.  We begin by presenting a handy theorem whose proof
+we delay to subsection \ref{sec:conformal map}:
 
 \begin{theorem}\label{thm:no-escape}
-under the previous notations, suppose that on time $t_0$ we have $e(t_0)=0$, let $t>0$ be the first time at which $x(t)^2+\frac{(x(t)-(e_\epsilon(t)-x(t))^2}2=1$, then the probability that $x(t)=e_\epsilon(t)=\pm1$ is at least $1-O(\frac1{log\epsilon})$.
+under the previous notations, suppose that on time $t_0$ we have
+$e(t_0)=0$, let $t>0$ be the first time at which
+$x(t)^2+\frac{(x(t)-(e_\epsilon(t)-x(t))^2}2=1$, then the probability
+that $x(t)=e_\epsilon(t)=\pm1$ is at least $1-O(\frac1{log\epsilon})$.
 \end{theorem}
 
-Applying scaling invariance to this theorem immediately yields the following corollary:
+Applying scaling invariance to this theorem immediately yields the
+following corollary:
 \begin{cor}\label{cor:cor0}
-let $\delta>0$ suppose that on time $t_0$ we have $e(t_0)=(0,0)$, let $t>0$ be the first time at which $x(t)^2+\frac{(x(t)-(e_\epsilon(t)-x(t))^2}2=\delta$, then the probability that $x(t)=e_\epsilon(t)=\pm\sqrt\delta$ is at least $1-O(\frac{1}{log\epsilon/\delta})$.
+let $\delta>0$ suppose that on time $t_0$ we have $e(t_0)=(0,0)$, let
+$t>0$ be the first time at which
+$x(t)^2+\frac{(x(t)-(e_\epsilon(t)-x(t))^2}2=\delta$, then the
+probability that $x(t)=e_\epsilon(t)=\pm\sqrt\delta$ is at least
+$1-O(\frac{1}{log\epsilon/\delta})$.
 \end{cor}
 
-It will, however be more comfortable to use the following weaker result:
+It will, however be more comfortable to use the following weaker
+result:
 \begin{cor}\label{cor:cor1}
-let $\delta>0$ suppose that on time $t_0$ we have $e(t_0)=(0,0)$, let $t>0$ be the first time at which $x(t)^2+(x(t)-(e_\epsilon(t)-x(t))^2=\delta$, then the probability that $x(t)=e_\epsilon(t)=\pm\sqrt\delta$ is at least $1-O(\frac{1}{log\epsilon/\delta})$.
+let $\delta>0$ suppose that on time $t_0$ we have $e(t_0)=(0,0)$, let
+$t>0$ be the first time at which
+$x(t)^2+(x(t)-(e_\epsilon(t)-x(t))^2=\delta$, then the probability
+that $x(t)=e_\epsilon(t)=\pm\sqrt\delta$ is at least
+$1-O(\frac{1}{log\epsilon/\delta})$.
 \end{cor}
 
-In order to overcome the gap between corollary \ref{cor:cor1} and theorem \ref{thm:main1} we present the following property of Browning motion:
+In order to overcome the gap between corollary \ref{cor:cor1} and
+theorem \ref{thm:main1} we present the following property of Browning
+motion:
 \begin{propos}\label{prop:prop1}
-let $\delta,\zeta>0$ and let $x(t)$ be a one dimensional browning motion such that $x(0)=\delta$. there exists some $k$ such that $P(\min_t(x(t)=0)<\frac1k)<\zeta$.
+let $\delta,\zeta>0$ and let $x(t)$ be a one dimensional browning
+motion such that $x(0)=\delta$. there exists some $k$ such that
+$P(\min_t(x(t)=0)<\frac1k)<\zeta$.
 \end{propos}
 
 We are now ready to give a proof to proposition \ref{prop:main2}.
 
 \begin{proof}[proof (proposition \ref{prop:main2})]
-Let $\zeta,\delta>0$. We find $\epsilon>0$ such that $P(|e_\epsilon(1)- x(1)|\le\sqrt\delta)<\zeta$. Let $t_1,...,t_k$ be the set of points such that $x(t_i)=0$,
-and there exists a time $t_i<t'_i<t_i+1$ such that $x(t'_i)=\pm\sqrt\delta$. By proposition \ref{prop:prop1}, there exists $K\in\mathbb{N}$ such that with probability
-$\sqrt\zeta$ it is true that $\sum_{i=1}^k(t_{i+1}-t'_i)\ge1/K$, and thus $k\le K$. If there exists $s_i\in (t_i, t'_i)$ for which $x(s_i)^2+(e_\epsilon(s_i)-x(s_i))^2=\delta$ then by the definition of $t'_i$, $x(s_i)<\sqrt\delta$. By choosing $\epsilon$ properly in corollary \ref{cor:cor1}  this happens with probability at most $\sqrt[2K]{\zeta}$. By the independence the process on the  intervals $[t_i,t'_i]$ we can multiply those probabilities, getting that the probability that for any $s_i$ we have $x(s_i)^2+(e_\epsilon(s_i)-x(s_i))^2=\delta$ is less then $\sqrt\zeta$. Since those intervals are not intersecting with the intervals $(t'_i,t_{i+1})$ we have for the chosen epsilon $P(\exists t | x(t)^2+(e_\epsilon(t)-x(t))^2=\delta, x(t)\neq \sqrt \delta)<\zeta$ for all $t\in(0,1)$.
+Let $\zeta,\delta>0$. We find $\epsilon>0$ such that
+$P(|e_\epsilon(1)- x(1)|\le\sqrt\delta)<\zeta$. Let $t_1,...,t_k$ be
+the set of points such that $x(t_i)=0$, and there exists a time
+$t_i<t'_i<t_i+1$ such that $x(t'_i)=\pm\sqrt\delta$. By proposition
+\ref{prop:prop1}, there exists $K\in\mathbb{N}$ such that with
+probability $\sqrt\zeta$ it is true that
+$\sum_{i=1}^k(t_{i+1}-t'_i)\ge1/K$, and thus $k\le K$. If there exists
+$s_i\in (t_i, t'_i)$ for which
+$x(s_i)^2+(e_\epsilon(s_i)-x(s_i))^2=\delta$ then by the definition of
+$t'_i$, $x(s_i)<\sqrt\delta$. By choosing $\epsilon$ properly in
+corollary \ref{cor:cor1} this happens with probability at most
+$\sqrt[2K]{\zeta}$. By the independence the process on the intervals
+$[t_i,t'_i]$ we can multiply those probabilities, getting that the
+probability that for any $s_i$ we have
+$x(s_i)^2+(e_\epsilon(s_i)-x(s_i))^2=\delta$ is less then
+$\sqrt\zeta$. Since those intervals are not intersecting with the
+intervals $(t'_i,t_{i+1})$ we have for the chosen epsilon $P(\exists t
+| x(t)^2+(e_\epsilon(t)-x(t))^2=\delta, x(t)\neq \sqrt \delta)<\zeta$
+for all $t\in(0,1)$.
 \end{proof}
 
 \subsection{Conformal maps}\label{sec:conformal map}
-We remind the reader our notation. Let $\xi_\epsilon=(X,Y,\epsilon)$ be a couple of $\epsilon$ resampled Brownian webs as defined in ?????. We denoted by by $e_\epsilon(t)$ a sample of $\xi_\epsilon$ starting at some given point at time $0$. We also denote by $x(t)$ a sample of $X$ starting at the same point.
-In this section we prove theorem \ref{thm:no-escape}. Our main technical tool in doing so will be conformal maps. We begin by introducing a few more definitions:
-Let $y(t)=\frac{e_\epsilon(t)-x(t)}{\sqrt2}$, and let $\bar{b}(t)=(x(t),y(t))$. We can now rephrase theorem \ref{thm:no-escape} as:
+We remind the reader our notation. Let $\xi_\epsilon=(X,Y,\epsilon)$
+be a couple of $\epsilon$ resampled Brownian webs as defined in
+?????. We denoted by by $e_\epsilon(t)$ a sample of $\xi_\epsilon$
+starting at some given point at time $0$. We also denote by $x(t)$ a
+sample of $X$ starting at the same point.  In this section we prove
+theorem \ref{thm:no-escape}. Our main technical tool in doing so will
+be conformal maps. We begin by introducing a few more definitions: Let
+$y(t)=\frac{e_\epsilon(t)-x(t)}{\sqrt2}$, and let
+$\bar{b}(t)=(x(t),y(t))$. We can now rephrase theorem
+\ref{thm:no-escape} as:
 
 \begin{propos}[Theorem \ref{thm:no-escape} rephrased]\label{prop:reph}
-under the previous notations, suppose that on time $t_0$ we have $\bar{b}(0)=(0,0)$, let $t_1>0$ be the first time at which $||b(t_1)||_2=1$, then the probability that $y(t_1)\neq0$ is less then $O(\frac1{log\epsilon})$.
+under the previous notations, suppose that on time $t_0$ we have
+$\bar{b}(0)=(0,0)$, let $t_1>0$ be the first time at which
+$||b(t_1)||_2=1$, then the probability that $y(t_1)\neq0$ is less then
+$O(\frac1{log\epsilon})$.
 \end{propos}
 
-We define the following indicator function $A(t):=(y(t)=0)\wedge(|x(t)|>\epsilon)$. Note that whenever $A(t)=1$, we can regard $b(t)$ as a one dimensional Brownian motion on the $x$-axis, while whenever $A(t)=0$ we can regard it as a two dimensional Brownian motion. It will be comfortable to treat the process as a 4-states 
+We define the following indicator function
+$A(t):=(y(t)=0)\wedge(|x(t)|>\epsilon)$. Note that whenever $A(t)=1$,
+we can regard $b(t)$ as a one dimensional Brownian motion on the
+$x$-axis, while whenever $A(t)=0$ we can regard it as a two
+dimensional Brownian motion. It will be comfortable to treat the
+process as a 4-states
+
 }
 
