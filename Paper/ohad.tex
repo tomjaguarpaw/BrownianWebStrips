@@ -7,7 +7,7 @@ $0$. $x(t)$ will denote a sample of $X$ starting at the same
 point. Our goal in this section is to prove the following theorem:
 
 \begin{theorem}\label{thm:main1}
-under the previous notations, $\ds\lim_{\epsilon \rightarrow 0}
+Under the previous notations, $\ds\lim_{\epsilon \rightarrow 0}
 |e_\epsilon(1)- x(1)| = 0$ where the convergence is in probability.
 \end{theorem}
 
@@ -24,7 +24,7 @@ $(-\sqrt\delta,0)$.
 \end{theorem}
 
 One can easily see from the definition of $\epsilon$-resampled
-Brownian webs that proposition \ref{thm:main2} infers theorem
+Brownian webs that Proposition \ref{thm:main2} infers theorem
 \ref{thm:main1}.
 
  We begin by presenting a handy theorem whose proof
@@ -40,36 +40,36 @@ that $x(t)=e_\epsilon(t)=\pm1$ is at least $1-O(\frac1{log\epsilon})$.
 Applying scaling invariance to this theorem immediately yields the
 following corollary:
 \begin{cor}\label{cor:cor1}
-let $\delta>0$ suppose that on time $t_0$ we have $e(t_0)=(0,0)$, let
+Let $\delta>0$ suppose that on time $t_0$ we have $e(t_0)=(0,0)$, let
 $t>0$ be the first time at which
 $x(t)^2+(x(t)-\frac{(e_\epsilon(t)-x(t))^2)}{\sqrt2}=\delta$, then the probability
 that $x(t)=e_\epsilon(t)=\pm\sqrt\delta$ is at least
 $1-O(\frac{1}{log\epsilon/\delta})$.
 \end{cor}
 
-In order to overcome the gap between corollary \ref{cor:cor1} and
-theorem \ref{thm:main1} we present the following property of Browning
+In order to overcome the gap between Corollary \ref{cor:cor1} and
+Theorem \ref{thm:main1} we present the following property of Brownian
 motion:
 \begin{propos}\label{prop:prop1}
-let $\delta,\zeta>0$ and let $x(t)$ be a one dimensional Brownian
+Let $\delta,\zeta>0$ and let $x(t)$ be a one dimensional Brownian
 motion such that $x(0)=\delta$. There exists some $k$ such that
 $\P(\min_t(x(t)=0)<\frac1k)<\zeta$.
 \end{propos}
 
 We are now ready to give a proof to proposition \ref{thm:main2}.
 
-\begin{proof}[proof (proposition \ref{thm:main2})]
+\begin{proof}[proof (Proposition \ref{thm:main2})]
 Let $\zeta,\delta>0$. We find $\epsilon>0$ such that
 $\P(|e_\epsilon(1)- x(1)|\le\sqrt\delta)<\zeta$. Let $t_1,...,t_k$ be
 the set of points such that $x(t_i)=0$, and there exists a time
-$t_i<t'_i<t_i+1$ such that $x(t'_i)=\pm\sqrt\delta$. By proposition
+$t_i<t'_i<t_i+1$ such that $x(t'_i)=\pm\sqrt\delta$. By Proposition
 \ref{prop:prop1}, there exists $K\in\mathbb{N}$ such that with
 probability $\sqrt\zeta$ it is true that
 $\sum_{i=1}^k(t_{i+1}-t'_i)\ge\frac{k}{K}$, and thus $k\le K$. If there exists
 $s_i\in (t_i, t'_i)$ for which
 $x(s_i)^2+\frac{(e_\epsilon(s_i)-x(s_i))^2}{\sqrt2}=\delta$ then by the definition of
 $t'_i$, $x(s_i)<\sqrt\delta$. By choosing $\epsilon$ properly in
-corollary \ref{cor:cor1} this happens with probability at most
+Corollary \ref{cor:cor1} this happens with probability at most
 $\sqrt[2K]{\zeta}$. By the independence of the process on the intervals
 $[t_i,t'_i]$ we can multiply those probabilities, getting that the
 probability that there exists any $s\in[0,1]$ for which
@@ -84,11 +84,11 @@ for all $t\in(0,1)$.
 Let $\xi_\epsilon=(X,Y,\epsilon)$ as before. We denoted by by $e_\epsilon(t)$ a sample of $\xi_\epsilon$
 starting at some given point at time $0$. We also denote by $x(t)$ a
 sample of $X$ starting at the same point.  In this section we prove
-theorem \ref{thm:no-escape}. Our main technical tool in doing so will
+Theorem \ref{thm:no-escape}. Our main technical tool in doing so will
 be conformal maps. We begin by introducing a few more definitions: Let
 $y(t)=\frac{e_\epsilon(t)-x(t)}{\sqrt2}$, and let
 $\bar{b}_\epsilon(t)=(x(t),y(t))$. Sometimes, we will omit the $\epsilon$ writing $b(t)$. We always assume $\epsilon$
-to be sufficiently small. We can now rephrase theorem
+to be sufficiently small. We can now rephrase Theorem
 \ref{thm:no-escape} as:
 
 \begin{propos}[Theorem \ref{thm:no-escape} rephrased]\label{prop:reph}
@@ -119,7 +119,7 @@ and what we need to prove is that its probability to get to
  state $a_\text{lose}$ before getting to $a_\text{win}$ is $O(\frac1{log\epsilon})$.
  We do this by calculating the transition functions of
  this state machine. This calculation is describe by the following proposition,
- while the state machine is depicted in figure \ref{fig:state_machine}.
+ while the state machine is depicted in Figure \ref{fig:state_machine}.
 
  \begin{figure}[htb]
 \begin{center}
@@ -153,7 +153,7 @@ $a_\text{win}$ and $a_\text{lose}$ are trap states which are assigned no transit
  are given separately in theorem \FIXME{}{put the right theorem from the integral part} in section \FIXME{}{The integral section}.
 \end{proof}
 
-Analyzing the transition probabilities described in proposition \ref{prop:trans} we
+Analyzing the transition probabilities described in Proposition \ref{prop:trans} we
 can find the probability of reaching $a_\text{lose}$ before $a_\text{win}$ and vice versa.
  The main step towards this result is the following theorem:
 
@@ -168,16 +168,16 @@ Let $s_1=a_0,...,s_n$ be the sequence of states of our state machine.
 \end{propos}
 
 \begin{proof}
-Both \eqref{eq:losecase} and \eqref{eq:wincase} are direct results of proposition \ref{prop:trans}.
+Both \eqref{eq:losecase} and \eqref{eq:wincase} are direct results of Proposition \ref{prop:trans}.
  $a_0$ can be followed only by $a_\text{lose}$ and $a_1^r$. However $a_\text{lose}$ cannot be
  reached from $a_1^r$ without passing through
  $a_\text{win}$, thus:
  $$\P(s_n=a_\text{lose} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))=\P(a_0\rightarrow a_\text{lose})=O(\epsilon)$$
- where the last equality is by item \ref{m22} in proposition \ref{prop:trans}.
+ where the last equality is by item \ref{m22} in Proposition \ref{prop:trans}.
  This concludes the proof of \eqref{eq:losecase}.
 
  In order to reach $a_\text{win}$ we must have $a_1^r$ following $a_0$, and $a_\text{win}$
-  following $a_1^r$. By Fubini this yields the following formula:
+  following $a_1^r$. By \TODO{Fubini}{Should be Fubini's Theorem?} this yields the following formula:
  \begin{equation}\label{eq:r1}
  \P(s_n=a_\text{win} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))=\ds\int_{\epsilon}^1 f(r) \P(a^r_1\rightarrow a_\text{win}) dr
  \end{equation}
@@ -186,13 +186,14 @@ Both \eqref{eq:losecase} and \eqref{eq:wincase} are direct results of propositio
  \begin{equation}\label{eq:r2}
  \P(s_n=a_\text{win} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))\ge\ds\int_{2\epsilon}^1 f(r) \P(a^r_1\rightarrow a_\text{win}) dr
  \end{equation}
- Applying items \ref{m24} and \ref{m12} of proposition \ref{prop:trans} to \eqref{eq:r2}, we get:
+ Applying items \ref{m24} and \ref{m12} of Proposition \ref{prop:trans} to \eqref{eq:r2}, we get:
 \begin{equation}\label{eq:r3}
  \P(s_n=a_\text{win} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))\ge \ds\int_{2\epsilon}^1 (\frac{c\epsilon}{r^2}-0.5)r dr = \Omega(\epsilon\log\epsilon)
 \end{equation}
 \end{proof}
 
 
-Proposition \ref{prop:winlose1}
+Proposition \ref{prop:winlose1} 
+\FIXME{}{I'm Here}
 
 } 
