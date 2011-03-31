@@ -1,5 +1,40 @@
 {
+\newcommand{\factor}[2]{\mathcal{F}_{#1 #2}}
+\newcommand{\simplex}{\mathcal{S}}
+
 \section{Definition of the Brownian web on horizontal strips}
+
+\begin{definition}
+  A pair of independent-coalescing Brownian motions is a pair of
+  stochastic processes $(X, X')$ such that $X_t$ is defined for $t \in
+  [s, \infty)$, say, and $X'_t$ for $t \in [s', \infty)$, say.  $X$
+      and $X'$ are Brownian motions independent until time $T = \inf
+      \{ t \ge s \max s' : X_t = X'_t\}$, and for $t \ge T$ $X_t =
+      X'_t$.
+\end{definition}
+
+\begin{definition}
+  Let $\simplex$ = $\{(t, s) \in \R^2 : t \ge s\}$
+\end{definition}
+
+\begin{definition}
+  A Brownian web on a probability space $\Omega$ is a
+  jointly-measurable mapping $\phi : \Omega \cross \simplex \cross
+  \R \to \R$, $(\omega, t, s, x) \mapsto \phi_{ts}(x)$ (we supress
+  $\omega$ in the notation) such that for fixed pairs of starting
+  points $(s, x)$ and $(s', x')$, the pair of processes $(\phi_{\cdot
+    s}(x), \phi_{\cdot s'}(x'))$ is a pair of independent-coalescing
+  Brownian motions.
+\end{definition}
+
+\begin{definition}
+  The horiztontal factorization of the Brownian motion is an
+  association of a $\sigma$-algebra $\factor{y}{x}$ to each $(y, x)
+  \in \simplex$ satisfying the following properties:
+  \begin{itemize}
+  \item \TODO{}{}
+  \end{itemize}
+\end{definition}
 
 \section{Definition of the ``resampled'' process}
 }
