@@ -1,53 +1,6 @@
-\documentclass[11pt]{article}
-\usepackage{amsmath, amssymb, amsfonts, amsthm,latexsym, hyperref}
-\usepackage[all,cmtip]{xy}
-\usepackage{graphicx}
-\usepackage{verbatim}
-%\baselineskip = 18pt
-
-\oddsidemargin  0pt     %   Left margin on odd-numbered pages.
-\evensidemargin 0pt     %   Left margin on even-numbered pages.
-\marginparwidth 40pt    %   Width of marginal notes.
-\marginparsep 10pt      % Horizontal space between outer margin and
-                        % marginal note
-
-% VERTICAL SPACING:
-\topmargin 0pt           % Nominal distance from top of page to top of
-                         %    box containing running head.
-\headsep 10pt            %    Space between running head and text.
-
-% DIMENSION OF TEXT:
-
-\textheight 8.5in        %Height of text(including footnotes and figures,
-                         % excluding running head and foot).
-\textwidth 6.6in         % Width of text line.
-\renewcommand{\baselinestretch}{1.2}
-\topmargin 0pt \headsep 0pt
-
-\def \ds{\displaystyle}
-
-\bibliographystyle{plain}
-\newtheorem*{uthm}{Theorem}
-\newtheorem{thm}{Theorem}
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{claim}{Claim}
-\newtheorem{obs}{Observation}
-\newtheorem{rem}{Remark}
-
-\newtheorem{lem}{Lemma}[section]
-\newtheorem{lemma}{Lemma}[section]
-
-\newtheorem{propos}{Proposition}
-
-
-\newtheorem{defin}{Definition}[section]
-\newtheorem{cor}{Corollary}
-\newtheorem{conjecture}{Conjecture}
-\newtheorem{problem}{Problem}
-\begin{document}
 {
 \section{Suitable title}
-Let $\xi_\epsilon=(X,Y,\epsilon)$ be a couple of $\epsilon$-resampled 
+Let $\xi_\epsilon=(X,Y,\epsilon)$ be a couple of $\epsilon$-resampled
 Brownian webs as defined in ?????. We denoted by $e_\epsilon(t)$ a
 sample of $\xi_\epsilon$ starting at some given point at time
 $0$. $x(t)$ will denote a sample of $X$ starting at the same
@@ -63,16 +16,16 @@ stronger claim:
 \begin{theorem}\label{thm:main2}
 For every $t\in[0,1]$ and every $\delta>0$ it is true that
 $$\ds lim_{\epsilon \rightarrow 0}P\left(\text{either } x(t)=e_\epsilon(t)
-\text{ or }x(t)^2+\frac{(e_\epsilon(t)-x(t))^2}{\sqrt2}<\delta\right)=1$$ 
-Equivalently the two dimensional process $(x(t),\frac{(e_\epsilon(t)-x(t))}{\sqrt2})$ 
-a.s. leaves the $\sqrt\delta$ ball only through 
+\text{ or }x(t)^2+\frac{(e_\epsilon(t)-x(t))^2}{\sqrt2}<\delta\right)=1$$
+Equivalently the two dimensional process $(x(t),\frac{(e_\epsilon(t)-x(t))}{\sqrt2})$
+a.s. leaves the $\sqrt\delta$ ball only through
 $(\sqrt\delta,0)$ or through
 $(-\sqrt\delta,0)$.
 \end{theorem}
 
 One can easily see from the definition of $\epsilon$-resampled
 Brownian webs that proposition \ref{thm:main2} infers theorem
-\ref{thm:main1}. 
+\ref{thm:main1}.
 
  We begin by presenting a handy theorem whose proof
 we delay to subsection \ref{sec:POC}:
@@ -80,7 +33,7 @@ we delay to subsection \ref{sec:POC}:
 \begin{theorem}\label{thm:no-escape}
 Suppose that on time $t_0$ we have
 $e(t_0)=0$, let $t>0$ be the first time at which
-$x(t)^2+\frac{(e_\epsilon(t)-x(t))^2)}{\sqrt2}=1$, then the probability
+$x(t)^2+\frac{(e_\epsilon(t)-x(t))^2}{\sqrt2}=1$, then the probability
 that $x(t)=e_\epsilon(t)=\pm1$ is at least $1-O(\frac1{log\epsilon})$.
 \end{theorem}
 
@@ -99,15 +52,15 @@ theorem \ref{thm:main1} we present the following property of Browning
 motion:
 \begin{propos}\label{prop:prop1}
 let $\delta,\zeta>0$ and let $x(t)$ be a one dimensional browning
-motion such that $x(0)=\delta$. there exists some $k$ such that
-$P(\min_t(x(t)=0)<\frac1k)<\zeta$.
+motion such that $x(0)=\delta$. There exists some $k$ such that
+$\P(\min_t(x(t)=0)<\frac1k)<\zeta$.
 \end{propos}
 
 We are now ready to give a proof to proposition \ref{thm:main2}.
 
 \begin{proof}[proof (proposition \ref{thm:main2})]
 Let $\zeta,\delta>0$. We find $\epsilon>0$ such that
-$P(|e_\epsilon(1)- x(1)|\le\sqrt\delta)<\zeta$. Let $t_1,...,t_k$ be
+$\P(|e_\epsilon(1)- x(1)|\le\sqrt\delta)<\zeta$. Let $t_1,...,t_k$ be
 the set of points such that $x(t_i)=0$, and there exists a time
 $t_i<t'_i<t_i+1$ such that $x(t'_i)=\pm\sqrt\delta$. By proposition
 \ref{prop:prop1}, there exists $K\in\mathbb{N}$ such that with
@@ -122,7 +75,7 @@ $[t_i,t'_i]$ we can multiply those probabilities, getting that the
 probability that there exists any $s\in[0,1]$ for which
 $x(s)^2+(e_\epsilon(s)-x(s))^2=\delta$ is less then
 $\sqrt\zeta$. Since those intervals are not intersecting with the
-intervals $(t'_i,t_{i+1})$ we have for the chosen epsilon $P(\exists t
+intervals $(t'_i,t_{i+1})$ we have for the chosen epsilon $\P(\exists t
 | x(t)^2+(e_\epsilon(t)-x(t))^2=\delta, x(t)\neq \sqrt \delta)<\zeta$
 for all $t\in(0,1)$.
 \end{proof}
@@ -134,7 +87,7 @@ sample of $X$ starting at the same point.  In this section we prove
 theorem \ref{thm:no-escape}. Our main technical tool in doing so will
 be conformal maps. We begin by introducing a few more definitions: Let
 $y(t)=\frac{e_\epsilon(t)-x(t)}{\sqrt2}$, and let
-$\bar{b}_\epsilon(t)=(x(t),y(t))$. Sometimes, we will omit the $\epsilon$ writing $b(t)$. We always assume $\epsilon$ 
+$\bar{b}_\epsilon(t)=(x(t),y(t))$. Sometimes, we will omit the $\epsilon$ writing $b(t)$. We always assume $\epsilon$
 to be sufficiently small. We can now rephrase theorem
 \ref{thm:no-escape} as:
 
@@ -150,21 +103,23 @@ $A(t):=(y(t)=0)\wedge(|x(t)|>\epsilon)$. Note that whenever $A(t)=1$,
 we can regard $b(t)$ as a one dimensional Brownian motion on the
 $x$-axis, while whenever $A(t)=0$ we can regard it as a two
 dimensional Brownian motion. We can now treat the sampled
-process $b_\epsilon(t)$ as a state machine with $4$ states 
+process $b_\epsilon(t)$ as a state machine with $4$ states
 $a_0,a^r_1,a_{\text{win}},a_{\text{lose}}$, one of which ($a^r_1$) has a parameter $r$.
 
-The states are defined in the following way: 
+The states are defined in the following way:
 \begin{enumerate}
-\item\label{n1} $b_\epsilon(t)$ is in state $a_0$ whenever $A(t)=0$. 
-\item\label{n2} $b_\epsilon(t)$ is in state $a^r_1$ whenever $A(t)=1$ and $|x(sup_{s<t}(A(s)=0))|=r$. 
-\item\label{n3} $b_\epsilon(t)$ is in state $a_\text{win}$ whenever $b_\epsilon(t)=(1,0)$. 
+\item\label{n1} $b_\epsilon(t)$ is in state $a_0$ whenever $A(t)=0$.
+\item\label{n2} $b_\epsilon(t)$ is in state $a^r_1$ whenever $A(t)=1$ and $|x(sup_{s<t}(A(s)=0))|=r$.
+\item\label{n3} $b_\epsilon(t)$ is in state $a_\text{win}$ whenever $b_\epsilon(t)=(1,0)$.
 \item\label{n4} $b_\epsilon(t)$ is in state $a_\text{lose}$ whenever $b_\epsilon(t)\neq(1,0)$ yet $||e(t)||_2=1$.
 \end{enumerate}
 
-By this definition at time $0$ our state machine is in state $a_0$, 
-and what we need to prove is that its probability to get to state $a_\text{lose}$ before
- getting to $a_\text{win}$ is $O(\frac1{log\epsilon})$. We do this by calculating the transition functions of 
- this state machine. This calculation is describe by the following proposition, while the state machine is depicted in figure \ref{fig:state_machine}
+By this definition at time $0$ our state machine is in state $a_0$,
+and what we need to prove is that its probability to get to
+ state $a_\text{lose}$ before getting to $a_\text{win}$ is $O(\frac1{log\epsilon})$.
+ We do this by calculating the transition functions of
+ this state machine. This calculation is describe by the following proposition,
+ while the state machine is depicted in figure \ref{fig:state_machine}.
 
  \begin{figure}[htb]
 \begin{center}
@@ -178,30 +133,66 @@ and what we need to prove is that its probability to get to state $a_\text{lose}
 \begin{propos}[Transition probabilities]\label{prop:trans}
 The following is the transition probability of the state machine described above:
 \begin{enumerate}
-\item\label{m11} $P(a^r_1\rightarrow a_0)=1-r$
-\item\label{m12} $P(a^r_1\rightarrow a_\text{win})=r$
-\item\label{m13} $P(a^r_1\rightarrow a_\text{lose})=0$
-\item\label{m21} $P(a_0\rightarrow a_\text{win})=0$
-\item\label{m22} $P(a_0\rightarrow a_\text{lose})=O(\epsilon)$
-\item\label{m23} $P(a_0\rightarrow a^r_1 \text{ for some }r)=1-O(\epsilon)$
-\item\label{m24} $P(a_0\rightarrow a^r_1 \text{ such that } r_0<r<r_1)>\ds\int_{r_0}^{r_1}(\frac{c\epsilon}{r^2}-0.5)dr$ for $r_0>2\epsilon$ 
+\item\label{m11} $\P(a^r_1\rightarrow a_0)=1-r$
+\item\label{m12} $\P(a^r_1\rightarrow a_\text{win})=r$
+\item\label{m13} $\P(a^r_1\rightarrow a_\text{lose})=0$
+\item\label{m21} $\P(a_0\rightarrow a_\text{win})=0$
+\item\label{m22} $\P(a_0\rightarrow a_\text{lose})=O(\epsilon)$
+\item\label{m23} $\P(a_0\rightarrow a^r_1 \text{ for some }r)=1-O(\epsilon)$
+\item\label{m24} $\P(a_0\rightarrow a^r_1 \text{ such that } r_0<r<r_1)>\ds\int_{r_0}^{r_1}(\frac{c\epsilon}{r^2}-0.5)dr$ for $r_0>2\epsilon$
 \end{enumerate}
 $a_\text{win}$ and $a_\text{lose}$ are trap states which are assigned no transition function.
 \end{propos}
 
 \begin{proof}
- On $a^r_1$ we know $b(t)$ is a $1$-dimensional Brownian motion starting at $r$. We can treat the transition time of $b(t)$ from $a^r_1$ to either $a_0$ or $a_\text{win}$ as a stopping time for such a Browinian motion, getting \ref{m11} and \ref{m12} immediately. The definition of the different states infers \ref{m13,m21}. The proofs of \ref{m22,m23} and \ref{m24} are given separately in theorem ????? in section ?????. 
-\end{proof}  
+ On $a^r_1$ we know $b(t)$ is a $1$-dimensional Brownian motion starting at $r$.
+ We can treat the transition time of $b(t)$ from $a^r_1$ to either $a_0$ or
+ $a_\text{win}$ as a stopping time for such a Browinian motion, getting
+ \ref{m11} and \ref{m12} immediately. The definition of the different states
+ infers \ref{m13},\ref{m21}. The proofs of \ref{m22},\ref{m23} and \ref{m24}
+ are given separately in theorem ????? in section ?????.
+\end{proof}
 
-Analyzing the transition probabilities described in proposition \ref{prop:trans} we can find the probability of reaching $a_\text{lose}$ before $a_\text{win}$ and vice versa. The main step towards this result is the following theorem:
+Analyzing the transition probabilities described in proposition \ref{prop:trans} we
+can find the probability of reaching $a_\text{lose}$ before $a_\text{win}$ and vice versa.
+ The main step towards this result is the following theorem:
 
 \begin{propos}\label{prop:winlose1}
-Let $s_1=a_0,...,s_n$ be the sequence of states of our state machine. 
-$$P(s_n=a_\text{win} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))=\Omega(\epsilon\log\epsilon)$$
-$$P(s_n=a_\text{lose} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))=O(\epsilon)$$
+Let $s_1=a_0,...,s_n$ be the sequence of states of our state machine.
+\begin{equation}\label{eq:losecase}
+\P(s_n=a_\text{lose} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))=O(\epsilon)
+\end{equation}
+\begin{equation}\label{eq:wincase}
+\P(s_n=a_\text{win} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))=\Omega(\epsilon\log\epsilon)
+\end{equation}
 \end{propos}
 
+\begin{proof}
+Both \eqref{eq:losecase} and \eqref{eq:wincase} are direct results of proposition \ref{prop:trans}.
+ $a_0$ can be followed only by $a_\text{lose}$ and $a_1^r$. However $a_\text{lose}$ cannot be
+ reached from $a_1^r$ without passing through
+ $a_\text{win}$, thus:
+ $$\P(s_n=a_\text{lose} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))=\P(a_0\rightarrow a_\text{lose})=O(\epsilon)$$
+ where the last equality is by item \ref{m22} in proposition \ref{prop:trans}.
+ This concludes the proof of \eqref{eq:losecase}.
 
-}
+ In order to reach $a_\text{win}$ we must have $a_1^r$ following $a_0$, and $a_\text{win}$
+  following $a_1^r$. By Fubini this yields the following formula:
+ \begin{equation}\label{eq:r1}
+ \P(s_n=a_\text{win} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))=\ds\int_{\epsilon}^1 f(r) \P(a^r_1\rightarrow a_\text{win}) dr
+ \end{equation}
+ Where $f(r)$ is the density of the random variable $r$ which gets $r$ when
+ $a_0\rightarrow a^r_1$ and $0$ otherwise. Since the density of a random variable is non-negative, we get:
+ \begin{equation}\label{eq:r2}
+ \P(s_n=a_\text{win} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))\ge\ds\int_{2\epsilon}^1 f(r) \P(a^r_1\rightarrow a_\text{win}) dr
+ \end{equation}
+ Applying items \ref{m24} and \ref{m12} of proposition \ref{prop:trans} to \eqref{eq:r2}, we get:
+\begin{equation}\label{eq:r3}
+ \P(s_n=a_\text{win} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))\ge \ds\int_{2\epsilon}^1 (\frac{c\epsilon}{r^2}-0.5)r dr = \Omega(\epsilon\log\epsilon)
+\end{equation}
+\end{proof}
 
-\end{document}
+
+Proposition \ref{prop:winlose1}
+
+} 
