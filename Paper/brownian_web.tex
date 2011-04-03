@@ -1,5 +1,6 @@
 {
 \newcommand{\factor}[2]{\mathcal{F}_{#1 #2}}
+\newcommand{\commafactor}[2]{\mathcal{F}_{#1,#2}}
 \newcommand{\simplex}{\mathcal{S}}
 
 \section{Definition of the Brownian web on horizontal strips}
@@ -51,4 +52,30 @@
 \end{theorem}
 
 \section{Definition of the ``resampled'' process}
+
+\newcommand{\sampled}{X}
+\newcommand{\resamplede}{X'_{\epsilon}}
+\newcommand{\reservoir}{\mathcal{G}}
+
+\newcommand{\twostrips}{\commafactor{\infty}{0} \tensor \commafactor{0}{-\infty}}
+\newcommand{\onestrip}{\commafactor{\infty}{-\infty}}
+
+Given a Brownian web $\phi$, fix a starting point $(s,x)$ and write
+$\sampled$ for the random process $t \mapsto \phi_{ts}(x)$\FIXME{}{say
+  ``which is a Brownian motion''?}.  Then $X$
+is measurable with respect to $\onestrip$.
+
+We introduce the process $\resamplede$ which is measurable with
+respect to $\twostrips \tensor \reservoir$ where $\reservoir$ is an
+additional \TODO{reservoir}{what's the right word for this?} of
+independent randomness.
+
+We will show that $\resamplede \to \sampled$ in probability as
+$\epsilon \to 0$.  Then we can deduce that $\sampled$ is in fact
+$\twostrips \tensor \reservoir$ measurable.  Since $\reservoir$ is
+\FIXME{independent of everything}{be precise} this \FIXME{leads to the
+  observation}{how?} that $\sampled$ is $\twostrips$ measurable.
+Since random variables of the form $\sampled$ generate
+$\onestrip$ we conclude that $\twostrips = \onestrip$.
+
 }
