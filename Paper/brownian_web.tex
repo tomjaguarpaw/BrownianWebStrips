@@ -59,23 +59,39 @@
 
 \newcommand{\twostrips}{\commafactor{\infty}{0} \tensor \commafactor{0}{-\infty}}
 \newcommand{\onestrip}{\commafactor{\infty}{-\infty}}
+\newcommand{\twostripsreservoir}{\twostrips \tensor \reservoir}
 
+\begin{definition}
 Given a Brownian web $\phi$, fix a starting point $(s,x)$ and write
 $\sampled$ for the random process $t \mapsto \phi_{ts}(x)$\FIXME{}{say
-  ``which is a Brownian motion''?}.  Then $X$
-is measurable with respect to $\onestrip$.
+  ``which is a Brownian motion''?}.
+\end{definition}
 
-We introduce the process $\resamplede$ which is measurable with
-respect to $\twostrips \tensor \reservoir$ where $\reservoir$ is an
-additional \TODO{reservoir}{what's the right word for this?} of
-independent randomness.
+\begin{obs}
+  $\sampled$ is $\onestrip$-measurable.
+\end{obs}
+
+\begin{definition}
+  We define $\resamplede$, a ``perturbed'' version of $\sampled$, as
+  follows.  Starting from time $t = s$, follow the path $\sampled$
+  until it hits $0$.  (This part of the process is
+  $\twostrips$-measurable).  Given $\reservoir$, an additional
+  \TODO{reservoir}{what's the right word for this?} of independent
+  randomness, launch a $\reservoir$-measurable Brownian motion until
+  it meets $\sampled$ outside the strip $\R \cross (-\epsilon,
+  \epsilon)$.  Then it joins $\sampled$ again until it reaches $0$ and
+  this process repeats indefinitely.
+\end{definition}
+
+\begin{obs}
+  $\resamplede$ is $\twostripsreservoir$-measurable.
+\end{obs}
 
 We will show that $\resamplede \to \sampled$ in probability as
 $\epsilon \to 0$.  Then we can deduce that $\sampled$ is in fact
-$\twostrips \tensor \reservoir$-measurable.  Since $\reservoir$ is
+$\twostripsreservoir$-measurable.  Since $\reservoir$ is
 \FIXME{independent of everything}{be precise} this \FIXME{leads to the
   observation}{how?} that $\sampled$ is $\twostrips$-measurable.
 Since random variables of the form $\sampled$ generate
 $\onestrip$ we conclude that $\twostrips = \onestrip$.
-
 }
