@@ -13,36 +13,36 @@ Under the previous notations, $\ds\lim_{\epsilon \rightarrow 0}
 
 In order to prove this it will be easier to prove the following
 stronger claim:
-\begin{theorem}\label{thm:main2}
+\begin{propos}\label{thm:main2}
 For every $t\in[0,1]$ and every $\delta>0$ it is true that
 $$\ds lim_{\epsilon \rightarrow 0}P\left(\text{either } x(t)=e_\epsilon(t)
-\text{ or }x(t)^2+\frac{(e_\epsilon(t)-x(t))^2}{\sqrt2}<\delta\right)=1$$
-Equivalently the two dimensional process $(x(t),\frac{(e_\epsilon(t)-x(t))}{\sqrt2})$
+\text{ or }x(t)^2+(e_\epsilon(t)-x(t))^2<\delta\right)=1$$
+Equivalently the two dimensional process $(x(t),e_\epsilon(t)-x(t))$
 a.s. leaves the $\sqrt\delta$ ball only through
 $(\sqrt\delta,0)$ or through
 $(-\sqrt\delta,0)$.
-\end{theorem}
+\end{propos}
 
 One can easily see from the definition of $\epsilon$-resampled
-Brownian webs that Proposition \ref{thm:main2} infers theorem
+Brownian webs that Proposition \ref{thm:main2} infers Theorem
 \ref{thm:main1}.
 
- We begin by presenting a handy theorem whose proof
+ We begin by presenting a handy property whose proof
 we delay to subsection \ref{sec:POC}:
 
-\begin{theorem}\label{thm:no-escape}
+\begin{propos}\label{thm:no-escape}
 Suppose that on time $t_0$ we have
 $e(t_0)=0$, let $t>0$ be the first time at which
-$x(t)^2+\frac{(e_\epsilon(t)-x(t))^2}{\sqrt2}=1$, then the probability
+$x(t)^2+\frac{(e_\epsilon(t)-x(t))^2}{2}=1$, then the probability
 that $x(t)=e_\epsilon(t)=\pm1$ is at least $1-O(\frac1{log\epsilon})$.
-\end{theorem}
+\end{propos}
 
 Applying scaling invariance to this theorem immediately yields the
 following corollary:
 \begin{cor}\label{cor:cor1}
 Let $\delta>0$ suppose that on time $t_0$ we have $e(t_0)=(0,0)$, let
 $t>0$ be the first time at which
-$x(t)^2+(x(t)-\frac{(e_\epsilon(t)-x(t))^2)}{\sqrt2}=\delta$, then the probability
+$x(t)^2+\frac{(e_\epsilon(t)-x(t))^2}{2}=\delta$, then the probability
 that $x(t)=e_\epsilon(t)=\pm\sqrt\delta$ is at least
 $1-O(\frac{1}{log\epsilon/\delta})$.
 \end{cor}
@@ -67,7 +67,7 @@ $t_i<t'_i<t_i+1$ such that $x(t'_i)=\pm\sqrt\delta$. By Proposition
 probability $\sqrt\zeta$ it is true that
 $\sum_{i=1}^k(t_{i+1}-t'_i)\ge\frac{k}{K}$, and thus $k\le K$. If there exists
 $s_i\in (t_i, t'_i)$ for which
-$x(s_i)^2+\frac{(e_\epsilon(s_i)-x(s_i))^2}{\sqrt2}=\delta$ then by the definition of
+$x(s_i)^2+\frac{(e_\epsilon(s_i)-x(s_i))^2}{2}=\delta$ then by the definition of
 $t'_i$, $x(s_i)<\sqrt\delta$. By choosing $\epsilon$ properly in
 Corollary \ref{cor:cor1} this happens with probability at most
 $\sqrt[2K]{\zeta}$. By the independence of the process on the intervals
@@ -81,21 +81,21 @@ for all $t\in(0,1)$.
 \end{proof}
 
 \subsection{Proof of convergence}\label{sec:POC}
-Let $\xi_\epsilon=(X,Y,\epsilon)$ as before. We denoted by by $e_\epsilon(t)$ a sample of $\xi_\epsilon$
-starting at some given point at time $0$. We also denote by $x(t)$ a
-sample of $X$ starting at the same point.  In this section we prove
-Theorem \ref{thm:no-escape}. Our main technical tool in doing so will
+%Let $\xi_\epsilon=(X,Y,\epsilon)$ as before. We denoted by $e_\epsilon(t)$ a sample of $\xi_\epsilon$
+%starting at some given point at time $0$. We also denote by $x(t)$ a
+%sample of $X$ starting at the same point.
+In this section we prove Proposition \ref{thm:no-escape}. Our main technical tool in doing so will
 be conformal maps. We begin by introducing a few more definitions: Let
 $y(t)=\frac{e_\epsilon(t)-x(t)}{\sqrt2}$, and let
-$\bar{b}_\epsilon(t)=(x(t),y(t))$. Sometimes, we will omit the $\epsilon$ writing $b(t)$. We always assume $\epsilon$
-to be sufficiently small. We can now rephrase Theorem
+${b}_\epsilon(t)=(x(t),y(t))$. Sometimes, we will omit the $\epsilon$ writing $b(t)$. We always assume $\epsilon$
+to be sufficiently small. We can now rephrase Proposition
 \ref{thm:no-escape} as:
 
-\begin{propos}[Theorem \ref{thm:no-escape} rephrased]\label{prop:reph}
+\begin{propos}[Proposition \ref{thm:no-escape} rephrased]\label{prop:reph}
 Suppose that on time $t_0$ we have
-$\bar{b}(0)=(0,0)$, let $t_1>0$ be the first time at which
-$||b(t_1)||_2=1$, then the probability that $y(t_1)\neq0$ is less then
-$O(\frac1{log\epsilon})$.
+${b}(t_0)=(0,0)$, let $t_1>0$ be the first time at which
+$||b(t_1)||_2=1$, then the probability that $y(t_1)\neq0$ is
+$O\left(-\frac1{log\epsilon}\right)$.
 \end{propos}
 
 We define the following indicator function
@@ -114,8 +114,8 @@ The states are defined in the following way:
 \item\label{n4} $b_\epsilon(t)$ is in state $a_\text{lose}$ whenever $b_\epsilon(t)\neq(1,0)$ yet $||e(t)||_2=1$.
 \end{enumerate}
 
-By this definition at time $0$ our state machine is in state $a_0$,
-and what we need to prove is that its probability to get to
+By this definition, at time $0$ our state machine is in state $a_0$.
+We strive to prove that the probability to get to
  state $a_\text{lose}$ before getting to $a_\text{win}$ is $O(\frac1{log\epsilon})$.
  We do this by calculating the transition functions of
  this state machine. This calculation is describe by the following proposition,
@@ -139,7 +139,8 @@ The following is the transition probability of the state machine described above
 \item\label{m21} $\P(a_0\rightarrow a_\text{win})=0$
 \item\label{m22} $\P(a_0\rightarrow a_\text{lose})=O(\epsilon)$
 \item\label{m23} $\P(a_0\rightarrow a^r_1 \text{ for some }r)=1-O(\epsilon)$
-\item\label{m24} $\P(a_0\rightarrow a^r_1 \text{ such that } r_0<r<r_1)>\ds\int_{r_0}^{r_1}(\frac{c\epsilon}{r^2}-0.5)dr$ for $r_0>2\epsilon$
+\item\label{m24} $\P(a_0\rightarrow a^r_1 \text{ such that } r_0<r<r_1)>\ds c\epsilon\left(\frac 1 {r_0}-\frac 1 {r_1}-1\right)$ for $r_0>2\epsilon$.
+%$\P(a_0\rightarrow a^r_1 \text{ such that } r_0<r<r_1)>\ds\int_{r_0}^{r_1}(\frac{c\epsilon}{r^2}-0.5)dr$ for $r_0>2\epsilon$
 \end{enumerate}
 $a_\text{win}$ and $a_\text{lose}$ are trap states which are assigned no transition function.
 \end{propos}
@@ -149,13 +150,13 @@ $a_\text{win}$ and $a_\text{lose}$ are trap states which are assigned no transit
  We can treat the transition time of $b(t)$ from $a^r_1$ to either $a_0$ or
  $a_\text{win}$ as a stopping time for such a Browinian motion, getting
  \ref{m11} and \ref{m12} immediately. The definition of the different states
- infers \ref{m13},\ref{m21}. The proofs of \ref{m22},\ref{m23} and \ref{m24}
- are given separately in theorem \FIXME{}{put the right theorem from the integral part} in section \FIXME{}{The integral section}.
+ infers \ref{m13} and \ref{m21}. The proofs of \ref{m22}, \ref{m23} and \ref{m24}
+ are given separately in corollaries \ref{m22and23true} and \ref{m24true} in section \ref{sec:ROI}.
 \end{proof}
 
 Analyzing the transition probabilities described in Proposition \ref{prop:trans} we
 can find the probability of reaching $a_\text{lose}$ before $a_\text{win}$ and vice versa.
- The main step towards this result is the following theorem:
+ The main step towards this result is the following proposition:
 
 \begin{propos}\label{prop:winlose1}
 Let $s_1=a_0,...,s_n$ be the sequence of states of our state machine.
@@ -163,7 +164,7 @@ Let $s_1=a_0,...,s_n$ be the sequence of states of our state machine.
 \P(s_n=a_\text{lose} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))=O(\epsilon)
 \end{equation}
 \begin{equation}\label{eq:wincase}
-\P(s_n=a_\text{win} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))=\Omega(\epsilon\log\epsilon)
+\P(s_n=a_\text{win} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))=\Omega(-\epsilon\log\epsilon)
 \end{equation}
 \end{propos}
 
@@ -176,8 +177,8 @@ Both \eqref{eq:losecase} and \eqref{eq:wincase} are direct results of Propositio
  where the last equality is by item \ref{m22} in Proposition \ref{prop:trans}.
  This concludes the proof of \eqref{eq:losecase}.
 
- In order to reach $a_\text{win}$ we must have $a_1^r$ following $a_0$, and $a_\text{win}$
-  following $a_1^r$. By \TODO{Fubini}{Should be Fubini's Theorem?} this yields the following formula:
+ In order to reach $a_\text{win}$ from $a_0$, we must have $a_1^r$ following $a_0$, and then $a_\text{win}$
+  following $a_1^r$. By Fubini's Theorem, this yields the following formula:
  \begin{equation}\label{eq:r1}
  \P(s_n=a_\text{win} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))=\ds\int_{\epsilon}^1 f(r) \P(a^r_1\rightarrow a_\text{win}) dr
  \end{equation}
@@ -186,14 +187,93 @@ Both \eqref{eq:losecase} and \eqref{eq:wincase} are direct results of Propositio
  \begin{equation}\label{eq:r2}
  \P(s_n=a_\text{win} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))\ge\ds\int_{2\epsilon}^1 f(r) \P(a^r_1\rightarrow a_\text{win}) dr
  \end{equation}
- Applying items \ref{m24} and \ref{m12} of Proposition \ref{prop:trans} to \eqref{eq:r2}, we get:
+Applying items \ref{m24} and \ref{m12} of Proposition \ref{prop:trans} to \eqref{eq:r2}, we get:
 \begin{equation}\label{eq:r3}
- \P(s_n=a_\text{win} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))\ge \ds\int_{2\epsilon}^1 (\frac{c\epsilon}{r^2}-0.5)r dr = \Omega(\epsilon\log\epsilon)
+ \P(s_n=a_\text{win} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))\ge \ds\int_{2\epsilon}^1 c\epsilon\left(\frac{1}{r^2}-1\right)r\, dr = \Omega(-\epsilon\log\epsilon).
 \end{equation}
 \end{proof}
 
+Proposition \ref{prop:reph} is an immediate consequence of Proposition
+\ref{prop:winlose1}. Indeed, suppose that on time $t_0$ we have
+$e(t_0)=0$, let $t_1>t_0$ be the first time at which $||b(t_1)||_2=1$.
+By Proposition \ref{prop:winlose1} we have
+$$\frac{\P (y(t_1)\neq0)}{\P (y(t_1)=0)}=O\left(-\frac 1 {\log\epsilon}\right).$$
 
-Proposition \ref{prop:winlose1} 
-\FIXME{}{I'm Here}
+\subsection{Results on Integrals}\label{sec:ROI}
+
+The main goal of this subsection is to prove items \ref{m22} - \ref{m24} in Proposition
+ \ref{prop:trans}. In order to understand the proofs of those items and the link
+  between them, we should refer once more to the process described in the
+   beginning of Section \ref{sec:POC}. When one wishes to estimate the
+   transition probabilities from state $a_0$ in our state machine, one
+   actually inquires about the behavior of a complex Brownian motion in
+   the domain $D=\{||x||<1\}\setminus\{|\Re x|>\epsilon,\,\Im y=0\}$. This
+   process terminates when it hits the boundary of the domain. Let us
+   denote such a process $B(t)=(x(t),y(t))$. We will use a conformal
+    map $\phi$ to map $D$ to the unit ball $\{||x||<1\}$ such that
+    under $\phi$ we have $-i \mapsto-i$, $i\mapsto i$ and
+    $\epsilon\mapsto-1$. Since those are three points on the
+     boundary of $D$ they define a unique conformal map from it
+      to the unit disk \TODO{}{write a reference?}. By symmetry
+      this also implies $0\mapsto0$, $-i\mapsto -i$, and
+       $-\epsilon\mapsto1$. The conformal map $\phi$ is
+       illustrated in figure \ref{fig:conf_map}.
+\begin{figure}[htb]
+\begin{center}
+\leavevmode
+\includegraphics{conformal_map.eps}
+\end{center}
+\caption{The conformal map $\phi$ from $D$ to the unit circle}
+\label{fig:conf_map}
+\end{figure}
+
+Our main result of this subsection is:
+\begin{propos}\label{prop:confmain}
+The conformal map above has:
+$$\Re \phi(z) = -\frac{\epsilon}{1+\epsilon^2}\frac{1+z^2}{z},$$
+for $z\in\mathbb{R}$ such that $\epsilon\le|z|\le1$.
+\end{propos}
+\begin{proof}
+The main instrument in our proof is the explicit description of $\phi$.
+We ease this description on the reader, by describing two
+auxiliary functions, $G(z)$ and $H(z)$. We define $G(z)=\frac{1+z}{1-z}$
+and $H(z)=\frac1{g(z)^2+g(-\epsilon)^2}$. We then define
+\begin{equation}\label{eq:functionf}
+\phi(z)=\frac{i\sqrt{H(\epsilon)-H(z)}-\sqrt{H(0)-H(\epsilon)}}{i\sqrt{H(\epsilon)-H(z)}+\sqrt{H(0)-H(\epsilon)}}
+\end{equation}
+\TODO{}{should we show that $\phi(z)$ is indeed the conformal map we are after?}
+We can multiply \eqref{eq:functionf} by its numerator to calculate $\Re \phi(x)$, when $x$ is real. This calculation yields
+\begin{equation}\label{eq:refunctionf}
+\Re \phi(z)=\frac{H(0)-2H(\epsilon)+H(z)}{H(0)-H(T)}
+\end{equation}
+Expanding \eqref{eq:refunctionf}, and using the fact $\epsilon\le |z|\le1$ we get:
+$\Re \phi(z) = -\frac{\epsilon}{1+\epsilon^2}\frac{1+z^2}{z}$ as required.
+\end{proof}
+
+\begin{cor}\label{m22and23true}
+Items \ref{m22} and \ref{m23} in Proposition \ref{prop:trans} are true.
+\end{cor}
+\begin{proof}
+Denote by $u$ the length of each of the two arcs in the unit cycle which are the images of the arcs $1\frown-1$. By Proposition \ref{prop:confmain} we have $\Re \phi(-1)=-\Re \phi(1)=2\frac{\epsilon}{1+\epsilon^2}$. As the length of an arc in a cycle cannot exceed the length of a string leaning on it, we get $u<\frac{4\epsilon}{1+\epsilon^2}<O(\epsilon)$.
+\end{proof}
+
+\begin{cor}\label{m24true}
+Item \ref{m24} in Proposition \ref{prop:trans} is true.
+\end{cor}
+\begin{proof}
+
+In order to prove Item \ref{m24} in Proposition \ref{prop:trans}, we should calculate the length $u$ of the arc between $\phi(-r_0)$ and $\phi(-r_1)$.
+%By Proposition \ref{prop:confmain} we have $\Re\phi(-r_i)=\frac{\epsilon}{1+\epsilon^2}\frac{1+r_i^2}{r_i}$ for $i\in\{0,1\}$.
+%Since $r_0>2\epsilon$,
+%$|\Re\phi(-r_1)-\Re\phi(-r_0)| \frac{\Re \phi (2\epsilon)}{ \sqrt {1-\Re \phi (2\epsilon)^2}} \le u$.
+
+Notice that $\phi(r)$ lies on a semi-circle for $r\in[2\epsilon,1]$, and that the slope of the semicircle is bounded from below (say by $m$) on $\Re\phi([2\epsilon,1])$. This leads to the bound: $|\Re\phi(-r_1)-\Re\phi(-r_0)| m \le u$.
+On the other hand,
+$$|\Re\phi(-r_1)-\Re\phi(-r_0)|=\frac{\epsilon}{1+\epsilon^2}\left|\frac{1+r_1^2}{r_1}-\frac{1+r_0^2}{r_0}\right|\ge\epsilon\left(\frac 1 {r_0} - \frac 1{r_1}-1 \right). $$
+
+\end{proof}
+
+
+
 
 } 
