@@ -87,11 +87,20 @@ $\sampled$ for the random process $t \mapsto \phi_{ts}(x)$\FIXME{}{say
   $\resamplede$ is $\twostripsreservoir$-measurable.
 \end{obs}
 
-We will show that $\resamplede \to \sampled$ in probability as
-$\epsilon \to 0$.  Then we can deduce that $\sampled$ is in fact
-$\twostripsreservoir$-measurable.  Since $\reservoir$ is
+\begin{lemma}
+  $\resamplede \to \sampled$ in probability as $\epsilon \to 0$.
+\end{lemma}
+
+\begin{theorem}
+  $\twostrips = \onestrip$
+\end{theorem}
+
+\begin{proof}
+  \FIXME{$\sampled$ is $twostripreservoir$-measurable}{say why}.
+  Since $\reservoir$ is
 \FIXME{independent of everything}{be precise} this \FIXME{leads to the
   observation}{how?} that $\sampled$ is $\twostrips$-measurable.
 Since random variables of the form $\sampled$ generate
-$\onestrip$ we conclude that $\twostrips = \onestrip$.
+$\onestrip$ the conclusion follows.
+\end{proof}
 }
