@@ -23,7 +23,7 @@ stronger claim:
 For every $t\in[0,1]$ and every $\radiussq>0$ it is true that
 $$\ds \lim_{\epsilon \rightarrow 0}\P\left(\text{either } x(t)=\eeps(t)
 \text{ or } \twonorm{(x(t), \eeps(t))} <\radius\right)=1$$
-Equivalently the two dimensional process $(x(t),\eeps(t)-x(t))$
+Equivalently the two dimensional process $(x(t),\eeps(t))$
 a.s.\ leaves the $\radius$ ball only through
 $(\radius,0)$ or through
 $(-\radius,0)$.
@@ -38,9 +38,9 @@ we delay to Subsection \ref{sec:POC}:
 
 \begin{propos}\label{thm:no-escape}
 Suppose that at time $t_0$ we have
-$e(t_0)=0$, let $t>0$ be the first time at which
-$x(t)^2+\frac{(\eeps(t)-x(t))^2}{2}=1$, then the probability
-that $x(t)=\eeps(t)=\pm1$ is at least $1-O(\frac1{\log\epsilon})$.
+$(x(t_0), \eeps(t_0))=(0,0)$, let $t>0$ be the first time at which
+$\twonorm{(x(t), \eeps(t)}=1$, then the probability
+that $(x(t), \eeps(t))=\pm(\frac{1}{\sqrt2},\frac{1}{\sqrt2})$ is at least $1-O(\frac1{\log\epsilon})$.
 \end{propos}
 
 Applying scaling invariance to this theorem immediately yields the
