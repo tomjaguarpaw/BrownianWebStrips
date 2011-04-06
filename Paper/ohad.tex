@@ -75,16 +75,16 @@ $t_i<t'_i<t_i+1$ such that $x(t'_i)=\pm\radius$. By Proposition
 probability $\sqrt\zeta$ it is true that
 $\sum_{i=1}^k(t_{i+1}-t'_i)\ge\frac{k}{K}$, and thus $k\le K$. If there exists
 $s_i\in (t_i, t'_i)$ for which
-$x(s_i)^2+\frac{(\eeps(s_i)-x(s_i))^2}{2}=\radiussq$ then by the definition of
+$\twonorm{\twodproc{s_i}}=\radius$ then by the definition of
 $t'_i$, $x(s_i)<\radius$. By choosing $\epsilon$ properly in
 Corollary \ref{cor:cor1} this happens with probability at most
 $\sqrt[2K]{\zeta}$. By the independence of the process on the intervals
 $[t_i,t'_i]$ we can multiply those probabilities, getting that the
 probability that there exists any $s\in[0,1]$ for which
-$x(s)^2+(\eeps(s)-x(s))^2=\radiussq$ is less then
+$\twonorm{\twodproc{s}}=\radius$ is less then
 $\sqrt\zeta$. Since those intervals are not intersecting with the
 intervals $(t'_i,t_{i+1})$ we have for the chosen $\epsilon$ $\P(\exists t
-| x(t)^2+(\eeps(t)-x(t))^2=\radiussq, x(t)\neq \radius)<\zeta$
+| \twonorm{\twodproc{t}}=\radius, x(t)\not=\eeps(t))<\zeta$
 for all $t\in(0,1)$.
 \end{proof}
 
