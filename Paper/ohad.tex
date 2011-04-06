@@ -1,13 +1,15 @@
 {
+\newcommand{\eeps}{e_\epsilon}
+
 \section{Suitable title}
 Let $\xi_\epsilon=(X,Y,\epsilon)$ be a couple of $\epsilon$-resampled
-Brownian webs as defined in \FIXME{a earlier section}{definition section come here}. We denoted by $e_\epsilon(t)$ a
+Brownian webs as defined in \FIXME{a earlier section}{definition section come here}. We denoted by $\eeps(t)$ a
 sample of $\xi_\epsilon$ starting at some given point at time
 $0$. $x(t)$ will denote a sample of $X$ starting at the same
 point. Our goal in this section is to prove the following theorem:
 
 \begin{theorem}\label{thm:main1}
-Under the previous notations, $e_\epsilon(1) \to x(1)$ in probability
+Under the previous notations, $\eeps(1) \to x(1)$ in probability
 as $\epsilon \to 0$.
 \end{theorem}
 
@@ -19,9 +21,9 @@ In order to prove this it will be easier to prove the following
 stronger claim:
 \begin{propos}\label{thm:main2}
 For every $t\in[0,1]$ and every $\radiussq>0$ it is true that
-$$\ds \lim_{\epsilon \rightarrow 0}\P\left(\text{either } x(t)=e_\epsilon(t)
-\text{ or } \twonorm{(x(t), e_\epsilon(t))} <\radius\right)=1$$
-Equivalently the two dimensional process $(x(t),e_\epsilon(t)-x(t))$
+$$\ds \lim_{\epsilon \rightarrow 0}\P\left(\text{either } x(t)=\eeps(t)
+\text{ or } \twonorm{(x(t), \eeps(t))} <\radius\right)=1$$
+Equivalently the two dimensional process $(x(t),\eeps(t)-x(t))$
 a.s.\ leaves the $\radius$ ball only through
 $(\radius,0)$ or through
 $(-\radius,0)$.
@@ -37,8 +39,8 @@ we delay to Subsection \ref{sec:POC}:
 \begin{propos}\label{thm:no-escape}
 Suppose that at time $t_0$ we have
 $e(t_0)=0$, let $t>0$ be the first time at which
-$x(t)^2+\frac{(e_\epsilon(t)-x(t))^2}{2}=1$, then the probability
-that $x(t)=e_\epsilon(t)=\pm1$ is at least $1-O(\frac1{\log\epsilon})$.
+$x(t)^2+\frac{(\eeps(t)-x(t))^2}{2}=1$, then the probability
+that $x(t)=\eeps(t)=\pm1$ is at least $1-O(\frac1{\log\epsilon})$.
 \end{propos}
 
 Applying scaling invariance to this theorem immediately yields the
@@ -46,8 +48,8 @@ following corollary:
 \begin{cor}\label{cor:cor1}
 Let $\radiussq>0$ suppose that at time $t_0$ we have $e(t_0)=(0,0)$, let
 $t>0$ be the first time at which
-$x(t)^2+\frac{(e_\epsilon(t)-x(t))^2}{2}=\radiussq$, then the probability
-that $x(t)=e_\epsilon(t)=\pm\radius$ is at least
+$x(t)^2+\frac{(\eeps(t)-x(t))^2}{2}=\radiussq$, then the probability
+that $x(t)=\eeps(t)=\pm\radius$ is at least
 $1-O(\frac{1}{\log\epsilon/\radiussq})$.
 \end{cor}
 
@@ -64,33 +66,33 @@ We are now ready to give a proof to Proposition \ref{thm:main2}.
 
 \begin{proof}[Proof (Proposition \ref{thm:main2})]
 Let $\zeta,\radiussq>0$. We find $\epsilon>0$ such that
-$\P(|e_\epsilon(1)- x(1)|\le\radius)<\zeta$. Let $t_1,...,t_k$ be
+$\P(|\eeps(1)- x(1)|\le\radius)<\zeta$. Let $t_1,...,t_k$ be
 the set of points such that $x(t_i)=0$, and there exists a time
 $t_i<t'_i<t_i+1$ such that $x(t'_i)=\pm\radius$. By Proposition
 \ref{prop:prop1}, there exists $K\in\mathbb{N}$ such that with
 probability $\sqrt\zeta$ it is true that
 $\sum_{i=1}^k(t_{i+1}-t'_i)\ge\frac{k}{K}$, and thus $k\le K$. If there exists
 $s_i\in (t_i, t'_i)$ for which
-$x(s_i)^2+\frac{(e_\epsilon(s_i)-x(s_i))^2}{2}=\radiussq$ then by the definition of
+$x(s_i)^2+\frac{(\eeps(s_i)-x(s_i))^2}{2}=\radiussq$ then by the definition of
 $t'_i$, $x(s_i)<\radius$. By choosing $\epsilon$ properly in
 Corollary \ref{cor:cor1} this happens with probability at most
 $\sqrt[2K]{\zeta}$. By the independence of the process on the intervals
 $[t_i,t'_i]$ we can multiply those probabilities, getting that the
 probability that there exists any $s\in[0,1]$ for which
-$x(s)^2+(e_\epsilon(s)-x(s))^2=\radiussq$ is less then
+$x(s)^2+(\eeps(s)-x(s))^2=\radiussq$ is less then
 $\sqrt\zeta$. Since those intervals are not intersecting with the
 intervals $(t'_i,t_{i+1})$ we have for the chosen $\epsilon$ $\P(\exists t
-| x(t)^2+(e_\epsilon(t)-x(t))^2=\radiussq, x(t)\neq \radius)<\zeta$
+| x(t)^2+(\eeps(t)-x(t))^2=\radiussq, x(t)\neq \radius)<\zeta$
 for all $t\in(0,1)$.
 \end{proof}
 
 \subsection{Proof of convergence}\label{sec:POC}
-%Let $\xi_\epsilon=(X,Y,\epsilon)$ as before. We denoted by $e_\epsilon(t)$ a sample of $\xi_\epsilon$
+%Let $\xi_\epsilon=(X,Y,\epsilon)$ as before. We denoted by $\eeps(t)$ a sample of $\xi_\epsilon$
 %starting at some given point at time $0$. We also denote by $x(t)$ a
 %sample of $X$ starting at the same point.
 In this section we prove Proposition \ref{thm:no-escape}. Our main technical tool in doing so will
 be conformal maps. We begin by introducing a few more definitions: Let
-$y(t)=\frac{e_\epsilon(t)-x(t)}{\sqrt2}$, and let
+$y(t)=\frac{\eeps(t)-x(t)}{\sqrt2}$, and let
 ${b}_\epsilon(t)=(x(t),y(t))$. Sometimes, we will omit the $\epsilon$ writing $b(t)$. We always assume $\epsilon$
 to be sufficiently small. We can now rephrase Proposition
 \ref{thm:no-escape} as:
