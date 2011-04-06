@@ -11,16 +11,19 @@ Under the previous notations, $e_\epsilon(1) \to x(1)$ in probability
 as $\epsilon \to 0$.
 \end{theorem}
 
+\newcommand{\radiussq}{\delta^2}
+\newcommand{\radius}{\delta}
+
 In order to prove this it will be easier to prove the following
 stronger claim:
 \begin{propos}\label{thm:main2}
-For every $t\in[0,1]$ and every $\delta>0$ it is true that
+For every $t\in[0,1]$ and every $\radiussq>0$ it is true that
 $$\ds \lim_{\epsilon \rightarrow 0}\P\left(\text{either } x(t)=e_\epsilon(t)
-\text{ or }x(t)^2+(e_\epsilon(t)-x(t))^2<\delta\right)=1$$
+\text{ or }x(t)^2+(e_\epsilon(t)-x(t))^2<\radiussq\right)=1$$
 Equivalently the two dimensional process $(x(t),e_\epsilon(t)-x(t))$
-a.s.\ leaves the $\sqrt\delta$ ball only through
-$(\sqrt\delta,0)$ or through
-$(-\sqrt\delta,0)$.
+a.s.\ leaves the $\radius$ ball only through
+$(\radius,0)$ or through
+$(-\radius,0)$.
 \end{propos}
 
 One can easily see from the definition of $\epsilon$-resampled
@@ -40,43 +43,43 @@ that $x(t)=e_\epsilon(t)=\pm1$ is at least $1-O(\frac1{\log\epsilon})$.
 Applying scaling invariance to this theorem immediately yields the
 following corollary:
 \begin{cor}\label{cor:cor1}
-Let $\delta>0$ suppose that at time $t_0$ we have $e(t_0)=(0,0)$, let
+Let $\radiussq>0$ suppose that at time $t_0$ we have $e(t_0)=(0,0)$, let
 $t>0$ be the first time at which
-$x(t)^2+\frac{(e_\epsilon(t)-x(t))^2}{2}=\delta$, then the probability
-that $x(t)=e_\epsilon(t)=\pm\sqrt\delta$ is at least
-$1-O(\frac{1}{\log\epsilon/\delta})$.
+$x(t)^2+\frac{(e_\epsilon(t)-x(t))^2}{2}=\radiussq$, then the probability
+that $x(t)=e_\epsilon(t)=\pm\radius$ is at least
+$1-O(\frac{1}{\log\epsilon/\radiussq})$.
 \end{cor}
 
 In order to overcome the gap between Corollary \ref{cor:cor1} and
 Theorem \ref{thm:main1} we present the following property of Brownian
 motion:
 \begin{propos}\label{prop:prop1}
-Let $\delta,\zeta>0$ and let $x(t)$ be a one dimensional Brownian
-motion such that $x(0)=\delta$. There exists some $k$ such that
+Let $\radiussq,\zeta>0$ and let $x(t)$ be a one dimensional Brownian
+motion such that $x(0)=\radiussq$. There exists some $k$ such that
 $\P(\min_t(x(t)=0)<\frac1k)<\zeta$.
 \end{propos}
 
 We are now ready to give a proof to Proposition \ref{thm:main2}.
 
 \begin{proof}[Proof (Proposition \ref{thm:main2})]
-Let $\zeta,\delta>0$. We find $\epsilon>0$ such that
-$\P(|e_\epsilon(1)- x(1)|\le\sqrt\delta)<\zeta$. Let $t_1,...,t_k$ be
+Let $\zeta,\radiussq>0$. We find $\epsilon>0$ such that
+$\P(|e_\epsilon(1)- x(1)|\le\radius)<\zeta$. Let $t_1,...,t_k$ be
 the set of points such that $x(t_i)=0$, and there exists a time
-$t_i<t'_i<t_i+1$ such that $x(t'_i)=\pm\sqrt\delta$. By Proposition
+$t_i<t'_i<t_i+1$ such that $x(t'_i)=\pm\radius$. By Proposition
 \ref{prop:prop1}, there exists $K\in\mathbb{N}$ such that with
 probability $\sqrt\zeta$ it is true that
 $\sum_{i=1}^k(t_{i+1}-t'_i)\ge\frac{k}{K}$, and thus $k\le K$. If there exists
 $s_i\in (t_i, t'_i)$ for which
-$x(s_i)^2+\frac{(e_\epsilon(s_i)-x(s_i))^2}{2}=\delta$ then by the definition of
-$t'_i$, $x(s_i)<\sqrt\delta$. By choosing $\epsilon$ properly in
+$x(s_i)^2+\frac{(e_\epsilon(s_i)-x(s_i))^2}{2}=\radiussq$ then by the definition of
+$t'_i$, $x(s_i)<\radius$. By choosing $\epsilon$ properly in
 Corollary \ref{cor:cor1} this happens with probability at most
 $\sqrt[2K]{\zeta}$. By the independence of the process on the intervals
 $[t_i,t'_i]$ we can multiply those probabilities, getting that the
 probability that there exists any $s\in[0,1]$ for which
-$x(s)^2+(e_\epsilon(s)-x(s))^2=\delta$ is less then
+$x(s)^2+(e_\epsilon(s)-x(s))^2=\radiussq$ is less then
 $\sqrt\zeta$. Since those intervals are not intersecting with the
 intervals $(t'_i,t_{i+1})$ we have for the chosen $\epsilon$ $\P(\exists t
-| x(t)^2+(e_\epsilon(t)-x(t))^2=\delta, x(t)\neq \sqrt \delta)<\zeta$
+| x(t)^2+(e_\epsilon(t)-x(t))^2=\radiussq, x(t)\neq \radius)<\zeta$
 for all $t\in(0,1)$.
 \end{proof}
 
