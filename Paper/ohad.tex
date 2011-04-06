@@ -67,24 +67,26 @@ $\P(\min_t(x(t)=0)<\frac1k)<\zeta$.
 We are now ready to give a proof to Proposition \ref{thm:main2}.
 
 \begin{proof}[Proof (Proposition \ref{thm:main2})]
+\newcommand{\hitradius}[1]{\twonorm{\twodproc{#1}}=\radius}
+
 Let $\zeta,\radius>0$. We find $\epsilon>0$ such that
 $\P(|\eeps(1)- x(1)|\le\radius)<\zeta$. Let $t_1,...,t_k$ be
-the set of points such that $x(t_i)=0$, and there exists a time
-$t_i<t'_i<t_i+1$ such that $x(t'_i)=\pm\radius$. By Proposition
+the set of points such that $\twodproc{t_i}=(0,0)$, and there exists a time
+$t_i<t'_i<t_i+1$ such that $\hitradius{t_i}$. By Proposition
 \ref{prop:prop1}, there exists $K\in\mathbb{N}$ such that with
 probability $\sqrt\zeta$ it is true that
 $\sum_{i=1}^k(t_{i+1}-t'_i)\ge\frac{k}{K}$, and thus $k\le K$. If there exists
 $s_i\in (t_i, t'_i)$ for which
-$\twonorm{\twodproc{s_i}}=\radius$ then by the definition of
+$\hitradius{s_i}$ then by the definition of
 $t'_i$, $x(s_i)<\radius$. By choosing $\epsilon$ properly in
 Corollary \ref{cor:cor1} this happens with probability at most
 $\sqrt[2K]{\zeta}$. By the independence of the process on the intervals
 $[t_i,t'_i]$ we can multiply those probabilities, getting that the
 probability that there exists any $s\in[0,1]$ for which
-$\twonorm{\twodproc{s}}=\radius$ is less then
+$\hitradius{s}$ is less then
 $\sqrt\zeta$. Since those intervals are not intersecting with the
 intervals $(t'_i,t_{i+1})$ we have for the chosen $\epsilon$ $\P(\exists t
-: \twonorm{\twodproc{t}}=\radius, x(t)\not=\eeps(t))<\zeta$
+: \hitradius{t}, x(t)\not=\eeps(t))<\zeta$
 for all $t\in(0,1)$.
 \end{proof}
 
