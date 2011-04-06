@@ -13,13 +13,14 @@ as $\epsilon \to 0$.
 
 \newcommand{\radiussq}{\delta^2}
 \newcommand{\radius}{\delta}
+\newcommand{\twonorm}[1]{||#1||}
 
 In order to prove this it will be easier to prove the following
 stronger claim:
 \begin{propos}\label{thm:main2}
 For every $t\in[0,1]$ and every $\radiussq>0$ it is true that
 $$\ds \lim_{\epsilon \rightarrow 0}\P\left(\text{either } x(t)=e_\epsilon(t)
-\text{ or }x(t)^2+(e_\epsilon(t)-x(t))^2<\radiussq\right)=1$$
+\text{ or } \twonorm{(x(t), e_\epsilon(t))} <\radius\right)=1$$
 Equivalently the two dimensional process $(x(t),e_\epsilon(t)-x(t))$
 a.s.\ leaves the $\radius$ ball only through
 $(\radius,0)$ or through
