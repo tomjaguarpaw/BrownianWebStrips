@@ -40,7 +40,7 @@ we delay to Subsection \ref{sec:POC}:
 
 \begin{propos}\label{thm:no-escape}
 Suppose that at time $t_0$ we have
-$(\twodproc{t_0})=(0,0)$, let $t>0$ be the first time at which
+$\twodproc{t_0}=(0,0)$, let $t>0$ be the first time at which
 $\twonorm{\twodproc{t}}=1$, then the probability
 that $\twodproc{t} =\pm(\frac{1}{\sqrt2},\frac{1}{\sqrt2})$ is at least $1-O(\frac1{\log\epsilon})$.
 \end{propos}
@@ -48,10 +48,10 @@ that $\twodproc{t} =\pm(\frac{1}{\sqrt2},\frac{1}{\sqrt2})$ is at least $1-O(\fr
 Applying scaling invariance to this theorem immediately yields the
 following corollary:
 \begin{cor}\label{cor:cor1}
-Let $\radius>0$ suppose that at time $t_0$ we have $e(t_0)=(0,0)$, let
+Let $\radius>0$ suppose that at time $t_0$ we have $\twodproc{t_0}=(0,0)$, let
 $t>0$ be the first time at which
-$x(t)^2+\frac{(\eeps(t)-x(t))^2}{2}=\radiussq$, then the probability
-that $x(t)=\eeps(t)=\pm\radius$ is at least
+$\twonorm{\twodproc{t}} = \radius$, then the probability
+that $\twodproc{t} =\pm(\frac{\radius}{\sqrt2},\frac{\radius}{\sqrt2})$ is at least
 $1-O(\frac{1}{\log\epsilon/\radiussq})$.
 \end{cor}
 
@@ -60,7 +60,7 @@ Theorem \ref{thm:main1} we present the following property of Brownian
 motion:
 \begin{propos}\label{prop:prop1}
 Let $\radius,\zeta>0$ and let $x(t)$ be a one dimensional Brownian
-motion such that $x(0)=\radiussq$. There exists some $k$ such that
+motion such that $x(0)=\radius$. There exists some $k$ such that
 $\P(\min_t(x(t)=0)<\frac1k)<\zeta$.
 \end{propos}
 
