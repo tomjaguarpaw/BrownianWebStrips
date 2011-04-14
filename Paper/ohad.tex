@@ -261,13 +261,13 @@ Expanding \eqref{eq:refunctionf}, and using the fact $\epsilon\le |z|\le1$ we ge
 $\Re \phi(z) = -\frac{\epsilon}{1+\epsilon^2}\frac{1+z^2}{z}$ as required.
 \end{proof}
 
+The next couple of Corollaries will establish the unresolved parts of Proposition \ref{prop:trans}. Both will use the fact a brownian motion has radial symmetry in the plane and thus its chance of leaving a circle through some arc is proportional to its length.
+
 \begin{cor}\label{m22and23true}
 Items \ref{m22} and \ref{m23} in Proposition \ref{prop:trans} are true.
 \end{cor}
 \begin{proof}
-Denote by $u$ the length of each of the two arcs in the unit circle which are the images of the arcs $1\frown-1$. By Proposition \ref{prop:confmain} we have $\Re \phi(-1)=-\Re \phi(1)=2\frac{\epsilon}{1+\epsilon^2}$. As the length of an arc in a circle cannot exceed the length of a string leaning on it, we get $u<\frac{4\epsilon}{1+\epsilon^2}<O(\epsilon)$.
-
-\FIXME{}{This inequality is the wrong way round}
+Denote by $u$ the length of each of the two arcs in the unit circle which are the images of the arcs $1\frown-1$. By Proposition \ref{prop:confmain} we have $\Re \phi(-1)=-\Re \phi(1)=2\frac{\epsilon}{1+\epsilon^2}$. As the length of an arc in a semicircle cannot exceed $\pi$ times the length of a string leaning on it, we get $u<\frac{4\pi\epsilon}{1+\epsilon^2}<O(\epsilon)$.
 \end{proof}
 
 \begin{cor}\label{m24true}
@@ -289,4 +289,4 @@ $$|\Re\phi(-r_1)-\Re\phi(-r_0)|=\frac{\epsilon}{1+\epsilon^2}\left|\frac{1+r_1^2
 
 
 
-} 
+}
