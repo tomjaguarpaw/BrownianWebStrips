@@ -25,10 +25,8 @@ stronger claim:
 For every $t\in[0,1]$ and every $\radiussq>0$ it is true that
 $$\ds \lim_{\epsilon \rightarrow 0}\P\left(\text{either } x(t)=\eeps(t)
 \text{ or } \twonorm{\twodproc{t}} <\radius\right)=1$$
-Equivalently the two dimensional process $(\twodproc{t})$
-a.s.\ leaves the $\radius$ ball only through
-$(\radius,0)$ or through
-$(-\radius,0)$.
+Equivalently the two dimensional process $\twodproc{t}$
+a.s.\ leaves the $\radius$ ball only through $(\frac{\radius}{\sqrt2},\frac{\radius}{\sqrt2})$ or through $-(\frac{\radius}{\sqrt2},\frac{\radius}{\sqrt2})$.
 \end{propos}
 
 One can easily see from the definition of $\epsilon$-resampled
@@ -56,12 +54,12 @@ $1-O(\frac{1}{\log\epsilon/\radiussq})$.
 \end{cor}
 
 In order to overcome the gap between Corollary \ref{cor:cor1} and
-Theorem \ref{thm:main1} we present the following property of Brownian
+Theorem \ref{thm:main1} we quote without proof the following property of Brownian
 motion:
 \begin{propos}\label{prop:prop1}
-Let $\radius,\zeta>0$ and let $x(t)$ be a one dimensional Brownian
-motion such that $x(0)=\radius$. There exists some $k$ such that
-$\P(\min_t(x(t)=0)<\frac1k)<\zeta$.
+Let $\zeta>0$ and let $x(t)$ be a one dimensional Brownian
+motion such that $x(0)=0$. There exist some $k$ such that
+$\P(\ds\sup_{t\in[0,1]}x(t)>k) <\zeta$.
 \end{propos}
 
 We are now ready to give a proof to Proposition \ref{thm:main2}.
@@ -69,26 +67,35 @@ We are now ready to give a proof to Proposition \ref{thm:main2}.
 \begin{proof}[Proof (Proposition \ref{thm:main2})]
 \newcommand{\hitradius}[1]{\twonorm{\twodproc{#1}}=\radius}
 
-Let $\zeta,\radius>0$. We find $\epsilon>0$ such that
-$\P(|\eeps(1)- x(1)|\le\radius)<\zeta$. Let $t_1,...,t_k$ be
-the largest set of points such that $\twodproc{t_i}=(0,0)$, and there exists a time
-$t_i<t'_i<t_i+1$ such that $\epsilon$ $\P(\exists t
-: \hitradius{t}, x(t)\not=\eeps(t))<\zeta$. By Proposition
-\ref{prop:prop1}, there exists $K\in\mathbb{N}$ such that with
-probability $\sqrt\zeta$ it is true that
-$\sum_{i=1}^k(t_{i+1}-t'_i)\ge\frac{k}{K}$, and thus $k\le K$. If there exists
-$s_i\in (t_i, t'_i)$ for which
-$\hitradius{s_i}$ then by the definition of
-$t'_i$, $x(s_i)<\radius$. By choosing $\epsilon$ properly in
-Corollary \ref{cor:cor1} this happens with probability at most
-$\sqrt[2K]{\zeta}$. By the independence of the process on the intervals
-$[t_i,t'_i]$ we can multiply those probabilities, getting that the
-probability that there exists any $s\in[0,1]$ for which
-$\hitradius{s}$ is less then
-$\sqrt\zeta$. Since those intervals are not intersecting with the
-intervals $(t'_i,t_{i+1})$ we have for the chosen $\epsilon$ $\P(\exists t
-: \hitradius{t}, x(t)\not=\eeps(t))<\zeta$
-for all $t\in(0,1)$.
+Let us think of $b(t)=\twodproc{t}$ as a process which dies if ever $x(t)\neq\eeps(t)
+\text{ or } \twonorm{\twodproc{t}} = \radius$.
+
+We define a one-dimensional "$\radius$-Teleporting" Brownian motion: $x^{\radius}(t)$
+ as a browning motion such that whenever it hits $0$ it teleports to $\frac1{\sqrt{2}}\radius$.
+Proposition \ref{prop:prop1} implies that for all $\zeta>0$ there exists a $k$ such that the probability
+ $x^{\radius}(t)$ teleported more then $k$ times between times $0$ and $1$ is less then $\zeta$. Let $x^{\radius}(t)$ be such a teleporting Brownian motion, and let 
+ $d_i(t)=\twodproc{t}_i$ be an infinite sequence
+ of independent random walks identical in distribution to $b{t}$, starting from $(0,0)$, such that each
+ of them dies when $\twonorm{\twodproc{t}} = \radius$. We can now couple $b(t)$ with the set $\{x^\radius(t)\}\ds\bigcup_{i=1}^\infty\{d_i(t)\}$ in the following way:
+
+Set $t_0=0$. We begin by coupling $d_1(t)$ with $b(t)$ until $d_1(t)$ terminates at 
+time $t'_0$, if $x(t'_0)\neq\eeps(t'_0)$ then $b(t)$ terminates as well, otherwise
+ if $x(t_0)=\frac1{\sqrt{2}}\radius$ we couple $b(t)$ with $(\frac{x^\radius(t-t'_0+t_0)}{\sqrt{2}},\frac{x^\radius(t-t'_0+t_0)}{\sqrt{2}})$,
+  and if $x(t_0)=-\radius$ we couple $b(t)$ with $-(\frac{x^\radius(t-t'_0+t_0)}{\sqrt{2}},\frac{x^\radius(t-t'_0+t_0)}{\sqrt{2}})$.
+ This continues until time $t_1$, the first to satisfy $b(t_1)=(0,0)$ after $t'_0$, 
+ at which we couple $b(t)$ with $d_2(t-t_1)$, and so on and so forth.
+
+Let us look at the event that $x^\radius(t)$ have teleported at most $k$ times by time $1$.
+ By proposition \ref{prop:prop1} we can pick $k$ such that this probability will be as small 
+ as we want. The events that $d_i$ for $i\le k$ terminated on a point such that $x=\eeps$ 
+ are independent and by corollary \ref{cor:cor1} can be made as small as we want. However
+  if both events do no occur - the coupling insures us that by time $t=1$ the two
+   dimensional process $b(t)$
+leaves the $\radius$ ball only through
+$\frac1{\sqrt2}(\radius,\radius)$ or through
+$\frac1{\sqrt2}(-\radius,-\radius)$. We deduce that the two dimensional process $b(t)=\twodproc{t}$
+a.s.\ leaves the $\radius$ ball only through $(\frac{\radius}{\sqrt2},\frac{\radius}{\sqrt2})$ or through $-(\frac{\radius}{\sqrt2},\frac{\radius}{\sqrt2})$
+
 \end{proof}
 
 \subsection{Proof of convergence}\label{sec:POC}
@@ -261,7 +268,7 @@ Expanding \eqref{eq:refunctionf}, and using the fact $\epsilon\le |z|\le1$ we ge
 $\Re \phi(z) = -\frac{\epsilon}{1+\epsilon^2}\frac{1+z^2}{z}$ as required.
 \end{proof}
 
-The next couple of Corollaries will establish the unresolved parts of Proposition \ref{prop:trans}. Both will use the fact a brownian motion has radial symmetry in the plane and thus its chance of leaving a circle through some arc is proportional to its length.
+The next couple of Corollaries will establish the unresolved parts of Proposition \ref{prop:trans}. Both will use the fact a Brownian motion has radial symmetry in the plane and thus its chance of leaving a circle through some arc is proportional to its length.
 
 \begin{cor}\label{m22and23true}
 Items \ref{m22} and \ref{m23} in Proposition \ref{prop:trans} are true.
