@@ -71,11 +71,11 @@ Let us think of $b(t)=\twodproc{t}$ as a process which dies if ever $x(t)\neq\ee
 \text{ or } \twonorm{\twodproc{t}} = \radius$.
 
 We define a one-dimensional "$\radius$-Teleporting" Brownian motion: $x^{\radius}(t)$
- as a browning motion such that whenever it hits $0$ it teleports to $\frac1{\sqrt{2}}\radius$.
+ as a Brownian motion such that whenever it hits $0$ it teleports to $\frac1{\sqrt{2}}\radius$.
 Proposition \ref{prop:prop1} implies that for all $\zeta>0$ there exists a $k$ such that the probability
- $x^{\radius}(t)$ teleported more then $k$ times between times $0$ and $1$ is less then $\zeta$. Let $x^{\radius}(t)$ be such a teleporting Brownian motion, and let 
+that $x^{\radius}(t)$ is teleported more then $k$ times between times $0$ and $1$ is less then $\zeta$. Let $x^{\radius}(t)$ be such a teleporting Brownian motion, and let
  $d_i(t)=\twodproc{t}_i$ be an infinite sequence
- of independent random walks identical in distribution to $b{t}$, starting from $(0,0)$, such that each
+ of independent random walks identical in distribution to $b(t)$, starting from $(0,0)$, such that each
  of them dies when $\twonorm{\twodproc{t}} = \radius$. We can now couple $b(t)$ with the set $\{x^\radius(t)\}\ds\bigcup_{i=1}^\infty\{d_i(t)\}$ in the following way:
 
 Set $t_0=0$. We begin by coupling $d_1(t)$ with $b(t)$ until $d_1(t)$ terminates at 
@@ -85,16 +85,16 @@ time $t'_0$, if $x(t'_0)\neq\eeps(t'_0)$ then $b(t)$ terminates as well, otherwi
  This continues until time $t_1$, the first to satisfy $b(t_1)=(0,0)$ after $t'_0$, 
  at which we couple $b(t)$ with $d_2(t-t_1)$, and so on and so forth.
 
-Let us look at the event that $x^\radius(t)$ have teleported at most $k$ times by time $1$.
- By proposition \ref{prop:prop1} we can pick $k$ such that this probability will be as small 
+Let us look at the event that $x^\radius(t)$ has teleported at most $k$ times by time $1$.
+ By Proposition \ref{prop:prop1} we can pick $k$ such that this probability will be as small 
  as we want. The events that $d_i$ for $i\le k$ terminated on a point such that $x=\eeps$ 
- are independent and by corollary \ref{cor:cor1} can be made as small as we want. However
-  if both events do no occur - the coupling insures us that by time $t=1$ the two
+ are independent and by Corollary \ref{cor:cor1} can be made as small as we want. However
+  if both events do not occur - the coupling insures us that by time $t=1$ the two
    dimensional process $b(t)$
 leaves the $\radius$ ball only through
 $\frac1{\sqrt2}(\radius,\radius)$ or through
 $\frac1{\sqrt2}(-\radius,-\radius)$. We deduce that the two dimensional process $b(t)=\twodproc{t}$
-a.s.\ leaves the $\radius$ ball only through $(\frac{\radius}{\sqrt2},\frac{\radius}{\sqrt2})$ or through $-(\frac{\radius}{\sqrt2},\frac{\radius}{\sqrt2})$
+a.s.\ leaves the $\radius$ ball only through $(\frac{\radius}{\sqrt2},\frac{\radius}{\sqrt2})$ or through $-(\frac{\radius}{\sqrt2},\frac{\radius}{\sqrt2})$.
 
 \end{proof}
 
