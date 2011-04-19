@@ -1,0 +1,54 @@
+{
+  \section{Tom's versions of some results}
+
+  Let $X$ be the process which is a two-dimensional Brownian motion,
+  absorbed on the line $x = y$ when $x = y \ge \epsilon$ and released
+  when $x = y = 0$.
+
+  \newcommand{\radius}{\delta}
+
+  We'd like to show that $X_1$ is within $\radius$ of the line with
+  high probability.  In fact we will show that for all $t \in [0,1]$
+  $X_t$ is within $\radius$ of the line with high probability.
+
+  \newcommand{\twonorm}[1]{\|#1\|}
+
+  Let $0 = S_0 > T_1 > S_1 > T_2 > S_2 > T_3 > S_3, \ldots$ be the
+  largest collection of stopping times such that $X_{S_i} = 0$ and
+  $\twonorm{X_{T_i}} = \radius$.
+
+  Then there are exactly $k$ escapes-and-returns-to-$0$ by time $S_k$.
+
+  Consider the probability of the event
+  \[
+  \text{Until time $S_k$ all the escapes are through the line, and
+    $S_k \ge 1$}
+  \]
+  This is no smaller than the probability for the event
+  \[
+  \text{Until time $S_k$ all the escapes are through the line, and
+    $\sum_{i=1}^k S_i - T_i \ge 1$}
+  \]
+  which is 
+  \begin{multline*}
+  \P\left(\sum_{i=1}^k S_i - T_i \ge 1 | \text{Until time $S_k$ all
+    the escapces are through the line} \right) \\ \cdot \P(\text{Until time
+      $S_k$ all the escapces are through the line})
+  \end{multline*}
+  which is
+  \begin{multline*}
+  \P(\text{Time for BM to go from $0$ to $k\radius \ge 1$})
+  \\ \cdot \P(\text{A particular launch escapes through the
+    line})^k
+  \end{multline*}
+  This is then a lower bound for the probability of
+  \[
+  \text{By time $1$ all the escapes are through the line}
+  \]
+  (this one is (a bit stronger than) what we want for Proposition
+  \ref{thm:main2}) which itself is a lower bound for the probability
+  of
+  \[
+  \text{At all times $t \in [0,1]$, $X_t$ is within $\radius$ of the line}
+  \]
+}
