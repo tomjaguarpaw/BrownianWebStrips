@@ -72,15 +72,24 @@ $\sampled$ for the random process $t \mapsto \phi_{ts}(x)$\FIXME{}{say
 \end{obs}
 
 \begin{definition}
+  \newcommand{\webt}{\psi}
+
   We define $\resamplede$, a ``perturbed'' version of $\sampled$, as
-  follows.  Starting from time $t = s$, follow the path $\sampled$
-  until it hits $0$.  (This part of the process is
-  $\twostrips$-measurable).  Given $\reservoir$, an additional
-  \TODO{reservoir}{what's the right word for this?} of independent
-  randomness, launch a $\reservoir$-measurable Brownian motion until
-  it meets $\sampled$ outside the strip $\R \cross (-\epsilon,
-  \epsilon)$.  Then it joins $\sampled$ again until it reaches $0$ and
-  this process repeats indefinitely.
+  follows.
+
+  Let $\webt$ be a Brownian web independent of $\phi$ (measurable with
+  respect to $\reservoir$, say, where $\reservoir$ is independent of
+  $\commafactor{-\infty}{\infty}$).
+
+  \begin{itemize}
+  \item Starting from time $s$, follow the path $\phi_{\cdot s}(x)$
+    until it hits $0$, at time $S_1$, say.
+  \item Then follow $\webt_{\cdot S_1}(0)$ until it hits $\pm \epsilon$, at
+    time $T_1$, say.
+  \item Then follow $\phi_{\cdot T_1}(\pm \epsilon)$ until it hits $0$, at
+    time $S_2$, say.
+  \item Continue indefinitely in this inductive fashion.
+  \end{itemize}
 \end{definition}
 
 \begin{obs}
