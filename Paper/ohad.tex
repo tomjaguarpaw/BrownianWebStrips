@@ -120,7 +120,7 @@ We can now rephrase Proposition
 Suppose that at time $t_0$ we have
 ${b}(t_0)=(0,0)$, let $t_1>0$ be the first time at which
 $||b(t_1)||_2=1$, then the probability that $b(t_1)\neq \pm(1,0)$ is
-$O\left(-\frac1{\log\epsilon}\right)$.
+$O\left(\frac1{\log\epsilon}\right)$.
 \end{propos}
 
 We define the following indicator function
@@ -189,7 +189,7 @@ Let $s_1=a_0,...,s_n$ be the sequence of states of our state machine.
 \P(s_n=a_\text{lose} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))=O(\epsilon)
 \end{equation}
 \begin{equation}\label{eq:wincase}
-\P(s_n=a_\text{win} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))=\Omega(-\epsilon\log\epsilon)
+\P(s_n=a_\text{win} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))=\Omega(\epsilon\log\epsilon)
 \end{equation}
 \end{propos}
 
@@ -214,7 +214,7 @@ Both \eqref{eq:losecase} and \eqref{eq:wincase} are direct results of Propositio
  \end{equation}
 Applying items \ref{m24} and \ref{m12} of Proposition \ref{prop:trans} to \eqref{eq:r2}, we get:
 \begin{equation}\label{eq:r3}
- \P(s_n=a_\text{win} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))\ge \ds\int_{2\epsilon}^1 c\epsilon\left(\frac{1}{r^2}-1\right)r\, dr = \Omega(-\epsilon\log\epsilon).
+ \P(s_n=a_\text{win} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))\ge \ds\int_{2\epsilon}^1 c\epsilon\left(\frac{1}{r^2}-1\right)r\, dr = \Omega(\epsilon\log\epsilon).
 \end{equation}
 \end{proof}
 
@@ -222,7 +222,7 @@ Proposition \ref{prop:reph} is an immediate consequence of Proposition
 \ref{prop:winlose1}. Indeed, suppose that at time $t_0$ we have
 $e(t_0)=0$, let $t_1>t_0$ be the first time at which $||b(t_1)||_2=1$.
 By Proposition \ref{prop:winlose1} we have
-$$\frac{\P (y(t_1)\neq0)}{\P (y(t_1)=0)}=O\left(-\frac 1 {\log\epsilon}\right).$$
+$$\frac{\P (y(t_1)\neq0)}{\P (y(t_1)=0)}=O\left(\frac 1 {\log\epsilon}\right).$$
 }
 
 \subsection{Results on Integrals}\label{sec:ROI}
