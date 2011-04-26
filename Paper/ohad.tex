@@ -124,19 +124,20 @@ $O\left(\frac1{\log\epsilon}\right)$.
 \end{propos}
 
 We define the following indicator function
-\[A(t):= (b(t) \text{ is on the x axis and its x component has modulus
+\newcommand{\online}[1]{A(#1)}
+\[\online{t} := (b(t) \text{ is on the x axis and its x component has modulus
 } > \epsilon)\]
-Note that whenever $A(t)=1$,
+Note that whenever $\online{t}=1$,
 we can regard $b(t)$ as a one dimensional Brownian motion on the
-$x$-axis, while whenever $A(t)=0$ we can regard it as a two
+$x$-axis, while whenever $\online{t}=0$ we can regard it as a two
 dimensional Brownian motion. We can now treat the sampled
 process $b_\epsilon(t)$ as a state machine with $4$ states
 $a_0,a^r_1,a_{\text{win}},a_{\text{lose}}$, one of which ($a^r_1$) has a parameter $r$.
 
 The states are defined in the following way:
 \begin{enumerate}
-\item\label{n1} $b_\epsilon(t)$ is in state $a_0$ whenever $A(t)=0$.
-\item\label{n2} $b_\epsilon(t)$ is in state $a^r_1$ whenever $A(t)=1$ and $|x(\sup_{s<t}(A(s)=0))|=r$.
+\item\label{n1} $b_\epsilon(t)$ is in state $a_0$ whenever $\online{t}=0$.
+\item\label{n2} $b_\epsilon(t)$ is in state $a^r_1$ whenever $\online{t}=1$ and $|x(\sup_{s<t}(\online{s}=0))|=r$.
 \item\label{n3} $b_\epsilon(t)$ is in state $a_\text{win}$ whenever $b_\epsilon(t)=(1,0)$.
 \item\label{n4} $b_\epsilon(t)$ is in state $a_\text{lose}$ whenever $b_\epsilon(t)\neq(1,0)$ yet $||e(t)||_2=1$.
 \end{enumerate}
