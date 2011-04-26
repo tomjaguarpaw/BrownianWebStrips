@@ -24,7 +24,7 @@ For every $t\in[0,1]$ and every $\radius>0$
 $$\ds \lim_{\epsilon \rightarrow 0}\P\left(\text{either } x(t)=\eeps(t)
 \text{ or } \twonorm{\twodproc{t}} <\radius\right)=1$$
 Equivalently, until time $1$, the two dimensional process $\twodproc{t}$
-leaves the $\radius$ ball only through $(\frac{\radius}{\sqrt2},\frac{\radius}{\sqrt2})$ or through $-(\frac{\radius}{\sqrt2},\frac{\radius}{\sqrt2})$, with high probability.
+leaves the $\radius$ disc only through $(\frac{\radius}{\sqrt2},\frac{\radius}{\sqrt2})$ or through $-(\frac{\radius}{\sqrt2},\frac{\radius}{\sqrt2})$, with high probability.
 \FIXME{}{I'm not completely comfortable with this equivalent
   definition.  It's informal, though it has a formal counterpart, and
   it doesn't seem immediate that the formal counterpart is equivalent
@@ -89,10 +89,10 @@ Let us look at the event that $x^\radius(t)$ has teleported at most $k$ times by
  are independent and by Corollary \ref{cor:cor1} can be made as small as we want. However
   if both events do not occur - the coupling insures us that by time $t=1$ the two
    dimensional process $b(t)$
-leaves the $\radius$ ball only through
+leaves the $\radius$ disc only through
 $\frac1{\sqrt2}(\radius,\radius)$ or through
 $\frac1{\sqrt2}(-\radius,-\radius)$. We deduce that the two dimensional process $b(t)=\twodproc{t}$
-a.s.\ leaves the $\radius$ ball only through $(\frac{\radius}{\sqrt2},\frac{\radius}{\sqrt2})$ or through $-(\frac{\radius}{\sqrt2},\frac{\radius}{\sqrt2})$.
+a.s.\ leaves the $\radius$ disc only through $(\frac{\radius}{\sqrt2},\frac{\radius}{\sqrt2})$ or through $-(\frac{\radius}{\sqrt2},\frac{\radius}{\sqrt2})$.
 
 \end{proof}
 
@@ -241,7 +241,7 @@ The main goal of this subsection is to prove items \ref{m22} - \ref{m24} in Prop
    the domain $D=\{|z|<1\}\setminus\{|\Re z|\ge\epsilon,\,\Im z=0\}$. This
    process terminates when it hits the boundary of the domain. Let us
    denote such a process $B(t)=(x(t),y(t))$. We will use a conformal
-    map $\phi$ to map $D$ to the unit ball $\{||x||<1\}$ such that
+    map $\phi$ to map $D$ to the unit disc $\{||x||<1\}$ such that
     under $\phi$ we have $-i \mapsto-i$, $i\mapsto i$ and
     $\epsilon\mapsto-1$. Since those are three points on the
      boundary of $D$ they define a unique conformal map from it
