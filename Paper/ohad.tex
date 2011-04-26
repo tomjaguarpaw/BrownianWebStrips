@@ -2,12 +2,10 @@
 \newcommand{\eeps}{e_\epsilon}
 
 \section{Suitable title}
-Let $\xi_\epsilon=(X,Y,\epsilon)$ be a couple of $\epsilon$-resampled
-Brownian webs as defined in \FIXME{a earlier section}{definition section come here}. We denoted by $\eeps(t)$ a
-sample of $\xi_\epsilon$ starting at some given point at time
-$0$. $x(t)$ will denote a sample of $X$ starting at the same
-point. Our goal in this section is to prove the following theorem:
+Let $(x, \eeps)$ be a pair with distribution the same as the two
+dimensional process from Observation \ref{obs:2d-proc}.
 
+Our goal in this section is to prove the following theorem:
 \begin{theorem}\label{thm:main1}
 Under the previous notations, $\eeps(1) \to x(1)$ in probability
 as $\epsilon \to 0$.
@@ -102,6 +100,7 @@ a.s.\ leaves the $\radius$ ball only through $(\frac{\radius}{\sqrt2},\frac{\rad
 %Let $\xi_\epsilon=(X,Y,\epsilon)$ as before. We denoted by $\eeps(t)$ a sample of $\xi_\epsilon$
 %starting at some given point at time $0$. We also denote by $x(t)$ a
 %sample of $X$ starting at the same point.
+%NB: \xi no longer exists above -- Tom
 In this section we prove Proposition \ref{thm:no-escape}. Our main technical tool in doing so will
 be conformal maps. We begin by introducing a few more definitions: Let
 $y(t)=\frac{\eeps(t)-x(t)}{\sqrt2}$, and let
