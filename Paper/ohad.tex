@@ -169,7 +169,7 @@ The following is the transition probability of the state machine described above
 \item\label{m21} $\P(a_0\rightarrow a_\text{win})=0$
 \item\label{m22} $\P(a_0\rightarrow a_\text{lose})=O(\epsilon)$
 \item\label{m23} $\P(a_0\rightarrow a^r_1 \text{ for some }r)=1-O(\epsilon)$
-\item\label{m24} $\P(a_0\rightarrow a^r_1 \text{ such that } r_0<r<r_1)>\ds c\epsilon\left(\frac 1 {r_0}-\frac 1 {r_1}-1\right)$ for $r_0>2\epsilon$.
+\item\label{m24} $\P(a_0\rightarrow a^r_1 \text{ such that } r_0 \le r \le r_1) \ge \frac{\epsilon}{2} \int_{r_0}^{r_1} \left(\frac{1}{r^2}-1\right) dr$.
 %$\P(a_0\rightarrow a^r_1 \text{ such that } r_0<r<r_1)>\ds\int_{r_0}^{r_1}(\frac{c\epsilon}{r^2}-0.5)dr$ for $r_0>2\epsilon$
 \end{enumerate}
 $a_\text{win}$ and $a_\text{lose}$ are trap states which are assigned no transition function.
@@ -213,13 +213,10 @@ Both \eqref{eq:losecase} and \eqref{eq:wincase} are direct results of Propositio
  \P(s_n=a_\text{win} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))=\ds\int_{\epsilon}^1 f(r) \P(a^r_1\rightarrow a_\text{win}) dr
  \end{equation}
  Where $f(r)$ is the density of the random variable $r$ which gets $r$ when
- $a_0\rightarrow a^r_1$ and $0$ otherwise. Since the density of a random variable is non-negative, we get:
- \begin{equation}\label{eq:r2}
- \P(s_n=a_\text{win} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))\ge\ds\int_{2\epsilon}^1 f(r) \P(a^r_1\rightarrow a_\text{win}) dr
- \end{equation}
-Applying items \ref{m24} and \ref{m12} of Proposition \ref{prop:trans} to \eqref{eq:r2}, we get:
+ $a_0\rightarrow a^r_1$ and $0$ otherwise.
+ Applying items \ref{m24} and \ref{m12} of Proposition \ref{prop:trans} to \eqref{eq:r2}, we get:
 \begin{equation}\label{eq:r3}
- \P(s_n=a_\text{win} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))\ge \ds\int_{2\epsilon}^1 c\epsilon\left(\frac{1}{r^2}-1\right)r\, dr = \Omega(\epsilon\log\epsilon).
+ \P(s_n=a_\text{win} \text{ and } \ds\forall_{i>1}(s_i\neq a_0))\ge \frac{\epsilon}{2} \int_{\epsilon}^{1} \left(\frac{1}{r^2}-1\right) r \, dr = \Omega(\epsilon\log\epsilon).
 \end{equation}
 \end{proof}
 
@@ -307,22 +304,12 @@ In order to prove Item \ref{m24} in Proposition \ref{prop:trans}, we should calc
 %Since $r_0>2\epsilon$,
 %$|\Re\phi(-r_1)-\Re\phi(-r_0)| \frac{\Re \phi (2\epsilon)}{ \sqrt {1-\Re \phi (2\epsilon)^2}} \le u$.
 
-Notice that $\phi(r)$ lies on a semi-circle for $r\in[2\epsilon,1]$,
-and that the slope of the semicircle is bounded from below (say by
-$m$) on $\Re\phi([2\epsilon,1])$. This leads to the bound:
-$|\Re\phi(-r_1)-\Re\phi(-r_0)| m \le u$.
+Note the bound:
+$0 \le \Re\phi(-r_1)-\Re\phi(-r_0) \le u$.
 On the other hand,
-\[|\Re\phi(-r_1)-\Re\phi(-r_0)|
+\[\Re\phi(-r_1)-\Re\phi(-r_0)
 =
-\frac{\epsilon}{1+\epsilon^2}\left|\frac{1+r_1^2}{r_1}-\frac{1+r_0^2}{r_0}\right|
-\ge\epsilon\left(\frac1 {r_0} - \frac 1{r_1}-1 \right).\]
-
-\FIXME{}{I don't get what this is all about.  Firstly, it's not a
-  semi-circle, it's an arc, and secondly, any estimates on the slope
-  of the arc seem unnecessary.  You can immediately get that
-  $|\Re\phi(-r_1)-\Re\phi(-r_0)| \le u$ -- Tom}
-
-\TODO{}{It's a bit strange that you've chosen a lower bound that can
-  be negative, but if it works, it works -- Tom}
+\frac{\epsilon}{1+\epsilon^2}\left(\frac{1+r_1^2}{r_1}-\frac{1+r_0^2}{r_0}\right)
+\ge\frac{\epsilon}{2} \int_{r_0}^{r_1} \left(\frac{1}{r^2}-1\right) dr.\]
 \end{proof}
 }
