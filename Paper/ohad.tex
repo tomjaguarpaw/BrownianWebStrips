@@ -317,4 +317,69 @@ On the other hand,
 \frac{\epsilon}{1+\epsilon^2}\left(\frac{1+r_1^2}{r_1}-\frac{1+r_0^2}{r_0}\right)
 \ge\frac{\epsilon}{2} \int_{r_0}^{r_1} \left(\frac{1}{r^2}-1\right) dr.\]
 \end{proof}
+\section{Reflection part}
+One difficulty with the two dimensional process $b(t)$ from
+Observation \ref{obs:2d-proc} it that its behavior when it
+ reaches a point of the form $(x_0,x_0)$ for $|x_0|<\epsilon$
+ (i.e. whether it continues as a one-dimensional BM or as a
+  two-dimensional one) depends on the past in a complex way. We therefore define a
+different process $b'(t)$ as a similar two dimensional process which
+starts from $(0,0)$, terminates when $\twonorm{b'(t)}=1$, but,
+unlike $b(t)$, becomes one dimensional only when it hits a point of
+the form $(x_0,x_0)$ for $|x_0|\ge\epsilon$.
+
+The relation between $b(t)$ and $b'(t)$ is described through the
+following proposition:
+\begin{propos}\label{prop:refprop}
+the probability that $b(t)$ terminates at
+$\pm(\frac{1}{\sqrt2},\frac{1}{\sqrt2})$ is greater or equal to the
+probability that $b'(t)$ terminates at
+$\pm(\frac{1}{\sqrt2},\frac{1}{\sqrt2})$.
+\end{propos}
+
+\begin{proof}
+Let us introduce a coupling from $b'(t)$ to $b(t)$ in the following
+way. We define 3 states of the coupling.
+\begin{enumerate}
+\item \label{cp:together} We say that $b(t)$ on the time interval $[t_0,t_0+\Delta]$ is
+state-1 coupled with $b'(t)$ on the interval $[t_1,t_1+\Delta]$ if
+$b(t)=b'(t+t_1-t_0)$ for $t\in[t_0,t_0+\Delta]$.
+
+\item \label{cp:shadow} We say that $b(t)$ on the time interval $[t_0,t_0+\sqrt2\Delta]$ is
+state-2 coupled with $b'(t)$ on the interval $[t_1,t_1+\Delta]$ if
+$b(t)=b'(\frac1{\sqrt2}t+t_1-t_0)$ for $t\in[t_0,t_0+\sqrt2\Delta]$.
+
+\item \label{cp:mirror} We say that $b(t)$ on the time interval $[t_0,t_0+\Delta]$ is
+$r$-state-3 coupled with $b'(t)$ on the interval $[t_1,t_1+\Delta]$
+for some parameter $r\in\mathbb{R}$ if $x(t)=y'(t+t_1-t_0)+r$ and
+$y(t)=x'(t+t_1-t_0)-r$ for $t\in[t_0,t_0+\Delta]$. One can easily
+check this is a reflection through the line $x+y=2r$.
+\end{enumerate}
+
+Our coupling will go as follows: We begin with coupling of type
+\ref{cp:together}. Whenever we are in coupling of type
+\ref{cp:together} and $b(t)$ becomes one-dimensional while $b(t')$
+remains two-dimensional we replace it with coupling of type
+\ref{cp:shadow}. Whenever we are in coupling of type \ref{cp:shadow}
+, if both processes become one-dimensional, we replace the coupling
+with a coupling of type \ref{cp:together} (notice they must be at
+the same point by the definition of coupling of type
+\ref{cp:shadow}). If however both processes become two dimensional -
+i.e. $b(t_0)=(0,0)$ and $b'(t_0)=(a,-a)$ we couple them in a
+coupling of type \ref{cp:mirror} with $r=a$. We replace coupling of
+type \ref{cp:mirror} with coupling of type \ref{cp:shadow} if $b(t)$
+becomes one-dimensional, and with coupling of type \ref{cp:shadow}
+if $b(t)$ becomes one dimensional.
+
+We can now check that in the coupled process, if $b'(t)$ leaves the
+unit circle through the line $x=y$ then $b(t)$ leaves through it as
+well, while if $b'(t)$ leaves the unit circle through a point which
+is not on the line then $b(t)$ is either equal to it or still inside
+the circle.
+
+When the coupling is of types \ref{cp:together} or \ref{cp:shadow}
+both are immediate. For coupling of type \ref{cp:mirror}, one can
+easily check that $b'(t)$ is always further away from $(0,0)$ and
+from the line $x=y$ then $b(t)$.
+\end{proof}
 }
