@@ -1,6 +1,7 @@
 {
 \newcommand{\eeps}{e_\epsilon}
 
+
 \section{Suitable title}
 Let $(x, \eeps)$ be a pair with distribution the same as the two
 dimensional process from Observation \ref{obs:2d-proc}.
@@ -76,16 +77,16 @@ that $x^{\radius}(t)$ is teleported more then $k$ times between times $0$ and $1
  of independent random walks identical in distribution to $b(t)$, starting from $(0,0)$, such that each
  of them dies when $\twonorm{\twodproc{t}} = \radius$. We can now couple $b(t)$ with the set $\{x^\radius(t)\}\ds\bigcup_{i=1}^\infty\{d_i(t)\}$ in the following way:
 
-Set $t_0=0$. We begin by coupling $d_1(t)$ with $b(t)$ until $d_1(t)$ terminates at 
+Set $t_0=0$. We begin by coupling $d_1(t)$ with $b(t)$ until $d_1(t)$ terminates at
 time $t'_0$, if $x(t'_0)\neq\eeps(t'_0)$ then $b(t)$ terminates as well, otherwise
  if $x(t_0)=\frac1{\sqrt{2}}\radius$ we couple $b(t)$ with $(\frac{x^\radius(t-t'_0+t_0)}{\sqrt{2}},\frac{x^\radius(t-t'_0+t_0)}{\sqrt{2}})$,
   and if $x(t_0)=-\radius$ we couple $b(t)$ with $-(\frac{x^\radius(t-t'_0+t_0)}{\sqrt{2}},\frac{x^\radius(t-t'_0+t_0)}{\sqrt{2}})$.
- This continues until time $t_1$, the first to satisfy $b(t_1)=(0,0)$ after $t'_0$, 
+ This continues until time $t_1$, the first to satisfy $b(t_1)=(0,0)$ after $t'_0$,
  at which we couple $b(t)$ with $d_2(t-t_1)$, and so on and so forth.
 
 Let us look at the event that $x^\radius(t)$ has teleported at most $k$ times by time $1$.
- By Proposition \ref{prop:prop1} we can pick $k$ such that this probability will be as small 
- as we want. The events that $d_i$ for $i\le k$ terminated on a point such that $x=\eeps$ 
+ By Proposition \ref{prop:prop1} we can pick $k$ such that this probability will be as small
+ as we want. The events that $d_i$ for $i\le k$ terminated on a point such that $x=\eeps$
  are independent and by Corollary \ref{cor:cor1} can be made as small as we want. However
   if both events do not occur - the coupling insures us that by time $t=1$ the two
    dimensional process $b(t)$
@@ -317,45 +318,83 @@ On the other hand,
 \frac{\epsilon}{1+\epsilon^2}\left(\frac{1+r_1^2}{r_1}-\frac{1+r_0^2}{r_0}\right)
 \ge\frac{\epsilon}{2} \int_{r_0}^{r_1} \left(\frac{1}{r^2}-1\right) dr.\]
 \end{proof}
-\section{Reflection part}
-One difficulty with the two dimensional process $b(t)$ from
-Observation \ref{obs:2d-proc} it that its behavior when it
- reaches a point of the form $(x_0,x_0)$ for $|x_0|<\epsilon$
- (i.e. whether it continues as a one-dimensional BM or as a
-  two-dimensional one) depends on the past in a complex way. We therefore define a
-different process $b'(t)$ as a similar two dimensional process which
-starts from $(0,0)$, terminates when $\twonorm{b'(t)}=1$, but,
-unlike $b(t)$, becomes one dimensional only when it hits a point of
-the form $(x_0,x_0)$ for $|x_0|\ge\epsilon$.
 
-The relation between $b(t)$ and $b'(t)$ is described through the
+\section{Reflection part}
+One difficulty with the two dimensional process $b(t)$ described in Observation \ref{obs:2d-proc} is that its future behavior when it hits a point of the form $(x_0,x_0)$ for $|x_0|<\epsilon$
+ (i.e. whether it becomes a one-dimensional BM or continues as
+  two-dimensional one) depends on the past in a complicated way. We therefore define a simpler two-dimensional process $b'(t)$ whose behavior is simpler to analyze.
+\begin{definition}
+  \label{def:2d-proc}
+  Description of $b'(t)$...
+  \FIXME{}{}
+\end{definition}
+   The only difference between $b(t)$ and $b'(t)$ is that $b'(t)$ becomes one dimensional only when it hits a point of
+the form $(x_0,x_0)$ for $|x_0|\ge\epsilon$, while $b(t)$ does so occasionally for $|x_0|<\epsilon$ as well.
+
+An important relation between $b(t)$ and $b'(t)$ is described through the
 following proposition:
+
 \begin{propos}\label{prop:refprop}
 the probability that $b(t)$ terminates at
-$\pm(\frac{1}{\sqrt2},\frac{1}{\sqrt2})$ is greater or equal to the
+$\pm(\frac{1}{\sqrt2},\frac{1}{\sqrt2})$ is greater or equal then the
 probability that $b'(t)$ terminates at
 $\pm(\frac{1}{\sqrt2},\frac{1}{\sqrt2})$.
 \end{propos}
 
 \begin{proof}
-Let us introduce a coupling from $b'(t)$ to $b(t)$ in the following
-way. We define 3 states of the coupling.
+For the purpose of the proof it will be comfortable to look at $b(t)$, and $b'(t)$ using a coordinate system over the basis $(\frac 1 {\sqrt 2},\frac 1 {\sqrt 2})$, $(-\frac 1 {\sqrt 2},\frac 1 {\sqrt 2})$. We thus define $x(t), y(t), x'(t), y'(t)$ by the relations:
+$$b(t)=x(t)(\frac 1 {\sqrt 2},\frac 1 {\sqrt 2})+y(t)(-\frac 1 {\sqrt 2},\frac 1 {\sqrt 2})$$
+$$b'(t)=x'(t)(\frac 1 {\sqrt 2},\frac 1 {\sqrt 2})+y'(t)(-\frac 1 {\sqrt 2},\frac 1 {\sqrt 2}).$$
+Notice the coordinate change is a rotation. We need to show the probability that $b(t)$ terminates at $x=\pm 1$, $y=0$ is greater or equal to the probability of $b'$ terminating at $x=\pm 1$, $y=0$.
+
+Next, we introduce a coupling of $b'(t)$ and $b(t)$. The coupling is defined through a set of states, such that the behavior of $b(t)$ at time $t$ depends only on the behavior of $b'(t)$ at time $t'\ge t$, and on the coupling state. We divide the states of the coupling into three sets:
+
 \begin{enumerate}
-\item \label{cp:together} We say that $b(t)$ on the time interval $[t_0,t_0+\Delta]$ is
-state-1 coupled with $b'(t)$ on the interval $[t_1,t_1+\Delta]$ if
-$b(t)=b'(t+t_1-t_0)$ for $t\in[t_0,t_0+\Delta]$.
+\item \label{cp:together} We say that $b(t)$ on the time interval $[t_0,t_0+\Delta]$ \emph{agrees}
+ with $b'(t)$ on the interval $[t_1,t_1+\Delta]$ if
+$b(t)=b'(t-t_0+t_1)$ for $t\in[t_0,t_0+\Delta]$.
 
-\item \label{cp:shadow} We say that $b(t)$ on the time interval $[t_0,t_0+\sqrt2\Delta]$ is
-state-2 coupled with $b'(t)$ on the interval $[t_1,t_1+\Delta]$ if
-$b(t)=b'(\frac1{\sqrt2}t+t_1-t_0)$ for $t\in[t_0,t_0+\sqrt2\Delta]$.
+\item\label{cp:shadow} We say that $b(t)$ on the time interval $[t_0,t_0+\Delta]$
+is an \emph{x-projection} of $b'(t)$ on the interval $[t_1,t_1+\sqrt2\Delta]$ if $x(t)=x'(\sqrt2(t-t_0)+t_1)$, and $y(t)=0$ for $t\in[t_0,t_0+\Delta]$.
 
-\item \label{cp:mirror} We say that $b(t)$ on the time interval $[t_0,t_0+\Delta]$ is
-$r$-state-3 coupled with $b'(t)$ on the interval $[t_1,t_1+\Delta]$
-for some parameter $r\in\mathbb{R}$ if $x(t)=y'(t+t_1-t_0)+r$ and
-$y(t)=x'(t+t_1-t_0)-r$ for $t\in[t_0,t_0+\Delta]$. One can easily
-check this is a reflection through the line $x+y=2r$.
+\item\label{cp:mirror} We say that $b(t)$ on the time interval $[t_0,t_0+\Delta]$ is
+ an \emph{$r$-state reflection} with $b'(t)$ on the interval $[t_1,t_1+\Delta]$
+for some parameter $r\in\mathbb{R}$ if $x(t)=x'(t+t_1-t_0)$ and
+$y(t)=r-y'(t+t_1-t_0)$ for $t\in[t_0,t_0+\Delta]$. Thus $(x(t),y(t))$ is a reflection of $(x'(t),y'(t))$ in the line $y=r$.
 \end{enumerate}
 
+Suppose $b(t)$ on the time interval $I$ is coupled with $b'(t)$ on the time interval $I'$ in one of the states above. Then for $t\in I$ we denote by $t'\in I'$ the corresponding time-change defined in each of the states; so that $(b(t),b'(t'))$ has the marginal distributions of $b$ and $b'$ as $t$ varies over $I$.
+
+Our coupling will go as follows: We begin at state \ref{cp:together}.
+
+\begin{itemize}
+\item At state \ref{cp:together} (agreement): \\
+Let $T_1$ be the stopping time which indicates when $b$ first turns from being two-dimensional to being one-dimensional.
+\begin{itemize}
+\item  If at time $T_1'$, $b'$ remains two-dimensional, pass to state \ref{cp:shadow} (projection).
+    \item Else, continue in state \ref{cp:together} and annul $T_1$.
+\end{itemize}
+
+\item At state \ref{cp:shadow} ($b$ is an $x$-projection of $b'$):\\
+Let $T_2$ be the stopping time which indicates when $b$ becomes two-dimensional. Let $S'$ be the stopping time which indicates when $b'$ becomes one-dimensional.
+\begin{itemize}
+\item If $T_2$ occurs, then necessarily $b(T_2)=(0,0)$ and $b'(T_2')=(0,a)$ for some $a$. In this case, pass to state \ref{cp:mirror} with $r=a/2$.
+\item If $S'$ occurs, then necessarily $b(S)=b'(S')$ meet on the line $y=0$. In this case, pass to state \ref{cp:together}.
+\end{itemize}
+
+\item At state \ref{cp:mirror} ($b$ and $b'$ are reflections in $y=r$):\\
+     Observe that upon arriving at this state, $b(t)$ is of shorter distance from the line $y=0$ than $b'(t')$. This property is preserved along the coupling in this state. \\
+    Let $T_1$ be as in state \ref{cp:together} (indicates when $b$ becomes one-dimensional). \\
+    Let $R$ be the first time $t$ for which $b(t)=b'(t')$.    \\
+    By the last observation, eventually one of the stopping times occurs or the process $b'$ has terminated.
+
+    \begin{itemize}
+    \item If $T_1$ occurs, pass to state \ref{cp:shadow}.
+    \item If $R$ occurs, pass to state \ref{cp:together}.
+    \end{itemize}
+\end{itemize}\
+
+\begin{comment}
 Our coupling will go as follows: We begin with coupling of type
 \ref{cp:together}. Whenever we are in coupling of type
 \ref{cp:together} and $b(t)$ becomes one-dimensional while $b(t')$
@@ -370,16 +409,18 @@ coupling of type \ref{cp:mirror} with $r=a$. We replace coupling of
 type \ref{cp:mirror} with coupling of type \ref{cp:shadow} if $b(t)$
 becomes one-dimensional, and with coupling of type \ref{cp:shadow}
 if $b(t)$ becomes one dimensional.
+\end{comment}
 
 We can now check that in the coupled process, if $b'(t)$ leaves the
 unit circle through the line $x=y$ then $b(t)$ leaves through it as
 well, while if $b'(t)$ leaves the unit circle through a point which
 is not on the line then $b(t)$ is either equal to it or still inside
-the circle.
-
-When the coupling is of types \ref{cp:together} or \ref{cp:shadow}
-both are immediate. For coupling of type \ref{cp:mirror}, one can
-easily check that $b'(t)$ is always further away from $(0,0)$ and
-from the line $x=y$ then $b(t)$.
+the circle. This yields proposition \label{prop:refprop}.
+ 
+%
+%When the coupling is of types \ref{cp:together} or \ref{cp:shadow}
+%both are immediate. For coupling of type \ref{cp:mirror}, one can
+%easily check that $b'(t)$ is always further away from $(0,0)$ and
+%from the line $x=y$ then $b(t)$.
 \end{proof}
 }
