@@ -1,0 +1,29 @@
+{
+\section{Ron's argument}
+
+\newcommand{\bandwidth}{\delta}
+\newcommand{\rotproc}{Y}
+
+It will be slightly easier to work with the process $\rotproc =
+(\sampled + \resamplede, \sampled - \resamplede)$ which is $(\sampled,
+\resamplede)$ rotated by $\pi / 4$ radians, and scaled by a factor of
+$\sqrt{2}$.
+
+Fix $\delta > 0$.  Consider the process $\rotproc$ run until it hits
+either $A$ or $L^+ \cup L^-$.  We will show that the probability it
+hits $A$ first is $O(\epsilon)$.
+
+The only difficulty is that $L^\epsilon$ is sometimes absorbing and
+sometimes not.
+
+We analyse $\rotproc$ through the following state machine.  From the
+start $S$ the process first hits either $L^- \cup L^+$ or $M$.
+
+The probability of transition from $S$ to $1$ is bounded below by $C$,
+say, which can be chosen independently of $\epsilon$, by scale
+invariance.
+
+From state $M$ the probability of reaching $A$ before $L^- \cup
+L^\epsilon \cup L^+$ is exactly $\epsilon/\delta$.
+
+}
