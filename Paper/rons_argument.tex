@@ -4,26 +4,106 @@
 \newcommand{\bandwidth}{\delta}
 \newcommand{\rotproc}{Y}
 
+\newcommand{\union}{\cup}
+\renewcommand{\L}{L^+ \union L^-}
+\newcommand{\Le}{L^\epsilon}
+
+\subsection{Probability of escape}
+
 It will be slightly easier to work with the process $\rotproc =
 (\sampled + \resamplede, \sampled - \resamplede)$ which is $(\sampled,
 \resamplede)$ rotated by $\pi / 4$ radians, and scaled by a factor of
 $\sqrt{2}$.
 
 Fix $\delta > 0$.  Consider the process $\rotproc$ run until it hits
-either $A$ or $L^+ \cup L^-$.  We will show that the probability it
+either $A$ or $\L$.  We will show that the probability it
 hits $A$ first is $O(\epsilon)$.
 
-The only difficulty is that $L^\epsilon$ is sometimes absorbing and
+The only difficulty is that $\Le$ is sometimes absorbing and
 sometimes not.
 
-We analyse $\rotproc$ through the following state machine.  From the
-start $S$ the process first hits either $L^- \cup L^+$ or $M$.
+We analyse $\rotproc$ through the following state machine.
 
-The probability of transition from $S$ to $1$ is bounded below by $C$,
-say, which can be chosen independently of $\epsilon$, by scale
-invariance.
+Consider $\rotproc = (x,0) \in \Le$ (for some $x$) and $\Le$ being in
+a non-absorbing state.  We will call this the start state.  From the
+start state, $Y$ will eventually reach one of three mutually exclusive
+states, according to which of the following occurs first
 
-From state $M$ the probability of reaching $A$ before $L^- \cup
-L^\epsilon \cup L^+$ is exactly $\epsilon/\delta$.
+\newcommand{\intermediatelines}{I}
+
+\begin{itemize}
+\item $Y$ hits $\L$
+\item $Y$ hits $\intermediatelines$
+\item $Y$ hits $\Le$ when it is in an absorbing state
+\end{itemize}
+
+The probability of the first is bounded by some constant $C$, say,
+which does not depend on $x$ and $\epsilon$, and regardless of the
+history of the state machine.
+
+\newcommand{\stateintermediate}{Intermediate}
+
+If the second happens we will say that the state machine goes into
+state $\stateintermediate$.  From this state, the possible transitions
+are according to which of the following occurs first
+
+\newcommand{\boundarylines}{A}
+
+\begin{itemize}
+\item $Y$ hits $\L$
+\item $Y$ hits $\boundarylines$
+\item $Y$ hits $\Le$ when it is in an absorbing state
+\item $Y$ hits $\Le$ when it is in a non-absorbing state
+\end{itemize}
+
+When the last happens we have returned to the start state.
+
+The probability of the second transition is exactly equal to
+$\epsilon/\delta$ regardless of the history of the state machine.
+
+From this description it is straightforward to deduce that the
+probability that the machine started when $Y = (0,0)$ (or indeed when
+$Y = (x, 0)$ for any $x \in \Le$ and $\Le$ not absorbing) will hit
+$\boundarylines$ before being absorbed on $L^+ \union \Le \union L^-$ is
+bounded above by $\epsilon/\delta C$, so indeed this probability is
+$O(\epsilon)$.
+
+\subsection{Probability of capture}
+
+From $Y = (0,0)$ there is a positive probabilty, $C$ say, not
+depending on $\epsilon$, that $Y$ hits $Q = [0, \epsilon] \cross
+\{\epsilon\}$ without having been absorbed on $L^+ \union \Le \union
+L^-$.
+
+From $Y \in Q$ the hitting density on $L^+$ is at least $K
+\frac{1}{\epsilon} \frac{1}{1 + (y/\epsilon)^2} dy$, where $K$ is a
+normalising constant.
+
+\newcommand{\Omegaeloge}{\Omega(\epsilon\log\epsilon)}
+
+So the probability that $Y$ started from some point in $Q$ hits $L^+$
+between $\epsilon$ and $1$ and then travels to a point $(P,0)$ is at least
+\[
+\frac{K}{P} \int_{\epsilon}^{1} \frac{y/\epsilon}{1 + (y/\epsilon)^2}
+\, dy
+\]
+which is
+\[
+\frac{K\epsilon}{2P} \log\left(\frac{1 + (1/\epsilon)^2}{2}\right)
+\]
+which is $\Omegaeloge$.
+
+\subsection{Probability of escape before capture}
+
+So the probability that $Y$ reaches $(P,0)$ before hitting
+$\boundarylines$ in one launch is at least
+$\Omegaeloge - O(\epsilon) = \Omegaeloge
+$.
+
+Thus the probability that $Y$ started from $(0,0)$ reaches
+$\boundarylines$ before $(P,0)$ is
+\[
+\frac{O(\epsilon)}{\Omegaeloge - O(\epsilon)} = O(\log\epsilon)
+\]
 
 }
