@@ -15,6 +15,62 @@ It will be slightly easier to work with the process $\rotproc =
 \resamplede)$ rotated by $\pi / 4$ radians, and scaled by a factor of
 $\sqrt{2}$.
 
+\newcommand{\boundarylines}{A}
+
+\begin{definition}
+  An excursion of $Y$ is two stopping times $S < T$ such that $Y_S =
+  (0,0)$ and $T = \inf\{ t \ge S : Y_t = (0,0) \}$.  \FIXME{Note that
+    this is well defined since almost surely $Y$ spends a positive
+    amount of time away from $(0,0)$ before returning.}{This isn't
+    quite the right way to explain this}
+\end{definition}
+
+\begin{lemma}
+  \label{lem:Phitboundaryline}
+  The probability that $Y$ hits $\boundarylines$ during an excursion
+  is $O(\epsilon)$.
+\end{lemma}
+
+\newcommand{\Omegaeloge}{\Omega(\epsilon\log\epsilon)}
+
+\begin{lemma}
+  \label{lem:Pabsorbedandtravelsfar}
+  Fix $P > 0$.  The probability that $Y$ hits $(P,0)$ during an
+  excursion is $\Omegaeloge$.
+\end{lemma}
+
+\begin{lemma}
+  Fix $P > 0$.  The probability that $Y$ hits $(P,0)$ during an
+  excursion without hitting $A$ is $\Omegaeloge$.
+\end{lemma}
+
+\begin{proof}
+  By Lemmas \ref{lem:Phitboundaryline} and
+  \ref{lem:Pabsorbedandtravelsfar} the probability is at least
+  $\Omegaeloge - O(\epsilon) = \Omegaeloge$.
+\end{proof}
+
+\begin{lemma}
+  Fix $P > 0$.  The probability that $Y$ started from $0$ hits $(P,0)$
+  before $\boundarylines$
+\end{lemma}
+
+\begin{proof}
+  $Y$ consists of a sequence of excursions, each of which satisfies
+  exactly one of the following conditions
+  \begin{itemize}
+  \item the excursion hits $\boundarylines$
+  \item the excursion does not hit $\boundarylines$ but does hit
+    $(P,0)$
+  \item 
+  \end{itemize}
+\end{proof}
+
+\begin{lemma}
+  The probability that before time $1$, $Y$ has hit $\boundarylines$
+  is $O(\log\epsilon)$.
+\end{lemma}
+
 Fix $\delta > 0$.  Consider the process $\rotproc$ run until it hits
 either $A$ or $\L$.  We will show that the probability it
 hits $A$ first is $O(\epsilon)$.
@@ -47,8 +103,6 @@ If the second happens we will say that the state machine goes into
 state $\stateintermediate$.  From this state, the possible transitions
 are according to which of the following occurs first
 
-\newcommand{\boundarylines}{A}
-
 \begin{itemize}
 \item $Y$ hits $\L$
 \item $Y$ hits $\boundarylines$
@@ -78,8 +132,6 @@ L^-$.
 From $Y \in Q$ the hitting density on $L^+$ is at least $K
 \frac{1}{\epsilon} \frac{1}{1 + (y/\epsilon)^2} dy$, where $K$ is a
 normalising constant.
-
-\newcommand{\Omegaeloge}{\Omega(\epsilon\log\epsilon)}
 
 So the probability that $Y$ started from some point in $Q$ hits $L^+$
 between $\epsilon$ and $1$ and then travels to a point $(P,0)$ is at least
