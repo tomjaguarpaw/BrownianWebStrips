@@ -25,6 +25,11 @@ $\sqrt{2}$.
     quite the right way to explain this}
 \end{definition}
 
+\begin{definition}
+  We say $Y$ is \emph{absorbed} when it hits $\L$, or it hits $\Le$
+  when it is in an absorbing state.
+\end{definition}
+
 \begin{lemma}
   \label{lem:Phitboundaryline}
   The probability that $Y$ hits $\boundarylines$ during an excursion
@@ -107,9 +112,9 @@ $\sqrt{2}$.
   0$ as $\epsilon \to 0$.
 \end{lemma}
 
-Fix $\delta > 0$.  Consider the process $\rotproc$ run until it hits
-either $A$ or $\L$.  We will show that the probability it
-hits $A$ first is $O(\epsilon)$.
+Fix $\delta > 0$.  Consider the process $\rotproc$ run until either
+it hits $A$ or is absorbed.  We will show that the probability it
+hits $A$ is $O(\epsilon)$.
 
 The only difficulty is that $\Le$ is sometimes absorbing and
 sometimes not.
@@ -118,18 +123,17 @@ We analyse $\rotproc$ through the following state machine.
 
 Consider $\rotproc = (x,0) \in \Le$ (for some $x$) and $\Le$ being in
 a non-absorbing state.  We will call this the start state.  From the
-start state, $Y$ will eventually reach one of three mutually exclusive
+start state, $Y$ will eventually reach one of two mutually exclusive
 states, according to which of the following occurs first
 
 \newcommand{\intermediatelines}{I}
 
 \begin{itemize}
-\item $Y$ hits $\L$
+\item $Y$ is absorbed
 \item $Y$ hits $\intermediatelines$
-\item $Y$ hits $\Le$ when it is in an absorbing state
 \end{itemize}
 
-The probability of the first is bounded by some constant $C$, say,
+The probability of the first is bounded below by some constant $C > 0$
 which does not depend on $x$ and $\epsilon$, and regardless of the
 history of the state machine.
 
@@ -140,9 +144,8 @@ state $\stateintermediate$.  From this state, the possible transitions
 are according to which of the following occurs first
 
 \begin{itemize}
-\item $Y$ hits $\L$
+\item $Y$ is absorbed
 \item $Y$ hits $\boundarylines$
-\item $Y$ hits $\Le$ when it is in an absorbing state
 \item $Y$ hits $\Le$ when it is in a non-absorbing state
 \end{itemize}
 
@@ -154,7 +157,7 @@ $\epsilon/\delta$ regardless of the history of the state machine.
 From this description it is straightforward to deduce that the
 probability that the machine started when $Y = (0,0)$ (or indeed when
 $Y = (x, 0)$ for any $x \in \Le$ and $\Le$ not absorbing) will hit
-$\boundarylines$ before being absorbed on $L^+ \union \Le \union L^-$ is
+$\boundarylines$ before being absorbed is
 bounded above by $\epsilon/\delta C$, so indeed this probability is
 $O(\epsilon)$.
 
