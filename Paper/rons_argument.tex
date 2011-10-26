@@ -219,10 +219,10 @@ $\resampledeT$ is $\resamplede$ truncated to $\AuB$
 
 $\resamplede$ is $\sampled$ resampled on an $\epsilon$ strip.
 
-\begin{lemma}
+\begin{obs}
   Processes of the form $\sampledT$ are $\F_A \tensor
   \F_B$-measurable.
-\end{lemma}
+\end{obs}
 
 \begin{lemma}
   $\resampledeT = \sampledTe$
@@ -236,9 +236,21 @@ $\resamplede$ is $\sampled$ resampled on an $\epsilon$ strip.
   We could show this directly along the lines above.  However instead
   we will do it as follows.
 
-  We know that $\resamplede \to \sampled$ as $\epsilon \to 0$, ucp.
-  From this we can show that $\resampledeT \to \sampledT$ as $\epsilon
-  \to 0$.
+  Note that
+  \begin{itemize}
+  \item $\resamplede \to^\P \sampled$
+  \item the probability that $f \mapsto \restrict{I}{f}$ is continuous
+    at $X$ is $1$
+  \end{itemize}
+  so by the continuous mapping theorem (see for example
+  \FIXME{Billingsley 1999, p. 21, Theorem 2.7}{make this a reference,
+    and check it}) $\restrict{I}{\resamplede} \to^\P
+  \restrict{I}{\sampled}$.  Note further that
+  \begin{itemize}
+  \item $\resampledeT = \restrict{I}{\resamplede}$
+  \item $\sampledT = \restrict{I}{\sampled}$
+  \end{itemize}
+  so that $\resampledeT \to^\P \sampledT$.
 \end{proof}
 
 \begin{lemma}
@@ -246,11 +258,5 @@ $\resamplede$ is $\sampled$ resampled on an $\epsilon$ strip.
   \ref{def:restrict}.  If $T$ is not a turning point of the path $f$,
   then the map $f \mapsto \restrict{I}{f}$ is continuous at $f$.
 \end{lemma}
-
-Now $\resampledeT = \restrict{I}{\resamplede}$ and $\sampledT =
-\restrict{I}{\sampled}$.  $\resamplede \to^\P \sampled$ and the
-probability that $f \mapsto \restrict{I}{f}$ is continuous at $X$ is
-$1$, and so $\restrict{I}{\resamplede} \to^\P \restrict{I}{\sampled}$,
-i.e. $\resampledeT \to^\P \sampledT$.
 
 }
