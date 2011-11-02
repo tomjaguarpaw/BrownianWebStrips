@@ -32,11 +32,12 @@
 \end{definition}
 
 \begin{definition}
+  \newcommand{\T}{\stripleavetime{f}}
   \label{def:restrict}
   From a path $f : [s, \infty) \to \R$ we define ``$f$ stopped on
     leaving the interval $I$'' to be the map $\restrict{I}{f} : [s,
-      \infty) \to \R$ given by $\restrict{I}{f}(t) = f(t \minsym T)$
-      where $T = \inf\{ t : f(t) \not\in I \}$.
+      \infty) \to \R$ given by $\restrict{I}{f}(t) = f(t \minsym \T)$
+      where $\T = \inf\{ t : f(t) \not\in I \}$.
 \end{definition}
 
 \newcommand{\brownianwebnoise}{collection of horiztontal
