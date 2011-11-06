@@ -4,44 +4,25 @@
 \newcommand{\Res}[1]{\mathcal{R}(#1)}
 
 Recall the definition of $\restrict{\cdot}{\cdot}{\cdot}$ from
-Definition \ref{def:restrict}.  Just in this section, for notational
-convenience, for fixed $a \le b$ we will write $\Res{\cdot}$ for
-$\restrict{a}{b}{\cdot}$.
+Definition \ref{def:restrict}.  For notational convenience in this
+section we will fix $a \le b \le c$ and write $\Res{\cdot}$ for
+$\restrict{a}{c}{\cdot}$.
 
 \newcommand{\AuB}{A \cup B}
-
-\TODO{Consider two horizontal strips $A$ and $B$ whose union is another
-horizontal strip $\AuB$}{Explain this better}.
-
 \newcommand{\F}{\mathcal{F}}
-
-$\sampled$ is $\F$-measurable.
 
 \newcommand{\sampledT}{\sampled^T}
 \newcommand{\sampledTe}{\sampled^{T,\epsilon}}
 \newcommand{\resampledeT}{{\resamplede}^{,T}}
 
-Let $\sampledT$ be the process $\sampled$ truncated on leaving
-$\AuB$.  Processes of this form generate $\F_{\AuB}$.
+Processes of the form $\Res{\sampled}$ generate $\factor{a}{c}$.
 
-$\sampledTe$ is the $\epsilon$-resampled truncated process and is
-$\F_A \tensor \F_B$-measurable.
-
-$\resampledeT$ is $\resamplede$ truncated to $\AuB$
-
-$\resamplede$ is $\sampled$ resampled on an $\epsilon$ strip.
-
-\begin{obs}
-  Processes of the form $\sampledT$ are $\F_A \tensor
-  \F_B$-measurable.
-\end{obs}
+$\Res{\resamplede}$ is the $\epsilon$-resampled truncated process and is
+$\factor{a}{b} \tensor \factor{b}{c}$-measurable.
 
 \begin{lemma}
-  $\resampledeT = \sampledTe$
-\end{lemma}
-
-\begin{lemma}
-  $\sampledTe \to \sampledT$ as $\epsilon \to 0$
+  $\Res{\resamplede} \to \Res{\sampled}$ as $\epsilon \to 0$
+  \FIXME{}{Need to say in probability I guess}
 \end{lemma}
 
 \begin{proof}
@@ -56,12 +37,7 @@ $\resamplede$ is $\sampled$ resampled on an $\epsilon$ strip.
   \end{itemize}
   so we conclude that $\Res{\resamplede} \to^\P
   \Res{\sampled}$ by the continuous mapping theorem (see for
-  example \cite{billingsley}, p. 21, Theorem 2.7). Note further that
-  \begin{itemize}
-  \item $\resampledeT = \Res{\resamplede}$
-  \item $\sampledT = \Res{\sampled}$
-  \end{itemize}
-  so that $\resampledeT \to^\P \sampledT$.
+  example \cite{billingsley}, p. 21, Theorem 2.7).
 \end{proof}
 
 \begin{lemma}
