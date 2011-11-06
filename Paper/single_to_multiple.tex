@@ -15,10 +15,11 @@ $\restrict{a}{c}{\cdot}$.
 \newcommand{\sampledTe}{\sampled^{T,\epsilon}}
 \newcommand{\resampledeT}{{\resamplede}^{,T}}
 
-Processes of the form $\Res{\sampled}$ generate $\factor{a}{c}$.
-
-$\Res{\resamplede}$ is the $\epsilon$-resampled truncated process and is
-$\factor{a}{b} \tensor \factor{b}{c}$-measurable.
+\begin{obs}
+  $\Res{\resamplede}$ could be called the ``$\epsilon$-resampled
+  truncated process'' and is $\factor{a}{b} \tensor \factor{b}{c}
+  \tensor \reservoir$-measurable.
+\end{obs}
 
 \begin{lemma}
   $\Res{\resamplede} \to \Res{\sampled}$ as $\epsilon \to 0$
@@ -37,6 +38,15 @@ $\factor{a}{b} \tensor \factor{b}{c}$-measurable.
   \Res{\sampled}$ by the continuous mapping theorem (see for
   example \cite{billingsley}, p. 21, Theorem 2.7).
 \end{proof}
+
+\begin{lemma}
+  $\Res{\sampled}$ is $\factor{a}{b} \tensor
+  \factor{b}{c}$-measurable.
+\end{lemma}
+
+\begin{theorem}
+  $\factor{a}{c} = \factor{a}{b} \tensor \factor{b}{c}$
+\end{theorem}
 
 \begin{lemma}
   If $\stripleavetime{f}$ is not a turning point of the path $f$,
