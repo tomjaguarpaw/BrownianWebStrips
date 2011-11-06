@@ -1,6 +1,13 @@
 {
 \section{From single point split to joining strips}
 
+\newcommand{\Res}[1]{\mathcal{R}(#1)}
+
+Recall the definition of $\restrict{\cdot}{\cdot}{\cdot}$ from
+Definition \ref{def:restrict}.  Just in this section, for notational
+convenience, for fixed $a \le b$ we will write $\Res{\cdot}$ for
+$\restrict{a}{b}{\cdot}$.
+
 \newcommand{\AuB}{A \cup B}
 
 \TODO{Consider two horizontal strips $A$ and $B$ whose union is another
@@ -37,8 +44,6 @@ $\resamplede$ is $\sampled$ resampled on an $\epsilon$ strip.
   $\sampledTe \to \sampledT$ as $\epsilon \to 0$
 \end{lemma}
 
-\newcommand{\Res}{\restrict{a}{b}}
-
 \begin{proof}
   We could show this directly along the lines above.  However instead
   we will do it as follows.
@@ -60,8 +65,7 @@ $\resamplede$ is $\sampled$ resampled on an $\epsilon$ strip.
 \end{proof}
 
 \begin{lemma}
-  Recall the definition of $\Res{\cdot}$ from Definition
-  \ref{def:restrict}.  If $\stripleavetime{f}$ is not a turning point of the path $f$,
+  If $\stripleavetime{f}$ is not a turning point of the path $f$,
   then the map $f \mapsto \Res{f}$ is continuous at $f$ in the
   topology of uniform convergence on compacts.
 \end{lemma}
