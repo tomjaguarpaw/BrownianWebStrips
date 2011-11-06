@@ -1,0 +1,114 @@
+{
+\section{From single point split to joining strips}
+
+\newcommand{\AuB}{A \cup B}
+
+\TODO{Consider two horizontal strips $A$ and $B$ whose union is another
+horizontal strip $\AuB$}{Explain this better}.
+
+\newcommand{\F}{\mathcal{F}}
+
+$\sampled$ is $\F$-measurable.
+
+\newcommand{\sampledT}{\sampled^T}
+\newcommand{\sampledTe}{\sampled^{T,\epsilon}}
+\newcommand{\resampledeT}{{\resamplede}^{,T}}
+
+Let $\sampledT$ be the process $\sampled$ truncated on leaving
+$\AuB$.  Processes of this form generate $\F_{\AuB}$.
+
+$\sampledTe$ is the $\epsilon$-resampled truncated process and is
+$\F_A \tensor \F_B$-measurable.
+
+$\resampledeT$ is $\resamplede$ truncated to $\AuB$
+
+$\resamplede$ is $\sampled$ resampled on an $\epsilon$ strip.
+
+\begin{obs}
+  Processes of the form $\sampledT$ are $\F_A \tensor
+  \F_B$-measurable.
+\end{obs}
+
+\begin{lemma}
+  $\resampledeT = \sampledTe$
+\end{lemma}
+
+\begin{lemma}
+  $\sampledTe \to \sampledT$ as $\epsilon \to 0$
+\end{lemma}
+
+\begin{proof}
+  We could show this directly along the lines above.  However instead
+  we will do it as follows.
+
+  Note that
+  \begin{itemize}
+  \item $\resamplede \to^\P \sampled$
+  \item the probability that $f \mapsto \restrict{I}{f}$ is continuous
+    at $X$ is $1$
+  \end{itemize}
+  so we conclude that $\restrict{I}{\resamplede} \to^\P
+  \restrict{I}{\sampled}$ by the continuous mapping theorem (see for
+  example \cite{billingsley}, p. 21, Theorem 2.7). Note further that
+  \begin{itemize}
+  \item $\resampledeT = \restrict{I}{\resamplede}$
+  \item $\sampledT = \restrict{I}{\sampled}$
+  \end{itemize}
+  so that $\resampledeT \to^\P \sampledT$.
+\end{proof}
+
+\begin{lemma}
+  Recall the definition of $\restrict{\cdot}{\cdot}$ from Definition
+  \ref{def:restrict}.  If $\stripleavetime{f}$ is not a turning point of the path $f$,
+  then the map $f \mapsto \restrict{I}{f}$ is continuous at $f$ in the
+  topology of uniform convergence on compacts.
+\end{lemma}
+
+\begin{proof}
+  \DOTHIS{We sketch a proof of this straightforward result in
+    classical analysis.
+
+    \newcommand{\fn}{f_n}
+
+    \newcommand{\T}{\stripleavetime{f}}
+    \newcommand{\Tn}{\stripleavetime{\fn}}
+
+    Suppose $\fn \to f$ uniformly on compacts.  Then since $\T$ is not
+    a turning point of $f$ it is easily seen that $\Tn \to \T$ and
+    that eventually $\fn(\Tn) = f(\T)$.
+
+    \renewcommand{\d}{\delta}
+    \newcommand{\e}{\epsilon}
+    \newcommand{\starttime}{-}
+
+    Since $f$ is continuous, choose $\d$ such that
+    $|f(\T) - f(x)| \le \epsilon$ when
+    $|\T - x| \le \delta$.  Eventually
+    \begin{itemize}
+    \item $\fn(\Tn) = f(\T)$
+    \item $|\Tn - \T| \le \d$
+    \item $|\fn - f| \le \e$ uniformly on some compact containing
+      $[\starttime, \T+\d]$.
+    \end{itemize}
+
+    \newcommand{\stoppedfn}{\restrict{I}{\fn}}
+    \newcommand{\stoppedf}{\restrict{I}{f}}
+
+    \newcommand{\condition}[2]{for $t \in {#1}$ we have
+      $|\stoppedfn(t) - \stoppedf(t)| #2$}
+    so
+    \begin{itemize}
+    \item \condition{[\starttime, \T-\d)}{\le \e}
+    \item \condition{[\T-\d, \T+\d]}{\le 2\e}
+    \item \condition{(\T+\d, \infty)}{= 0}
+    \end{itemize}
+    so indeed $\stoppedfn \to \stoppedf$ uniformly on compacts (indeed
+    globally since they are both eventually $0$ outside some
+    compact).}{The only tricky part is the second item.  There are
+      four cases to consider.  The worst case is when $\stoppedf$ has
+      been truncated and $\stoppedfn$ hasn't.  But $\stoppedf$ is
+      equal to the level, and so is within $\e$ of $f$.  OTOH
+      $\stoppedfn = \fn$ so is within $\e$ of $f$.  Thus the $2\e$
+      bound.}
+\end{proof}
+}
