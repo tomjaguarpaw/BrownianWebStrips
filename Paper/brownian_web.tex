@@ -104,28 +104,27 @@ $\sampled$ for the random process $t \mapsto \web{ts}{x}$
 
 {
 \newcommand{\webt}{\psi}
+\newcommand{\joinernoargs}{\webt}
+\newcommand{\joiner}[2]{\webt_{{#1}{#2}}}
 \begin{definition}
   We define $\resamplede$, a ``perturbed'' version of $\sampled$, as
   follows.
 
-  Let $\webt$ be a Brownian web independent of $\webnoargs$ (measurable with
+  Let $\joiner{t}{s}$ be the increments (between times $s \le t$) of
+  some Brownian motion independent of $\webnoargs$ (measurable with
   respect to $\reservoir$, say, where $\reservoir$ is independent of
   $\commafactor{\infty}{-\infty}$).
 
   \begin{itemize}
   \item Starting from time $s$, follow the path $\web{\cdot s}{x}$
     until it hits $0$, at time $S_1$, say.
-  \item Then follow $\webt_{\cdot S_1}(0)$ until it hits $\pm \epsilon$, at
+  \item Then follow $\joiner{\cdot}{S_1}$ until it hits $\pm \epsilon$, at
     time $T_1$, say.
   \item Then follow $\web{\cdot T_1}{\pm \epsilon}$ until it hits $0$, at
     time $S_2$, say.
   \item Continue indefinitely in this inductive fashion.
   \end{itemize}
 \end{definition}
-
-\TODO{Note that $\webt$ didn't actually need to be a Brownian web.  All the we need
-  is that the trajectories are $\reservoir$-measurable Brownian
-  motions.}{}
 }
 
 \begin{obs}
