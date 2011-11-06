@@ -37,6 +37,8 @@ $\resamplede$ is $\sampled$ resampled on an $\epsilon$ strip.
   $\sampledTe \to \sampledT$ as $\epsilon \to 0$
 \end{lemma}
 
+\newcommand{\Res}{\restrict{a}{b}}
+
 \begin{proof}
   We could show this directly along the lines above.  However instead
   we will do it as follows.
@@ -44,23 +46,23 @@ $\resamplede$ is $\sampled$ resampled on an $\epsilon$ strip.
   Note that
   \begin{itemize}
   \item $\resamplede \to^\P \sampled$
-  \item the probability that $f \mapsto \restrict{I}{f}$ is continuous
+  \item the probability that $f \mapsto \Res{f}$ is continuous
     at $X$ is $1$
   \end{itemize}
-  so we conclude that $\restrict{I}{\resamplede} \to^\P
-  \restrict{I}{\sampled}$ by the continuous mapping theorem (see for
+  so we conclude that $\Res{\resamplede} \to^\P
+  \Res{\sampled}$ by the continuous mapping theorem (see for
   example \cite{billingsley}, p. 21, Theorem 2.7). Note further that
   \begin{itemize}
-  \item $\resampledeT = \restrict{I}{\resamplede}$
-  \item $\sampledT = \restrict{I}{\sampled}$
+  \item $\resampledeT = \Res{\resamplede}$
+  \item $\sampledT = \Res{\sampled}$
   \end{itemize}
   so that $\resampledeT \to^\P \sampledT$.
 \end{proof}
 
 \begin{lemma}
-  Recall the definition of $\restrict{\cdot}{\cdot}$ from Definition
+  Recall the definition of $\Res{\cdot}$ from Definition
   \ref{def:restrict}.  If $\stripleavetime{f}$ is not a turning point of the path $f$,
-  then the map $f \mapsto \restrict{I}{f}$ is continuous at $f$ in the
+  then the map $f \mapsto \Res{f}$ is continuous at $f$ in the
   topology of uniform convergence on compacts.
 \end{lemma}
 
@@ -91,8 +93,8 @@ $\resamplede$ is $\sampled$ resampled on an $\epsilon$ strip.
       $[\starttime, \T+\d]$.
     \end{itemize}
 
-    \newcommand{\stoppedfn}{\restrict{I}{\fn}}
-    \newcommand{\stoppedf}{\restrict{I}{f}}
+    \newcommand{\stoppedfn}{\Res{\fn}}
+    \newcommand{\stoppedf}{\Res{f}}
 
     \newcommand{\condition}[2]{for $t \in {#1}$ we have
       $|\stoppedfn(t) - \stoppedf(t)| #2$}
