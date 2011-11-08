@@ -1,0 +1,60 @@
+{
+\section {Recovering the Brownian web from its horizontal half-planes}
+
+We will show that, given the trajectories of the Brownian web for the
+upper and lower half planes separately we can reconstruct the
+trajectories for the entire Brownian web.
+
+The difficulty is that when a trajectory $\sampled$, from the upper
+half plane, say, hits the time axis there is no finitary way to join
+it to its continuation in the lower half plane, since it essentially
+oscillates with infinite frequency about the value $0$ immediately
+after reaching it.
+
+Instead when the trajectory his $0$ we will continue it with a
+Brownian motion \emph{independent} of the web until that Brownian
+motion hits $\pm\epsilon$, at which point we will continue the
+trajectory from the web.  Call this ``perturbed'' trajectory
+$\resamplede$.
+
+The idea is that as $\epsilon$ becomes very small $\resamplede$
+converges to $\sampled$ so we can recover $\sampled$ from the
+trajectories in the horizontal half planes, and the additional
+independent Browian motion.  We prove that the independence of this
+additional Brownian motion means that, in some sense, it was not in
+fact required, and so we can recover $\sampled$ from the
+trajectories in the horizontal half planes alone.
+
+Now we'll make this idea formal.
+
+\begin{notation}
+Given a Brownian web $\webnoargs$, fix a starting point $(s,x)$ and write
+$\sampled$ for the random process $t \mapsto \web{s}{t}{x}$
+(which is a Brownian motion).
+\end{notation}
+
+{
+\newcommand{\joinernoargs}{\psi}
+\newcommand{\joiner}[2]{\joinernoargs_{{#1}{#2}}}
+\begin{definition}
+  We define $\resamplede$, a ``perturbed'' version of $\sampled$, as
+  follows.
+
+  Let $\joiner{s}{t}$ be the increments (between times $s \le t$) of
+  some Brownian motion independent of $\webnoargs$ (measurable with
+  respect to $\reservoir$, say, where $\reservoir$ is independent of
+  $\commafactor{\infty}{-\infty}$).
+
+  \begin{itemize}
+  \item Starting from time $s$, follow the path $\web{s}{\cdot}{x}$
+    until it hits $0$, at time $S_1$, say.
+  \item Then follow $\joiner{S_1}{\cdot}$ until it hits $\pm \epsilon$, at
+    time $T_1$, say.
+  \item Then follow $\web{T_1}{\cdot}{\pm \epsilon}$ until it hits $0$, at
+    time $S_2$, say.
+  \item Continue indefinitely in this inductive fashion.
+  \end{itemize}
+\end{definition}
+}
+
+}

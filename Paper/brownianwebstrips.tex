@@ -8,6 +8,7 @@
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{definition}[theorem]{Definition}
+\newtheorem{notation}[theorem]{Notation}
 \newtheorem{example}[theorem]{Example}
 \newtheorem{assumption}[theorem]{Assumption}
 \newtheorem{note}[theorem]{Note}
@@ -45,15 +46,20 @@
 \newcommand{\resamplede}{X^{\epsilon}}
 
 \newcommand{\factor}[2]{\mathcal{F}_{#1 #2}}
+\newcommand{\commafactor}[2]{\mathcal{F}_{#1,#2}}
 \newcommand{\restrict}[3]{\mathcal{R}_{{#1}{#2}}(#3)}
 \newcommand{\stripleavetime}[1]{T_{#1}}
 \newcommand{\reservoir}{\mathcal{G}}
+
+\newcommand{\webnoargs}{\phi}
+\newcommand{\web}[3]{\webnoargs_{{#1}{#2}}(#3)}
 
 \begin{document}
 
 {
   \input{abstract.tex}
   \input{brownian_web.tex}
+  \input{recovering_from_half_planes.tex}
   \input{rons_argument.tex}
   \input{single_to_multiple.tex}
 %  \input{ohad.tex}
