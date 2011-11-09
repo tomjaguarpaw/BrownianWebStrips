@@ -18,6 +18,7 @@
 
 \bibliographystyle{plain}
 \newtheorem{obs}[theorem]{Observation}
+\newtheorem{observation}[theorem]{Observation}
 \newtheorem{propos}[theorem]{Proposition}
 \newtheorem{defin}{Definition}[section]
 \newtheorem{cor}[theorem]{Corollary}
@@ -51,7 +52,10 @@
 \newcommand{\stripleavetime}[1]{T_{#1}}
 \newcommand{\reservoir}{\mathcal{G}}
 
-\newcommand{\twostrips}{\commafactor{-\infty}{0} \tensor \commafactor{0}{\infty}}
+\newcommand{\upperhp}{\mathcal{F}_{+}}
+\newcommand{\lowerhp}{\mathcal{F}_{-}}
+
+\newcommand{\twostrips}{\lowerhp \tensor \upperhp}
 \newcommand{\onestrip}{\commafactor{-\infty}{\infty}}
 \newcommand{\twostripsreservoir}{\twostrips \tensor \reservoir}
 
