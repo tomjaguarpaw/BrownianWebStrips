@@ -26,6 +26,23 @@
   \tensor \reservoir$-measurable.
 \end{observation}
 
+\begin{lemma}
+  $\Res{\resamplede} \to^\P \Res{\sampled}$ as $\epsilon \to 0$
+\end{lemma}
+
+\begin{proof}
+  We could show this directly along the lines above.  However instead
+  we will do it as follows.  Note that
+  \begin{itemize}
+  \item $\resamplede \to^\P \sampled$
+  \item the probability that $f \mapsto \Res{f}$ is continuous
+    at $X$ is $1$
+  \end{itemize}
+  so we conclude that $\Res{\resamplede} \to^\P
+  \Res{\sampled}$ by the continuous mapping theorem (see for
+  example \cite{billingsley}, p. 21, Theorem 2.7).
+\end{proof}
+
 \begin{theorem}
   The \brownianwebnoise{}
   is a continuous product of probability spaces in the sense that
