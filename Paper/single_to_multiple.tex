@@ -1,8 +1,6 @@
 {
 \section{From single point split to joining strips}
 
-\newcommand{\Res}[1]{\mathcal{R}(#1)}
-
 Recall the definition of $\restrict{\cdot}{\cdot}{\cdot}$ from
 Definition \ref{def:restrict}.  For notational convenience in this
 section we will fix $a \le b \le c$ and write $\Res{\cdot}$ for
@@ -14,12 +12,6 @@ $\restrict{a}{c}{\cdot}$.
 \newcommand{\sampledT}{\sampled^T}
 \newcommand{\sampledTe}{\sampled^{T,\epsilon}}
 \newcommand{\resampledeT}{{\resamplede}^{,T}}
-
-\begin{obs}
-  $\Res{\resamplede}$ could be called the ``$\epsilon$-resampled
-  truncated process'' and is $\factor{a}{b} \tensor \factor{b}{c}
-  \tensor \reservoir$-measurable.
-\end{obs}
 
 \begin{lemma}
   $\Res{\resamplede} \to^\P \Res{\sampled}$ as $\epsilon \to 0$
