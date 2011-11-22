@@ -165,9 +165,18 @@ As in Section \ref{recovering-from-half-planes} we can conclude that
 
 \subsection{What does this mean in terms of noises?}
 
+As before we can conclude that
+
 \begin{theorem}
-  $\factor{a}{c} = \factor{a}{b} \tensor \factor{b}{c}$
+  $\factor{\bottom}{\top} = \factor{\bottom}{0} \tensor \factor{0}{\top}$
 \end{theorem}
+
+There was nothing special about the split between the strips being at
+level $0$, so in fact we have shown that
+
+\begin{cor}
+  $\factor{x}{z} = \factor{x}{y} \tensor \factor{y}{z}$ for all $x < y < z$
+\end{cor}
 
 \begin{theorem}
   The \brownianwebnoise{}
