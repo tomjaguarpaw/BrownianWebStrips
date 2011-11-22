@@ -34,16 +34,19 @@ $\commafactor{-\infty}{0}$.
   intervals $(w,x)$ and $(y,z)$ are disjoint.
 \end{observation}
 
+\renewcommand{\top}{b}
+\newcommand{\bottom}{a}
+
 For notational convenience in the rest of this
-section we will fix $a \le b \le c$ and write $\Res{\cdot}$ for
-$\restrict{a}{c}{\cdot}$.
+section we will fix $\bottom \le 0 \le \top$ and write $\Res{\cdot}$ for
+$\restrict{\bottom}{\top}{\cdot}$.
 
 \newcommand{\Resresamplede}{\Res{\resamplede}}
 \newcommand{\Ressampled}{\Res{\sampled}}
 
 The collection of variables of the form $\Ressampled$ generate
-$\factor{a}{c}$, and the aim is to show that in fact $\Ressampled$ can
-be recovered from information in $\factor{a}{b}$ and $\factor{b}{c}$
+$\factor{\bottom}{\top}$, and the aim is to show that in fact $\Ressampled$ can
+be recovered from information in $\factor{\bottom}{0}$ and $\factor{0}{\top}$
 only.
 
 We could show this directly by an extension of the argument we used for the
@@ -53,12 +56,13 @@ ourselves.
 
 Note that $\Resresamplede$ is what you obtain when you perform the
 procedure of Definition \ref{def:resamplede} on paths in the
-$(a,b)$-strip and the $(b,c)$-strip, rather than the upper and lower
-half-planes.
+$(\bottom,0)$-strip and the $(0,\top)$-strip, rather than the upper and lower
+half-planes.  The $\reservoir$-measurable Brownian motion is still used to
+cross the gap between the strips, which is at level $0$.
 
 \begin{observation}
   $\Res{\resamplede}$ could be called the ``$\epsilon$-resampled
-  truncated process'' and is $\factor{a}{b} \tensor \factor{b}{c}
+  truncated process'' and is $\factor{\bottom}{0} \tensor \factor{0}{\top}
   \tensor \reservoir$-measurable.
 \end{observation}
 
@@ -78,8 +82,8 @@ half-planes.
 \end{proof}
 
 \begin{lemma}
-  $\Res{\sampled}$ is $\factor{a}{b} \tensor
-  \factor{b}{c}$-measurable.
+  $\Res{\sampled}$ is $\factor{\bottom}{0} \tensor
+  \factor{0}{\top}$-measurable.
 \end{lemma}
 
 \begin{lemma}
