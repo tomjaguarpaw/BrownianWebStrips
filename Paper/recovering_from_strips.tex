@@ -38,6 +38,24 @@ For notational convenience in the rest of this
 section we will fix $a \le b \le c$ and write $\Res{\cdot}$ for
 $\restrict{a}{c}{\cdot}$.
 
+\newcommand{\Resresamplede}{\Res{\resamplede}}
+\newcommand{\Ressampled}{\Res{\sampled}}
+
+The collection of variables of the form $\Ressampled$ generate
+$\factor{a}{c}$, and the aim is to show that in fact $\Ressampled$ can
+be recovered from information in $\factor{a}{b}$ and $\factor{b}{c}$
+only.
+
+We could show this directly by an extension of the argument we used for the
+half-planes in Section \ref{recovering-from-half-planes}.  However instead
+we will use that result augmented by a simple lemma to avoid repeating
+ourselves.
+
+Note that $\Resresamplede$ is what you obtain when you perform the
+procedure of Definition \ref{def:resamplede} on paths in the
+$(a,b)$-strip and the $(b,c)$-strip, rather than the upper and lower
+half-planes.
+
 \begin{observation}
   $\Res{\resamplede}$ could be called the ``$\epsilon$-resampled
   truncated process'' and is $\factor{a}{b} \tensor \factor{b}{c}
@@ -49,10 +67,6 @@ $\restrict{a}{c}{\cdot}$.
 \end{lemma}
 
 \begin{proof}
-  We could show this directly in the same way we did for the
-  half-planes in Section \ref{recovering-from-half-planes}.  However instead
-  we will use the result we already have to avoid repeating
-  a similar argument.  Note that
   \begin{itemize}
   \item $\resamplede \to^\P \sampled$
   \item the probability that $f \mapsto \Res{f}$ is continuous
