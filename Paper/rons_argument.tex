@@ -16,6 +16,7 @@ It will be slightly easier to work with the process $\rotproc =
 $\sqrt{2}$.
 
 \newcommand{\boundarylines}{A}
+\newcommand{\farpoint}{(P,0)}
 
 \begin{definition}
   An excursion of $Y$ is two stopping times $S \le T$ such that $Y_S =
@@ -42,12 +43,12 @@ sequence of excursions.
 
 \begin{lemma}
   \label{lem:Pabsorbedandtravelsfar}
-  Fix $P > 0$.  The probability that $Y$ hits $(P,0)$ during an
+  Fix $P > 0$.  The probability that $Y$ hits $\farpoint$ during an
   excursion is $\Omegaeloge$.
 \end{lemma}
 
 \begin{lemma}
-  Fix $P > 0$.  The probability that $Y$ hits $(P,0)$ during an
+  Fix $P > 0$.  The probability that $Y$ hits $\farpoint$ during an
   excursion without hitting $A$ is $\Omegaeloge$.
 \end{lemma}
 
@@ -59,7 +60,7 @@ sequence of excursions.
 
 \begin{lemma}
   Fix $P > 0$.  The probability that $Y$ started from $0$ hits
-  $\boundarylines$ before $(P,0)$ is $O(\frac{1}{\log\epsilon})$.
+  $\boundarylines$ before $\farpoint$ is $O(\frac{1}{\log\epsilon})$.
 \end{lemma}
 
 \newcommand{\Oe}{O(\epsilon)}
@@ -71,8 +72,8 @@ sequence of excursions.
   \item the excursion hits $\boundarylines$ (with probability
     $O(\epsilon$))
   \item the excursion does not hit $\boundarylines$ but does hit
-    $(P,0)$ (with probability $\Omegaeloge$)
-  \item the excursion does not hit $\boundarylines$ or $(P,0)$ before
+    $\farpoint$ (with probability $\Omegaeloge$)
+  \item the excursion does not hit $\boundarylines$ or $\farpoint$ before
     returning to $(0,0)$
   \end{itemize}
   When $Y$ returns to $(0,0)$ a new excursion begins independent of
@@ -97,10 +98,10 @@ sequence of excursions.
   $\eta$.
 
   Choose $\epsilon$ such that the probability that $Y$ hits
-  $\boundarylines$ before $(P,0)$ is less than $\eta$.
+  $\boundarylines$ before $\farpoint$ is less than $\eta$.
 
-  Then the probability that $Y$ hits $\boundarylines$ before $(P,0)$
-  or takes less time than $1$ to return from $(P,0)$ to $(0,0)$ is
+  Then the probability that $Y$ hits $\boundarylines$ before $\farpoint$
+  or takes less time than $1$ to return from $\farpoint$ to $(0,0)$ is
   less than $2\eta$.
 \end{proof}
 
@@ -182,7 +183,7 @@ From $Y \in Q$ the hitting density on $L^+$ is at least $K
 normalising constant.
 
 So the probability that $Y$ started from some point in $Q$ hits $L^+$
-between $\epsilon$ and $1$ and then travels to a point $(P,0)$ is at least
+between $\epsilon$ and $1$ and then travels to a point $\farpoint$ is at least
 \[
 \frac{K}{P} \int_{\epsilon}^{1} \frac{y/\epsilon}{1 + (y/\epsilon)^2}
 \, dy
