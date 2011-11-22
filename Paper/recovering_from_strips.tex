@@ -72,28 +72,15 @@ $\resamplede \to \sampled$ is nearly enough, and all that is required
 in addition is to show that this convergence is preserved by the
 restriction map $\Res{\cdot}$.
 
-\begin{lemma}
-  $\Res{\resamplede} \to^\P \Res{\sampled}$ as $\epsilon \to 0$
-\end{lemma}
+To show that the convergence is preserved we use the following
+property of the restriction map.
 
-\begin{proof}
-  \begin{itemize}
-  \item $\resamplede \to^\P \sampled$
-  \item the probability that $f \mapsto \Res{f}$ is continuous
-    at $X$ is $1$
-  \end{itemize}
-  so we conclude that $\Res{\resamplede} \to^\P
-  \Res{\sampled}$ by the continuous mapping theorem (see for
-  example \cite{billingsley}, p. 21, Theorem 2.7).
-\end{proof}
+\newcommand{\stripleavetimenotturningpoint}[1]{$\stripleavetime{#1}$ is
+  not a turning point of the path $#1$}
 
 \begin{lemma}
-  $\Res{\sampled}$ is $\factor{\bottom}{0} \tensor
-  \factor{0}{\top}$-measurable.
-\end{lemma}
-
-\begin{lemma}
-  If $\stripleavetime{f}$ is not a turning point of the path $f$,
+  \label{lem:Res-continuous-ae}
+  If \stripleavetimenotturningpoint{f},
   then the map $f \mapsto \Res{f}$ is continuous at $f$ in the
   topology of uniform convergence on compacts.
 \end{lemma}
@@ -145,6 +132,32 @@ restriction map $\Res{\cdot}$.
       $\stoppedfn = \fn$ so is within $\e$ of $f$.  Thus the $2\e$
       bound.}
 \end{proof}
+
+Observe that sample paths of Brownian motion $\sampled$ almost surely
+satisfy the condition of the lemma, that
+``\stripleavetimenotturningpoint{\sampled}''.  This allows us to reach
+the desired convergence result.
+
+\begin{lemma}
+  $\Res{\resamplede} \to^\P \Res{\sampled}$ as $\epsilon \to 0$
+\end{lemma}
+
+\begin{proof}
+  We already know that $\resamplede \to^\P \sampled$, and in addition
+  the probability that $f \mapsto \Res{f}$ is continuous at $X$ is $1$
+  (by Lemma \ref{lem:Res-continuous-ae}).
+  So we conclude that $\Res{\resamplede} \to^\P
+  \Res{\sampled}$ by the continuous mapping theorem (see for
+  example \cite{billingsley}, p. 21, Theorem 2.7).
+\end{proof}
+
+As in Section \ref{recovering-from-half-planes} we can conclude that
+
+\begin{lemma}
+  $\Res{\sampled}$ is $\factor{\bottom}{0} \tensor
+  \factor{0}{\top}$-measurable.
+\end{lemma}
+
 \subsection{What does this mean in terms of noises?}
 
 \begin{theorem}
