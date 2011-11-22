@@ -17,14 +17,15 @@ $\sqrt{2}$.
 
 \newcommand{\boundarylines}{A}
 \newcommand{\farpoint}{(P,0)}
+\newcommand{\origin}{(0,0)}
 
 \begin{definition}
   An excursion of $Y$ is two stopping times $S \le T$ such that $Y_S =
-  (0,0)$ and $T = \inf\{ t > S : Y_t = (0,0) \}$.
+  \origin$ and $T = \inf\{ t > S : Y_t = \origin \}$.
 \end{definition}
 
 Note that there is a.s.\ no excursion for which $S = T$, since almost
-surely $Y$ spends a positive amount of time away from $(0,0)$ before
+surely $Y$ spends a positive amount of time away from $\origin$ before
 returning.  We can then consider $Y$ as a process which performs a
 sequence of excursions.
 
@@ -74,9 +75,9 @@ sequence of excursions.
   \item the excursion does not hit $\boundarylines$ but does hit
     $\farpoint$ (with probability $\Omegaeloge$)
   \item the excursion does not hit $\boundarylines$ or $\farpoint$ before
-    returning to $(0,0)$
+    returning to $\origin$
   \end{itemize}
-  When $Y$ returns to $(0,0)$ a new excursion begins independent of
+  When $Y$ returns to $\origin$ a new excursion begins independent of
   the previous excursions.  Thus the probability that the first
   condition occurs before the second is exactly the probability of the
   first as fraction of the sum of their probabilities, that is
@@ -101,7 +102,7 @@ sequence of excursions.
   $\boundarylines$ before $\farpoint$ is less than $\eta$.
 
   Then the probability that $Y$ hits $\boundarylines$ before $\farpoint$
-  or takes less time than $1$ to return from $\farpoint$ to $(0,0)$ is
+  or takes less time than $1$ to return from $\farpoint$ to $\origin$ is
   less than $2\eta$.
 \end{proof}
 
@@ -166,7 +167,7 @@ The probability of the second transition is exactly equal to
 $\epsilon/\delta$ regardless of the history of the state machine.
 
 From this description it is straightforward to deduce that the
-probability that the machine started when $Y = (0,0)$ (or indeed when
+probability that the machine started when $Y = \origin$ (or indeed when
 $Y = (x, 0)$ for any $x \in \Le$ and $\Le$ not absorbing) will hit
 $\boundarylines$ before being absorbed is
 bounded above by $\epsilon/\delta C$, so indeed this probability is
@@ -174,7 +175,7 @@ $O(\epsilon)$.
 \end{proof}
 
 \begin{proof}[Proof of Lemma \ref{lem:Pabsorbedandtravelsfar}]
-From $Y = (0,0)$ there is a positive probabilty, $C$ say, not
+From $Y = \origin$ there is a positive probabilty, $C$ say, not
 depending on $\epsilon$, that $Y$ hits $Q = [0, \epsilon] \cross
 \{\epsilon\}$ without having been absorbed.
 
