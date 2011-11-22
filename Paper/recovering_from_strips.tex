@@ -93,14 +93,20 @@ property of the restriction map.
 
     \newcommand{\T}{\stripleavetime{f}}
     \newcommand{\Tn}{\stripleavetime{\fn}}
+    \newcommand{\starttime}{s}
 
-    Suppose $\fn \to f$ uniformly on compacts.  Then since $\T$ is not
+    Suppose $\fn \to f$ uniformly on compacts, and both are paths
+    starting at time $\starttime$
+
+    If $\T = \infty$ there is very little to prove, so suppose
+    otherwise.  Then since $\T$ is not
     a turning point of $f$ it is easily seen that $\Tn \to \T$ and
-    that eventually $\fn(\Tn) = f(\T)$.
+    that eventually \DOTHIS{$\fn(\Tn) = f(\T)$}{They both take the value
+      either $\bottom$ or $\top$ -- or both of them start outside the
+      strip}.
 
     \renewcommand{\d}{\delta}
     \newcommand{\e}{\epsilon}
-    \newcommand{\starttime}{-}
 
     Since $f$ is continuous, choose $\d$ such that
     $|f(\T) - f(x)| \le \epsilon$ when
@@ -123,9 +129,8 @@ property of the restriction map.
     \item \condition{[\T-\d, \T+\d]}{\le 2\e}
     \item \condition{(\T+\d, \infty)}{= 0}
     \end{itemize}
-    so indeed $\stoppedfn \to \stoppedf$ uniformly on compacts (indeed
-    globally since they are both eventually $0$ outside some
-    compact).}{The only tricky part is the second item.  There are
+    so indeed $\stoppedfn \to \stoppedf$ uniformly on compacts.}
+      {The only tricky part is the second item.  There are
       four cases to consider.  The worst case is when $\stoppedf$ has
       been truncated and $\stoppedfn$ hasn't.  But $\stoppedf$ is
       equal to the level, and so is within $\e$ of $f$.  OTOH
