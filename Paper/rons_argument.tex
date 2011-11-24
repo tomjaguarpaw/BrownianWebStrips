@@ -191,7 +191,7 @@ sometimes not.
 
 We analyse $\rotproc$ through the following state machine.
 
-Consider $\rotproc = (x,0) \in \Le$ (for some $x$) and $\Le$ being in
+Consider $\rotproc$ at $(x,0) \in \Le$ (for some $x$) and $\Le$ being in
 a non-absorbing state.  We will call this the start state.  From the
 start state, $Y$ will eventually reach one of two mutually exclusive
 states, according to which of the following occurs first
@@ -200,11 +200,11 @@ states, according to which of the following occurs first
 
 \begin{itemize}
 \item $Y$ is absorbed
-\item $Y$ hits $\intermediatelines$
+\item $Y$ reaches height $\pm\epsilon$
 \end{itemize}
 
 The probability of the first is bounded below by some constant $C > 0$
-which does not depend on $x$ and $\epsilon$, and regardless of the
+which does not depend on $x$ or $\epsilon$, and regardless of the
 history of the state machine.
 
 \newcommand{\stateintermediate}{Intermediate}
