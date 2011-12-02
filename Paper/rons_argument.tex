@@ -92,10 +92,14 @@ which we do in the following section through the notion of excursions.
 
 \subsection{Excursions}
 
+\newcommand{\excursionstart}{T}
+
 \begin{definition}
-  An excursion of $Y$ is the behaviour of $Y$ between two stopping times
-  $S \le T$ such that $Y_S =
-  \origin$ and $T = \inf\{ t > S : Y_t = \origin \}$.
+  Almost surely, the times at which $\rotproc = 0$ (which are stopping
+  times) form an infinite discrete collection $\excursionstart_1 <
+  \excursionstart_2 < \cdots$, say.  An excursion of $\rotproc$ is a
+  time interval $[\excursionstart_i, \excursionstart_{i+1}]$ for some
+  $i$.
 \end{definition}
 
 \newcommand{\Omegaeloge}{\Omega(\epsilon\log\epsilon)}
