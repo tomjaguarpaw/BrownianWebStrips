@@ -11,12 +11,24 @@
 
 This section is devoted to proving Lemma
 \ref{lem:resamplede-to-sampled}, i.e.\ that
-\statementoflemresampledetosampled.
+\statementoflemresampledetosampled.  This statment only depends on the
+joint distribution $(\sampled, \resamplede)$ so let us describe this
+distribution as a two-dimensional random process.
 
-It will be slightly easier to work with the process $\rotproc =
+...
+
+It will simplify notation to work with the process $\rotproc =
 (\sampled + \resamplede, \sampled - \resamplede)$ which is $(\sampled,
-\resamplede)$ rotated clockwise about the origin by $\pi / 4$ radians, and enlarged by a factor of
-$\sqrt{2}$.
+\resamplede)$ rotated clockwise about the origin by $\pi / 4$ radians (and enlarged by a factor of
+$\sqrt{2}$, but the enlargement will be irrelevant).
+
+Write $(\rotproc^1, \rotproc^2) = Y$.
+
+Then \statementoflemresampledetosampled{} is equivalent to $\rotproc^2
+\to 0$ (uniformly on compacts in probability) as $\epsilon \to 0$.
+Furthermore, this is equivalent to $\rotproc$ staying close to the
+horizontal axis during bounded time intervals with high probability.
+
 
 \newcommand{\boundarylines}{A}
 
@@ -107,7 +119,7 @@ $\sqrt{2}$.
 \end{proof}
 
 \begin{lemma}
-  Write $(Y^1, Y^2) = Y$.  Then $\P(\sup_{t \in [0,1]} |Y^2_t| \ge
+  Then $\P(\sup_{t \in [0,1]} |Y^2_t| \ge
   \delta) \to 0$ as $\epsilon \to 0$.
 \end{lemma}
 
