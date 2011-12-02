@@ -20,46 +20,13 @@ $\sqrt{2}$.
 
 \newcommand{\boundarylines}{A}
 
-Choose $\delta$ and let $\boundarylines$ be the union of the
-horizontal lines at levels $\pm\delta$.  To prove the convergence
-result we will first show that by choosing $\epsilon$ small enough we
-can make arbitrarily small the probability that $\rotproc$ has hit
-$\boundarylines$ before time $1$.
-
-We will write $\L$ for the union of the two segments of the horizontal
-axis between $\epsilon$ and $\infty$ and between $-\infty$ and
-$-\epsilon$.  $\Le$ is the segment of the horizontal axis between
-$-\epsilon$ and $\epsilon$.
-
-Assume for convenience that the processes start at time $0$.  At time
-$0$, $\sampled$ and $\resamplede$ take the same value, so $\rotproc$
-starts on the horizontal axis.  It remains on the horizontal axis
-performing a Brownian motion of volatility $2$, until it reaches $0$.
-At this point it becomes a standard two-dimensional Brownian motion.
-It returns to being a one-dimensional Brownian motion on the
-horizontal axis when it is ``absorbed''.  To be absorbed means that it
-hits $\L$, or it hits $\Le$ when $\resamplede$ has more recently taken
-value $\pm\epsilon$ than $0$.  (When this condition holds we will say
-that $\Le$ is in an ``absorbing state'').  This corresponds to
-$\resamplede$ moving according to the web $\webnoargs$ and coalescing
-with $\sampled$.
-
 \begin{definition}
   We say $Y$ is \emph{absorbed} when it hits $\L$, or it hits $\Le$
   when it is in an absorbing state.
 \end{definition}
 
-Our argument does not actually depend on $\Le$ ever being in an
-absorbing state.  Our intuition tells us that having $\Le$ being
-absorbing can only ever help $\rotproc$ remain close to the horizontal
-axis.
-
 \newcommand{\farpoint}{(P,0)}
 \newcommand{\origin}{(0,0)}
-
-We will consider $Y$ as a process which performs a sequence of
-excursions, whereby it starts at $\origin$, is later absorbed, and
-then eventually returns to $\origin$ again to start another excursion.
 
 \begin{definition}
   An excursion of $Y$ is the behaviour of $Y$ between two stopping times
@@ -67,20 +34,7 @@ then eventually returns to $\origin$ again to start another excursion.
   \origin$ and $T = \inf\{ t > S : Y_t = \origin \}$.
 \end{definition}
 
-Note that there is a.s.\ no excursion for which $S = T$, since almost
-surely $Y$ spends a positive amount of time away from $\origin$ before
-returning.
-
 \newcommand{\Omegaeloge}{\Omega(\epsilon\log\epsilon)}
-
-The key to the proof is that during an excursion $\rotproc$ hits
-$\boundarylines$ with probability $O(\epsilon)$, but hits some distant fixed
-point on $\L$, $\farpoint$ say, with a probability
-$\Omegaeloge$ which is eventually much higher.  (Here and in what
-follows all asymptotic bounds are given for $\epsilon \to 0$).
-The following two
-lemmas state these results and their proofs are presented at the end
-of the section.
 
 \begin{lemma}
   \label{lem:Phitboundaryline}
@@ -104,9 +58,6 @@ of the section.
   \ref{lem:Pabsorbedandtravelsfar} the probability is at least
   $\Omegaeloge - O(\epsilon) = \Omegaeloge$.
 \end{proof}
-
-Now instead of thinking of excursions separately, we show that with
-high probability $\rotproc$ hits $\farpoint$ before $\boundarylines$.
 
 \begin{lemma}
   Fix $P > 0$.  The probability that $Y$ started from $0$ hits
@@ -135,18 +86,6 @@ high probability $\rotproc$ hits $\farpoint$ before $\boundarylines$.
   \]
 \end{proof}
 
-We can choose $\farpoint$ arbitrarily.  The following statements hold
-with probability approaching $1$ as $\epsilon \to 0$.
-
-By making $\epsilon$ small we can force $\rotproc$ to travel to a far
-away point on the horizontal axis before hitting $\boundarylines$.
-Once $\rotproc$ has travelled far away it will take time greater than
-$1$ to return to the origin.  Thus during the whole of the time
-interval $[0,1]$ it remains within the strip bounded by the lines
-$\boundarylines$.
-
-Formally
-
 \begin{lemma}
   The probability that before time $1$, $Y$ has hit $\boundarylines$
   is $o(1)$.
@@ -167,14 +106,10 @@ Formally
   less than $2\eta$.
 \end{proof}
 
-This proves the following.
-
 \begin{lemma}
   Write $(Y^1, Y^2) = Y$.  Then $\P(\sup_{t \in [0,1]} |Y^2_t| \ge
   \delta) \to 0$ as $\epsilon \to 0$.
 \end{lemma}
-
-In other words,
 
 \begin{cor}
   $\P(\sup_{t \in [0,1]} |\sampled_t - \resamplede_t | \ge \delta) \to
