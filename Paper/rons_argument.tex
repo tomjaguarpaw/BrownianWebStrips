@@ -25,12 +25,32 @@ $\sqrt{2}$, but the enlargement will be irrelevant).
 Write $(\rotproc^1, \rotproc^2) = Y$.
 
 Then \statementoflemresampledetosampled{} is equivalent to $\rotproc^2
-\to 0$ (uniformly on compacts in probability) as $\epsilon \to 0$.
-Furthermore, this is equivalent to $\rotproc$ staying close to the
-horizontal axis during bounded time intervals with high probability.
+\toinP 0$ as $\epsilon \to 0$.
+Described less formally, this is $\rotproc$ staying close to the
+horizontal axis during bounded time intervals with high probability.  
+By the scale-invariance properties of Brownian motion, proving the
+convergence uniformly on the interval $[0,1]$ is as good as proving it
+uniformly for every bounded interval.  Thus it will suffice to prove
+the following lemma.
 
+\begin{lemma}
+  Then $\P(\sup_{t \in [0,1]} |Y^2_t| \ge \delta) \to 0$ as $\epsilon
+  \to 0$.
+\end{lemma}
 
 \newcommand{\boundarylines}{A}
+
+A further restatement will make our goal clearer.  \FIXME{}{Introduce
+  $\boundarylines$}.
+
+\begin{lemma}
+  \label{lem:hit-boundary-lines-o1}
+  The probability that before time $1$, $Y$ has hit $\boundarylines$
+  is $o(1)$.
+\end{lemma}
+
+
+And Lemma \ref{lem:resamplede-to-sampled}, i.e.\ that \statementoflemresampledetosampled.
 
 \begin{definition}
   We say $Y$ is \emph{absorbed} when it hits $\L$, or it hits $\Le$
@@ -98,12 +118,7 @@ horizontal axis during bounded time intervals with high probability.
   \]
 \end{proof}
 
-\begin{lemma}
-  The probability that before time $1$, $Y$ has hit $\boundarylines$
-  is $o(1)$.
-\end{lemma}
-
-\begin{proof}
+\begin{proof}[Proof of \ref{lem:hit-boundary-lines-o1}]
   Fix $\eta > 0$.
 
   Choose $P$ so that the probability that standard Brownian motion
@@ -117,21 +132,6 @@ horizontal axis during bounded time intervals with high probability.
   or takes less time than $1$ to return from $\farpoint$ to $\origin$ is
   less than $2\eta$.
 \end{proof}
-
-\begin{lemma}
-  Then $\P(\sup_{t \in [0,1]} |Y^2_t| \ge
-  \delta) \to 0$ as $\epsilon \to 0$.
-\end{lemma}
-
-\begin{cor}
-  $\P(\sup_{t \in [0,1]} |\sampled_t - \resamplede_t | \ge \delta) \to
-  0$ as $\epsilon \to 0$.
-\end{cor}
-
-And by the scale-invariance properties of Brownian motion, proving the
-convergence uniformly on the interval $[0,1]$ is as good as proving it
-uniformly for every bounded interval.  Thus this suffices to prove
-Lemma \ref{lem:resamplede-to-sampled}, i.e.\ that \statementoflemresampledetosampled.
 
 We conclude the section by providing the proofs of the two previously
 stated lemmas.
