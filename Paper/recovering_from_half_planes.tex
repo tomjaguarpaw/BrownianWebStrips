@@ -88,20 +88,14 @@ to the following lemma.
   \statementoflemresampledetosampled
 \end{lemma}
 
-\[\text{
-  $\resamplede$ is $\twostripsreservoir$-measurable
-}\]
-
-\[\text{
-  \label{cor:sampled-twostripsreservoir-meas}
-  $\sampled$ is $\twostripsreservoir$-measurable.
-}\]  
-
-\begin{proof}
-  This is a simple result on tensor products of
-  Hilbert spaces (for example (1c1), p5 of
-  \cite{tsirelson-completion}).
+\begin{proof}[Proof that Lemma \ref{lem:resamplede-to-sampled}
+    imples Lemma \ref{lem:sampled-twostrip-meas}]
+  $\resamplede$ is $\twostripsreservoir$-measurable, so we use Lemma
+  \ref{lem:resamplede-to-sampled} to conclude that $\sampled$ is also
+  $\twostripsreservoir$-measurable.  However, since $\sampled$ is
+  actually independent of $\reservoir$ we can use a basic result on
+  tensor products of Hilbert spaces (for example (1c1), p5 of
+  \cite{tsirelson-completion}) to conclude that $\sampled$ is
+  in fact $\twostrips$-measurable.
 \end{proof}
-
-
 }
