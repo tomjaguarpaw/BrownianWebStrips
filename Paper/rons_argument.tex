@@ -103,21 +103,22 @@ which we do in the following section through the notion of excursions.
 
 \newcommand{\Omegaeloge}{\Omega(\epsilon\log\epsilon)}
 
+\newcommand{\probexcursion}[2]{The probability the during a given
+  excursion #1 is #2.}
+
 \begin{lemma}
   \label{lem:Phitboundaryline}
-  The probability that during a given excursion $Y$ hits $\boundarylines$
-  is $O(\epsilon)$.
+  \probexcursion{$Y$ hits $\boundarylines$}{$O(\epsilon)$}
 \end{lemma}
 
 \begin{lemma}
   \label{lem:Pabsorbedandtravelsfar}
-  Fix $P > 0$.  The probability that during a given excursion $Y$ hits $\farpoint$
-  is $\Omegaeloge$.
+  Fix $P > 0$. \probexcursion{$Y$ hits $\farpoint$}{$\Omegaeloge$}
 \end{lemma}
 
 \begin{lemma*}
-  Fix $P > 0$.  The probability that during a given excursion $Y$ hits $\farpoint$
-  and does not hit $A$ is $\Omegaeloge$.
+  Fix $P > 0$.  \probexcursion{$Y$ hits $\farpoint$ and does not hit
+    $A$}{$\Omegaeloge$}
 \end{lemma*}
 
 \begin{proof}
