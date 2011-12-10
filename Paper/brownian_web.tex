@@ -1,29 +1,41 @@
 {
-\section{Definition of the Brownian web on horizontal strips}
+\section{Definition of the Brownian web}
+
+The Brownian web is the continuum scaling limit of a system of
+independent coalescing random walks (see []).  Constructing the
+continuum version raises several technical difficulties addressed in
+[] [] [] . One way to deal with the difficulties is to introduce the
+structure of flows as detailed in [].  Nonetheless all the
+constructions share the following property, which we use as a
+definition, at the expense of uniqueness:
 
 \begin{definition}
-  \label{def:independent-coalescing-bm}
-  \newcommand{\maxsym}{\vee}
-  A pair of independent-coalescing Brownian motions is a pair of
-  stochastic processes $(X, X')$ such that $X_t$ is defined for $t \in
-  [s, \infty)$, say, and $X'_t$ for $t \in [s', \infty)$, say.  $X$
-      and $X'$ are Brownian motions. They are independent until time $T = \inf
-      \{ t \ge s \maxsym s' : X_t = X'_t\}$, and for $t \ge T$ $X_t =
-      X'_t$.
+  A Brownian web on a probability space $\Omega$ is a (jointly)
+  measurable mapping $\webnoargs : \Omega \cross \simplex \cross \R
+  \to \R$, $(\omega, (s, t), x) \mapsto \web{s}{t}{x}$ (we supress
+  $\omega$ in the notation) such that for fixed finite collection of
+  starting points $(s_1, x_1),(s_2, x_2),...,(s_n, x_n))$, the
+  collection of processes $(\web{s_1} {\cdot}{x_1},
+  \web{s_2}{\cdot}{x_2},...,\web{s_n}{\cdot}{x_n})$ is a pair of
+  independent-coalescing Brownian motions.
 \end{definition}
 
 \begin{notation}
-  Let $\simplex$ = $\{(s, t) \in \R^2 : s \le t\}$
+  Where $\simplex$ denotes $\{(s, t) \in \R^2 : s \le t\}$.
 \end{notation}
 
-\begin{definition}
-  A Brownian web on a probability space $\Omega$ is a
-  (jointly) measurable mapping $\webnoargs : \Omega \cross \simplex \cross
-  \R \to \R$, $(\omega, (s, t), x) \mapsto \web{s}{t}{x}$ (we supress
-  $\omega$ in the notation) such that for fixed pairs of starting
-  points $(s, x)$ and $(s', x')$, the pair of processes $(\web{s}
-  {\cdot}{x}, \web{s'}{\cdot}{x'})$ is a pair of independent-coalescing
-  Brownian motions.
+and:
+
+\begin{definition}\TODO{}{Maybe make inline[ohad]} 
+  \label{def:independent-coalescing-bm}
+  \newcommand{\maxsym}{\vee} 
+  A system of $n$ independent-coalescing Brownian motions is a finite
+  collection of stochastic processes $(X_1, X_2,...,X_n)$ such that
+  each $X_i$ starts at some point $x_i$ at some time $s_i$, and $(X_1,
+  X_2,...,X_n)$ are independent until the first time $T$ at which
+  $X_i(T)=X_j(T)$ for some $i\neq j$. From this time onwards $X_i(T)$
+  and $X_j(T)$ coalesce and continue with the rest of the $X_k$ (for
+  $k\neq i,j$) as a system of $n-1$ independent Brownian motions.
 \end{definition}
 
 \begin{notation}
