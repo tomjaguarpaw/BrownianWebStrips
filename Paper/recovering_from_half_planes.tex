@@ -55,7 +55,19 @@ so our theorem reduces to the following lemma.
   $\sampled$ is $\twostrips$-measurable.
 \end{lemma}
 
-\FIXME{This is not immediate.}{Explain why this is difficult}
+Equivalently, by using trajectories starting on the upper halfplane
+which  ``die out'' when they hit $0$ and trajectories starting on
+the lower halfplane which ``die out'' when they hit $0$ as well we
+can recover all of the web's trajectories.
+To see that Lemma \ref{lem:sampled-twostrip-meas} is non-trivial,
+observe that the following does not work. We cannot recover a web's
+trajectory by following it on, say, the upper halfplane until it
+hits 0, then following a trajectory starting from that point on the
+lower halfplane. The reason for this is that trajectories starting at
+0 ``die out'' immediatly. Observe that this problem does not arise when
+trying to use information about two overlapping half-planes, so it is
+not difficult to recover the web from such.
+\TODO{}{Check grammar}
 
 {
 \newcommand{\joinernoargs}{\psi}
