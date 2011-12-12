@@ -58,9 +58,19 @@ the $y=0$ line). The transition of $\twodim$ is summarized in figure
 \end{figure}
 \TODO{}{Break lines in titles of two last columns}
 
-Whether both follow the web
-if so whether coalesced
-...
+We can now reduce Lemma \ref{lem:resamplede-to-sampled} and rephrase it in terms of $\twodim$:
+\begin{lemma}\label{lem:resamplede-to-sampled-twodim}
+Let $A_\delta$ be the diagonally oriented strip $\{(x,y) \ :\  |x-y|<\delta \}$, 
+$\P(\twodim_t \in A_\delta \text{ for all } t \in [0,1])\to1$ as $\epsilon\to 0$.
+\end{lemma}
+The reduction of Lemma \ref{lem:resamplede-to-sampled} to the above
+follows from the scale-invariance properties of Brownian motion. Those
+imply that proving the convergence uniformly on the interval $[0,1]$ is
+suffices to prove the convergence on every bounded time interval.
+
+It is evident from Figure [] that this process is better looked at when rotated 45 degrees clockwise,
+Thus we define $\rotproc = (\sampled + \resamplede, \sampled - \resamplede)$, and restate Lemma \ref{lem:resamplede-to-sampled-twodim} in terms of $\rotproc$: 
+\TODO{}{We are here!}
 
 \begin{definition}
   We say $Y$ is \emph{absorbed} when it hits $\L$, or it hits $\Le$
