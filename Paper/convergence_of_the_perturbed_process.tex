@@ -10,12 +10,55 @@
 \newcommand{\union}{\cup}
 \renewcommand{\L}{L^+ \union L^-}
 \newcommand{\Le}{L^\epsilon}
+\newcommand{\statenoweb}{\text{state }1}
+\newcommand{\statewebapart}{\text{state }2}
+\newcommand{\statewebtogether}{\text{state }3}
+\newcommand{\twodim}{B^\epsilon}
 
 The statement
 \statementoflemresampledetosampled{} depends only on the
-(joint) distribution of $(\sampled, \resamplede)$ so let us describe this
+(joint) distribution of $\twodim=(\sampled, \resamplede)$ so let us describe this
 distribution as a two-dimensional random process.
+We classify the behavior of the process according to three states, according to
+the behavior of $\resamplede$ in respect to $\sampled$. If $\resamplede$ follows
+$\bmweb$ we say it is in $\statenoweb$. If $\resamplede$ follows $\webnoargs$
+and does not coalesce with $\sampled$ we say it is in $\statewebapart$. Finally,
+if $\resamplede$ follows $\webnoargs$ coalescing with $\sampled$ we say it is in
+$\statewebtogether$. \TODO{}{ohad: add figure} Observe that $\twodim$ always starts
+in $\statewebtogether$. Further notice that from that from this state $\twodim$
+can only transition to $\statenoweb$ after hitting the origin, as the coalesced
+$\sampled$ and $\resamplede$ will continue together until they leave their
+current half-plane. From $\statenoweb$ the process will transition to
+$\statewebtogether$ as soon as $\resamplede$ leaves the $(-\epsilon,\epsilon)$
+interval (i.e. $\twodim$ hits either of the $y=\pm\epsilon$ lines). From
+$\statewebapart$ the process can either transition to $\statewebtogether$
+if $\sampled$ and $\resamplede$ coalesce (i.e. $\twodim$ hits the line $x=y$)
+or transition to $\statenoweb$ if $\resamplede$ hits $0$ (i.e. $\twodim$ hits
+the $y=0$ line). The transition of $\twodim$ is summarized in figure
+\ref{fig:twodimtranstab}.
 
+\begin{figure}\label{fig:twodimtranstab}
+\begin{center}
+  \begin{tabular}{| l || c | c | c | c | c | }
+    \hline
+    State & Illustration & Law & Next & Trans. Cond. ($\resamplede$) & Trans. Cond. ($\twodim=(x,y)$) \\
+    \hline
+    \hline
+    $\statenoweb$ & 2 & indep. & $\statewebapart$ & hits $\pm\epsilon$ & $x=\pm\epsilon$ \\
+    \hline
+    \multirow{2}{*}{$\statewebapart$} & \multirow{2}{*}{5} & \multirow{2}{*}{indep.} & $\statenoweb$ & hits $0$ & $x=0$ \\ \cline{4-6}
+        &  &  & $\statewebtogether$ & hits $\sampled$ & $x=y$\\
+    \hline
+    $\statewebtogether$  & 8 & equal & $\statenoweb$ &  hits $0$ & $y=x=0$\\
+    \hline
+  \end{tabular}
+\end{center}
+\caption{States and transitions of $\twodim$}
+\end{figure}
+\TODO{}{Break lines in titles of two last columns}
+
+Whether both follow the web
+if so whether coalesced
 ...
 
 \begin{definition}
