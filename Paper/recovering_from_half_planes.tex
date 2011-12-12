@@ -50,27 +50,27 @@ so our theorem reduces to the following lemma.
   $\sampled$ is $\twostrips$-measurable.
 \end{lemma}
 
-Equivalently, by using trajectories starting on the upper halfplane
-which  ``die out'' when they hit $0$ and trajectories starting on
-the lower halfplane which ``die out'' when they hit $0$ as well we
+Equivalently, by using trajectories starting on the upper half-plane
+which ``die out'' when they hit $0$ and trajectories starting on
+the lower half-plane which ``die out'' when they hit $0$ as well we
 can recover all of the web's trajectories.
 To see that Lemma \ref{lem:sampled-twostrip-meas} is non-trivial,
 observe that the following does not work. We cannot recover a web's
-trajectory by following it on, say, the upper halfplane until it
+trajectory by following it on, say, the upper half-plane until it
 hits 0, then following a trajectory starting from that point on the
-lower halfplane. The reason for this is that trajectories starting at
-0 ``die out'' immediatly. Observe that this problem does not arise when
+lower half-plane. The reason for this is that trajectories starting at
+0 ``die out'' immediately. Observe that this problem does not arise when
 trying to use information about two overlapping half-planes, so it is
 not difficult to recover the web from such.
 \TODO{}{Check grammar}
 
 To overcome this problem, for every starting point, say in the upper
 half-plane, we define the following process. While the process is in
-the upper halfpplane, it follows the upper half-plane web until it hits
+the upper half-plane, it follows the upper half-plane web until it hits
 $0$, at which point it starts to follow a Brownian motion entirely
 independent of the web. It follows this Brownian motion until it gets
-to disatance $\epsilon$ from 0, and then follows the web of the appropriate
-halfplane.
+to distance $\epsilon$ from 0, and then follows the web of the appropriate
+half-plane.
 
 In section [the next subsection] we define this process, we call the
 $\epsilon$ perturbed process, formally.
@@ -107,10 +107,10 @@ to both the upper half-plane web and the lower half-plane one.
   We say $\resamplede$ follows $\joinernoargs$ on $[s,u]$ if
   $\resamplede_t = \resamplede_s + \joinerval{t} - \joinerval{s}$ for $t \in [s,u]$.
 
-  The perturbed process alternates between two states.  In state A it follows 
-  $\webnoargs$ while in state B it follows $\bmweb$. State A is replaced with state B 
-  when $\resamplede$ hits $0$, while state B is replaced by state A when 
-  $\resamplede$ hits $\pm \epsilon$. 
+  The perturbed process alternates between two states.  In state A it follows
+  $\webnoargs$ while in state B it follows $\bmweb$. State A is replaced with state B
+  when $\resamplede$ hits $0$, while state B is replaced by state A when
+  $\resamplede$ hits $\pm \epsilon$.
 \end{definition}
 }
 
