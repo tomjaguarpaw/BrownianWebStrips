@@ -115,8 +115,6 @@ following section using the notion of excursions of $\twodim$.
   \excursionstart_2 < \cdots$. We say ``the probability that an excursion
   hits a set $X$ is $p$'', if $\P(\twodim_t\in X \text{
   for some } t\in [\excursionstart_0, \excursionstart_{1}]) = p$.
-  We can similarly define the probability that an excursion hits a set
-  $X$ without hitting a set $Y$.
     
   Observe that by equidistribution the probability is the same when 
   $t$ ranges over $[\excursionstart_i, \excursionstart_{i+1}]$, and 
@@ -138,29 +136,15 @@ realized through the next couple of lemmas.
 
 \newcommand{\Omegaeloge}{\Omega(\epsilon\log\epsilon)}
 
-\newcommand{\probexcursion}[2]{The probability that during a given
-  excursion #1 is #2.}
-
 \begin{lemma}
   \label{lem:Phitboundaryline}
-  \probexcursion{$Y$ hits $\boundarylines$}{$O(\epsilon)$}
+  $\P\left(\text{an excursion hits $\boundarylines$}\right)=O(\epsilon)$
 \end{lemma}
 
 \begin{lemma}
   \label{lem:Pabsorbedandtravelsfar}
-  Fix $P > 0$. \probexcursion{$Y$ hits $\farpoint$}{$\Omegaeloge$}
+  For any fixed $P > 0$, $\P\left(\text{an excursion hits $\boundarylines$}\right)=O(\epsilon)$
 \end{lemma}
-
-\begin{lemma*}
-  Fix $P > 0$.  \probexcursion{$Y$ hits $\farpoint$ and does not hit
-    $A$}{$\Omegaeloge$}
-\end{lemma*}
-
-\begin{proof}
-  By Lemmas \ref{lem:Phitboundaryline} and
-  \ref{lem:Pabsorbedandtravelsfar} the probability is at least
-  $\Omegaeloge - O(\epsilon) = \Omegaeloge$.
-\end{proof}
 
 We are now in a position to prove something slightly stronger than
 Lemma \ref{lem:prob-hit-boundary-o1}.
