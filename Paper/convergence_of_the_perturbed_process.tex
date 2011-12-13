@@ -121,11 +121,13 @@ following section using the notion of excursions of $\twodim$.
   note that the hitting events in question are independent.
 }
 
+\newcommand{\probexcursionhits}[1]{\P\left(\text{an excursion hits #1}\right)}
+
 Using this definition we can now use the following strategy to
 prove Lemma \ref{lem:prob-hit-boundary-o1}:
 \[
-\frac{\P\left(\text{an excursion hits $\boundarylines$}\right)}
-     {\P\left(\text{an excursion hits $\farpoint$}\right)}
+\frac{\probexcursionhits{\boundarylines}}
+     {\probexcursionhits{\farpoint}}
         \to 0 \text{ as } \epsilon\to0
 \]
 As the hitting events on different excursions are independent we
@@ -138,12 +140,12 @@ realized through the next couple of lemmas.
 
 \begin{lemma}
   \label{lem:Phitboundaryline}
-  $\P\left(\text{an excursion hits $\boundarylines$}\right)=O(\epsilon)$
+  $\probexcursionhits{\boundarylines}$ is $O(\epsilon)$.
 \end{lemma}
 
 \begin{lemma}
   \label{lem:Pabsorbedandtravelsfar}
-  For any fixed $P > 0$, $\P\left(\text{an excursion hits $\boundarylines$}\right)=O(\epsilon)$
+  For any fixed $P > 0$, $\probexcursionhits{\boundarylines}$ is $O(\epsilon)$.
 \end{lemma}
 
 We are now in a position to prove something slightly stronger than
