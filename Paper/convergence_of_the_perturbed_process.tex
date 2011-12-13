@@ -5,8 +5,6 @@
 \label{sec:proof-of-lem:resamplede-to-sampled}
 
 \newcommand{\bandwidth}{\delta}
-\newcommand{\rotproc}{Y^\circ}
-\FIXME{}{delete the above def}
 \newcommand{\union}{\cup}
 \renewcommand{\L}{L^+ \union L^-}
 \newcommand{\Le}{L^\epsilon}
@@ -34,7 +32,9 @@ interval (i.e. $\twodim$ hits either of the $y=\pm\epsilon$ lines). From
 $\statewebapart$ the process can either transition to $\statewebtogether$
 if $\sampled$ and $\resamplede$ coalesce (i.e. $\twodim$ hits the line $x=y$)
 or transition to $\statenoweb$ if $\resamplede$ hits $0$ (i.e. $\twodim$ hits
-the $y=0$ line). The transition of $\twodim$ is summarized in figure
+the $y=0$ line). Observe that this process always follows the law of a two dimensional
+Brownian motion outsize the line $\{(x,x)\}$. The transition of $\twodim$ is
+summarized in figure
 \ref{fig:twodimtranstab}.
 
 \begin{figure}\label{fig:twodimtranstab}
@@ -181,19 +181,21 @@ We conclude by providing the proofs of the two previously
 stated lemmas.
 
 \subsection{Proofs of the excursion lemmas}
+\newcommand{\tdh}{\rotproc^1}
+\newcommand{\tdv}{\rotproc^2}
+\newcommand{\rotproc}{Z}
 
-In this section we give the proof of Lemmas \ref{lem:Phitboundaryline} 
-and \ref{lem:Pabsorbedandtravelsfar}. 
-
-\newcommand{\tdh}{\twodim^{(\nearrow)}}
-\newcommand{\tdv}{\twodim^{(\nwarrow)}}
+In this section we give the proof of Lemmas \ref{lem:Phitboundaryline}
+and \ref{lem:Pabsorbedandtravelsfar}.
+For convenience we rotate (and scale) $\twodim=(\twodim^1,\twodim^2)$, defining
+$\rotproc=(\tdh,\tdv)=(\twodim^1+\twodim^2,\twodim^1-\twodim^2)$.
 
 \begin{proof}[Proof of Lemma \ref{lem:Phitboundaryline}]
 Consider the process $\twodim$ between times $\excursionstart_0$ and $\excursionstart_1$.
 Our goal is to show that with probability at least $1-o(\epsilon)$, $\twodim$ arrives in
 $\statewebtogether$, before hitting $\boundarylines$. That is because once it arrives at
 $\statewebtogether$ it can never hit $\boundarylines$ before hitting $\origin$.
-We now \TODO{factorize}{what's the right word?} $\twodim=(\twodim^1,\twodim^2)$ into two one dimensional walks $\tdh=\twodim^1+\twodim^2,\tdv=\twodim^1-\twodim^2$. We now show to following two
+We now show to following two
 auxiliary claims:
 
 \begin{claim}
@@ -214,19 +216,28 @@ of it hitting $\boundarylines$ tends to $0$. We can now deduce Lemma \ref{lem:Ph
 \end{proof}
 
 \begin{proof}[Proof of Lemma \ref{lem:Pabsorbedandtravelsfar}]
-We bound the probability that $\rotproc$ hits $\farpoint$ during an
-excursion with a crude estimate which is nontheless sufficient.
+We bound below the probability that an excursion hits $\farpoint$, i.e. $\rotproc$ hits $(P,0)$ before returning to $\origin$.
 
-From $\rotproc = \origin$ there is a positive probabilty, $C$ say, not
-depending on $\epsilon$, that $\rotproc$ hits $Q = [0, \epsilon] \cross
-\{\epsilon\}$ without having been absorbed.
+After a stopping time at which $\twodim = \rotproc = \origin$ there is a positive probability $C$
+that $\rotproc$ hits $Q=[0, \epsilon] \cross
+\{\epsilon\}$ before returning to $\origin$.
+By scale invariance $C$ is independent of $\epsilon$.
 
-From $\rotproc \in Q$ the hitting density on $L^+$ is at least $K
-\frac{1}{\epsilon} \frac{1}{1 + (y/\epsilon)^2} dy$, where $K$ is a
-normalising constant independent of $\epsilon$.
+Let $(x,\epsilon)\in Q$ and consider $\rotproc$ after hitting $(x,\epsilon)$.
+We calculate the hitting density of this process on the horizontal axis.
+By the classical result on the hitting density on a line of the two dimensional
+Brownian motion, this density for points on $L^+$ is at least
+\[
+K\frac{1}{\epsilon} \frac{1}{1 + (y/\epsilon)^2} dy
+\]
+where $K$ is a normalizing constant (independent of $\epsilon$).
 
-So the probability that $\rotproc$ started from some point in $Q$ hits $L^+$
-between $\epsilon$ and $1$ and then travels to a point $\farpoint$ is at least
+By the same martingale argument used above, after hitting a point $(x,0)$ the
+probability of hitting $(P,0)$ before $\origin$ is $x/P$ for all $0\le x\le P$.
+Integrating this against the hitting density we get that the probability that
+$\rotproc$ started from some point in $Q$ hits $L^+$
+between $\epsilon$ and $1$ and then travels to $\farpoint$ before returning
+to $\origin$ is at least
 \[
 \frac{K}{P} \int_{\epsilon}^{1} \frac{y/\epsilon}{1 + (y/\epsilon)^2}
 \, dy
