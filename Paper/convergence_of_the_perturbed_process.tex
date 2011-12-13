@@ -108,15 +108,17 @@ following section using the notion of excursions of $\twodim$.
 
 \subsection{Excursions of $\twodim$}
 
-\newcommand{\excursionstart}{T}
-
-\begin{definition*}
-  Almost surely, the times at which $\rotproc = 0$ (which are stopping
+{
+  \newcommand{\excursionstart}{T}
+  Almost surely, the times at which $\twodim = 0$ (which are stopping
   times) form an infinite discrete collection $\excursionstart_1 <
-  \excursionstart_2 < \cdots$, say.  An excursion of $\rotproc$ is a
-  time interval $[\excursionstart_i, \excursionstart_{i+1}]$ for some
-  $i$.
-\end{definition*}
+  \excursionstart_2 < \cdots$. We say ``during an excursion $\twodim$ 
+  hits a set $X$ with probability $p$'', if $\P(\twodim_t\in X \text{
+  for some } t\in [\excursionstart_0, \excursionstart_{1}]) = p$.
+  Observe that by equidistribution the probability is the same when 
+  $t$ ranges over $[\excursionstart_i, \excursionstart_{i+1}]$, and 
+  note that the hitting events in question are independent.
+}
 
 \newcommand{\Omegaeloge}{\Omega(\epsilon\log\epsilon)}
 
