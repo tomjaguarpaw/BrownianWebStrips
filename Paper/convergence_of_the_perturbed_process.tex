@@ -114,9 +114,9 @@ following section using the notion of excursions of $\twodim$.
   \excursionstart_1 < \cdots$. We say ``the probability that an excursion
   hits a set $X$ is $p$'', if $\P(\twodim_t\in X \text{
   for some } t\in [\excursionstart_0, \excursionstart_{1}]) = p$.
-    
-  Observe that by equidistribution the probability is the same when 
-  $t$ ranges over $[\excursionstart_i, \excursionstart_{i+1}]$, and 
+
+  Observe that by equidistribution the probability is the same when
+  $t$ ranges over $[\excursionstart_i, \excursionstart_{i+1}]$, and
   note that the hitting events in question are independent.
 }
 
@@ -132,7 +132,7 @@ prove Lemma \ref{lem:prob-hit-boundary-o1}:
 As the hitting events on different excursions are independent we
 can deduce it is much more likely that hitting $\farpoint$ happens
 before hitting $\boundarylines$. This implies Lemma
-\ref{lem:prob-hit-boundary-o1}. This philosophy is 
+\ref{lem:prob-hit-boundary-o1}. This philosophy is
 realized through the next couple of lemmas.
 
 \newcommand{\Omegaeloge}{\Omega(\epsilon\log\epsilon)}
@@ -164,7 +164,7 @@ Lemma \ref{lem:prob-hit-boundary-o1}.
     $O(\epsilon$))
   \item the excursion does not hit $\boundarylines$ but does hit
     $\farpoint$ (with probability $\Omegaeloge-\Oe$, which is itself
-    $\Omegaeloge$) 
+    $\Omegaeloge$)
   \item the excursion does not hit $\boundarylines$ or $\farpoint$ before
     returning to $\origin$
   \end{itemize}
@@ -196,7 +196,7 @@ $\statewebtogether$ it can never hit $\boundarylines$ before hitting $\origin$.
 We now \TODO{factorize}{what's the right word?} $\twodim=(\twodim^1,\twodim^2)$ into two one dimensional walks $\tdh=\twodim^1+\twodim^2,\tdv=\twodim^1-\twodim^2$. We now show to following two
 auxiliary claims:
 
-\begin{claim} 
+\begin{claim}
  Whenever $\tdv=0$ the probability that subsequently $\twodim$ arrives at $\statewebtogether$ before $\tdv$ hits $\epsilon$ is at least a constant (independent of $\epsilon$).
 \end{claim}
 
@@ -208,7 +208,7 @@ Claim 1 follows from scale invariance, while Claim 2 is a standard martingale re
 
 The reduction of Lemma \ref{lem:Phitboundaryline} to those two claims is similar to the
 proof of Lemma \ref{lem:prob-hit-boundary-o1loge}. Claims 1 and 2 imply that between two consecutive times when $\tdv=0$
-the ratio of the probability of $\twodim$ arriving at $\statewebtogether$ and the probability 
+the ratio of the probability of $\twodim$ arriving at $\statewebtogether$ and the probability
 of it hitting $\boundarylines$ tends to $0$. We can now deduce Lemma \ref{lem:Phitboundaryline} from the fact that the behavior of $\twodim$ is independent on those intervals.
 \FIXME{}{Make this paragraph clearer}
 \end{proof}
