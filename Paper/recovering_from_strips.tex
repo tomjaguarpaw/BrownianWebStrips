@@ -95,7 +95,7 @@ restriction map $\Res{\cdot}$.
 \end{lemma}
 
 To show that the convergence is preserved we use the following
-property of the restriction map.
+straightforward result in classical analysis.
 
 \newcommand{\stripleavetimenotturningpoint}[1]{$\stripleavetime{#1}$ is
   not a turning point of the path $#1$}
@@ -106,8 +106,6 @@ property of the restriction map.
   then the map $f \mapsto \Res{f}$ is continuous at $f$ in the
   topology of uniform convergence on compacts.
 \end{lemma}
-
-This is a straightforward result in classical analysis.
 
 \newcommand{\commenttom}[1]{}
 \commenttom{
@@ -164,16 +162,12 @@ This is a straightforward result in classical analysis.
 \end{proof}
 }}
 
-Observe that sample paths of Brownian motion $\sampled$ almost surely
-satisfy the condition of the lemma, that
-``\stripleavetimenotturningpoint{\sampled}''.  This allows us to reach
-the desired convergence result.
-
 \begin{proof}[Proof of Lemma \ref{lem:resamplede-to-sampled-strip}]
-  We already know that $\resamplede \toinP \sampled$, and in addition
-  the probability that $f \mapsto \Res{f}$ is continuous at $X$ is $1$
-  (by Lemma \ref{lem:Res-continuous-ae}).
-  So we conclude that $\Res{\resamplede} \toinP
+  We already know that $\resamplede \toinP \sampled$.  In addition
+  $\sampled$ is a Brownian motion so almost surely
+  satisfies the condition of Lemma \ref{lem:Res-continuous-ae}, that
+  ``\stripleavetimenotturningpoint{\sampled}''.
+  We conclude that $\Res{\resamplede} \toinP
   \Res{\sampled}$ by the continuous mapping theorem (see for
   example \cite{billingsley}, p. 21, Theorem 2.7).
 \end{proof}
