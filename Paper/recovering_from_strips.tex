@@ -28,6 +28,13 @@ $(-\infty, \infty) \cross (y,z)$.
   intervals $(w,x)$ and $(y,z)$ are disjoint.
 \end{observation}
 
+\renewcommand{\top}{b}
+\newcommand{\bottom}{a}
+
+\begin{theorem}
+  $\factor{x}{z} = \factor{x}{y} \tensor \factor{y}{z}$ for all $x < y < z$
+\end{theorem}
+
 \newcommand{\brownianwebnoise}{collection of horiztontal
   sub-$\sigma$-algebras of the Brownian web}
 
@@ -41,9 +48,6 @@ $(-\infty, \infty) \cross (y,z)$.
 With these definitions, $\upperhp$ of Section \ref{recovering-from-half-planes} is
 $\commafactor{0}{\infty}$ and $\lowerhp$ is
 $\commafactor{-\infty}{0}$.
-
-\renewcommand{\top}{b}
-\newcommand{\bottom}{a}
 
 In the rest of this
 section we fix $\bottom < 0 < \top$ and write $\Res{\cdot}$ for
@@ -173,18 +177,9 @@ As in Section \ref{recovering-from-half-planes} we can conclude that
 
 \subsection{What does this mean in terms of noises?}
 
-As before we can conclude that
-
 \begin{theorem}
   $\factor{\bottom}{\top} = \factor{\bottom}{0} \tensor \factor{0}{\top}$
 \end{theorem}
-
-There was nothing special about the split between the strips being at
-level $0$, so in fact we have shown that
-
-\begin{cor}
-  $\factor{x}{z} = \factor{x}{y} \tensor \factor{y}{z}$ for all $x < y < z$
-\end{cor}
 
 \begin{theorem}
   The \brownianwebnoise{}
