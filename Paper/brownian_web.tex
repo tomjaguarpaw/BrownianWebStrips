@@ -9,25 +9,16 @@ structure of flows as detailed in [].  Nonetheless all the
 constructions share the following property, which we use as a
 definition, at the expense of uniqueness:
 
-\begin{definition}
+  Denote $\simplex=\{(s, t) \in \R^2 : s \le t\}$.
   A Brownian web on a probability space $\Omega$ is a (jointly)
   measurable mapping $\webnoargs : \Omega \cross \simplex \cross \R
   \to \R$, $(\omega, (s, t), x) \mapsto \web{s}{t}{x}$ (supressing
-  $\omega$ in the notation) such that for fixed finite collection of
-  starting points $(s_1, x_1),(s_2, x_2),...,(s_n, x_n))$, the
-  collection of processes $(\web{s_1} {\cdot}{x_1},
-  \web{s_2}{\cdot}{x_2},...,\web{s_n}{\cdot}{x_n})$ is a pair of
-  independent-coalescing Brownian motions.
-\end{definition}
+  $\omega$ in the notation) such that for every finite collection of
+  starting points $(s_1, x_1),(s_2, x_2),...,(s_n, x_n)$, the
+  collection of processes $\web{s_1} {\cdot}{x_1},
+  \web{s_2}{\cdot}{x_2},...,\web{s_n}{\cdot}{x_n}$
+  forms a system of $n$ independent-coalescing Brownian motions.
 
-\begin{notation}
-  Where $\simplex$ denotes $\{(s, t) \in \R^2 : s \le t\}$.
-\end{notation}
-
-and:
-
-\begin{definition}\TODO{}{Maybe make inline[ohad]}
-  \label{def:independent-coalescing-bm}
   \newcommand{\maxsym}{\vee}
   A system of $n$ independent-coalescing Brownian motions is a finite
   collection of stochastic processes $(X_1, X_2,...,X_n)$ such that
@@ -35,18 +26,15 @@ and:
   X_2,...,X_n)$ are independent until the first time $T$ at which
   $X_i(T)=X_j(T)$ for some $i\neq j$. From this time onwards $X_i(T)$
   and $X_j(T)$ coalesce and continue with the rest of the $X_k$ (for
-  $k\neq i,j$) as a system of $n-1$ independent Brownian motions.
-\end{definition}
+  $k\neq i,j$) as a system of $n-1$ independent-coalescing Brownian motions.
 
-\begin{notation}
+We conclude this section by indroducing a notation for independent
+factorization of $\sigma$-algebras.
+
   \newcommand{\F}{\mathcal{F}}
-
   For $\sigma$-algebras $\F_a$, $\F_b$, $\F_c$ we write $\F_a = \F_b
   \tensor \F_c$ when $\F_b$ and $\F_c$ are independent, and $\F_a =
   \F_b \vee \F_c$ (up to sets of measure $0$).
-
-  \TODO{}{Ron says clarify this definition}
-\end{notation}
 
 \begin{figure}
    \centering
