@@ -234,10 +234,12 @@ that $\rotproc$ hits $Q=[0, \epsilon] \cross
 \{\epsilon\}$ before returning to $\origin$.
 By scale invariance $C$ is independent of $\epsilon$.
 
+\newcommand{\Lp}{[0,\infty) \cross \{0\}}
+
 Consider $\rotproc$ after hitting some point in $Q$.  We now
 bound the hitting density of this process on the horizontal
 axis.  Regardless of the point in $Q$, this density for points on
-$L^+$ is at least
+$\Lp$ is at least
 \[
 K\frac{1}{\epsilon} \frac{1}{1 + (x/\epsilon)^2} dx
 \]
@@ -249,7 +251,7 @@ By the same martingale argument which justifies
 Claim \ref{cl:tdv-hitting-back-0-estimate}, after hitting a point $(x,0)$ the
 probability of hitting $(P,0)$ before $\origin$ is $x/P$ for all $0\le x\le P$.
 Integrating this against the hitting density we get that the probability that
-$\rotproc$ started from some point in $Q$ hits $L^+$
+$\rotproc$ started from some point in $Q$ hits $\Lp$
 between $\epsilon$ and $1$ and then travels to $\farpoint$ before returning
 to $\origin$ is at least
 \[
