@@ -193,34 +193,42 @@ stated lemmas.
 \newcommand{\tdv}{\rotproc^2}
 \newcommand{\rotproc}{Z}
 
-In this section we give the proof of Lemmas \ref{lem:Phitboundaryline}
-and \ref{lem:Pabsorbedandtravelsfar}.
-For convenience we rotate (and scale) $\twodim=(\twodim^1,\twodim^2)$, defining
-$\rotproc=(\tdh,\tdv)=(\twodim^1+\twodim^2,\twodim^1-\twodim^2)$.
+In this section we give the proof of Lemmas \ref{lem:Phitboundaryline} and
+\ref{lem:Pabsorbedandtravelsfar}. For convenience we rotate (and scale)
+$\twodim=(\twodim^1,\twodim^2)$, defining
+$\rotproc=(\tdh,\tdv)=(\twodim^1+\twodim^2,\twodim^1-\twodim^2)$. Observe
+that whenever $\twodim$ follows the law of a two-dimensional Brownian motion,
+so does $\rotproc$, though its motion is scaled by $\sqrt{2}$.
 
 \begin{proof}[Proof of Lemma \ref{lem:Phitboundaryline}]
-Consider the process $\twodim$ between times $\excursionstart_0$ and $\excursionstart_1$.
-Our goal is to show that with probability at least $1-o(\epsilon)$, $\twodim$ arrives in
-$\statewebtogether$, before hitting $\boundarylines$. That is because once it arrives at
-$\statewebtogether$ it can never hit $\boundarylines$ before hitting $\origin$.
-We now show to following two
-auxiliary claims:
+Consider the process $\twodim$ between times $\excursionstart_0$ and
+$\excursionstart_1$. Our goal is to show that with probability at least
+$1-o(\epsilon)$, $\twodim$ arrives in $\statewebtogether$, before hitting
+$\boundarylines$. That is because once it arrives at $\statewebtogether$ it
+can never hit $\boundarylines$ before hitting $\origin$. Next, we observe the
+following two auxiliary claims:
 
-\begin{claim}
+\begin{claim}\label{cl:tdv-together-estimate}
  Whenever $\tdv=0$ the probability that subsequently $\twodim$ arrives at $\statewebtogether$ before $\tdv$ hits $\epsilon$ is at least a constant (independent of $\epsilon$).
 \end{claim}
 
-\begin{claim}
+\begin{claim}\label{cl:tdv-hitting-back-0-estimate}
 Whenever $\tdv=\pm\epsilon$ then there is probability at least $\epsilon/\delta$ of $\tdv$ hitting $0$ before it hits $\pm\delta$.
 \end{claim}
 
-Claim 1 follows from scale invariance, while Claim 2 is a standard martingale result on Brownian motion (observing that on the relevant time interval $\tdv$ is a standard Brownian motion).
+Claim \ref{cl:tdv-together-estimate} follows from scale invariance, while
+Claim \ref{cl:tdv-hitting-back-0-estimate} is a standard martingale result on
+Brownian motion (observing that on the relevant time interval $\tdv$ is a
+standard Brownian motion).
 
-The reduction of Lemma \ref{lem:Phitboundaryline} to those two claims is similar to the
-proof of Lemma \ref{lem:prob-hit-boundary-o1loge}. Claims 1 and 2 imply that between two consecutive times when $\tdv=0$
-the ratio of the probability of $\twodim$ arriving at $\statewebtogether$ and the probability
-of it hitting $\boundarylines$ tends to $0$. We can now deduce Lemma \ref{lem:Phitboundaryline} from the fact that the behavior of $\twodim$ is independent on those intervals.
-\FIXME{}{Make this paragraph clearer}
+The reduction of Lemma \ref{lem:Phitboundaryline} to those two claims is
+similar to the proof of Lemma \ref{lem:prob-hit-boundary-o1loge}. Claims
+\ref{cl:tdv-together-estimate} and \ref{cl:tdv-hitting-back-0-estimate} imply
+that between two consecutive times when $\tdv=0$,
+\[ \frac{\P(\twodim\text{ hits }\boundarylines)}{\P(\twodim\text{arrives at }\statewebtogether)}\ge\frac{(1-C)(\epsilon/\delta)}{C} =o(\epsilon)\]
+Where $C$ is the constant of Claim \ref{cl:tdv-together-estimate}. As the
+behavior of $\twodim$ is independent on those intervals, we deduce Lemma
+\ref{lem:Phitboundaryline}.
 \end{proof}
 
 \begin{proof}[Proof of Lemma \ref{lem:Pabsorbedandtravelsfar}]
