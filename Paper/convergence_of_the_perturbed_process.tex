@@ -238,20 +238,24 @@ behavior of $\twodim$ is independent on those intervals, we deduce Lemma
 \end{proof}
 
 \begin{proof}[Proof of Lemma \ref{lem:Pabsorbedandtravelsfar}]
+\newcommand{\rotfarpoint}{(2P,0)}
+\newcommand{\segment}{[\epsilon,1] \cross \{0\}}
 We bound below the probability that an excursion hits $\farpoint$,
-i.e.\ $\rotproc$ hits $(P,0)$ before returning to $\origin$.
+i.e.\ $\rotproc$ hits $\rotfarpoint$ before returning to $\origin$.
+We do this by considering the probability that the excursion takes
+the following form: $\rotproc$ travels from $\origin$ to the line
+segment $Q = [0, \epsilon] \cross \{\epsilon\}$, then hits the horizontal
+axis for the first time in $\segment$, then travels to $\rotfarpoint$,
+before returning to $\origin$.
 
 After a stopping time at which $\twodim = \rotproc = \origin$ there is a positive probability $C$
-that $\rotproc$ hits $Q=[0, \epsilon] \cross
-\{\epsilon\}$ before returning to $\origin$.
+that $\rotproc$ hits $Q$ before returning to $\origin$.
 By scale invariance $C$ is independent of $\epsilon$.
-
-\newcommand{\Lp}{[0,\infty) \cross \{0\}}
 
 Consider $\rotproc$ after hitting some point in $Q$.  We now
 bound the hitting density of this process on the horizontal
 axis.  Regardless of the point in $Q$, this density for points on
-$\Lp$ is at least
+$\segment$ is at least
 \[
 K\frac{1}{\epsilon} \frac{1}{1 + (x/\epsilon)^2} dx
 \]
@@ -260,20 +264,25 @@ This follows directly from the classical result on the hitting density
 on a line of the two-dimensional Brownian motion.
 \FIXME{}{find reference}
 
+On hitting a point $(x,0)$ for $x \in [\epsilon, 1]$ the process
+transitions from state $\statewebapart$ to state $\statewebtogether$.
+When in state $\statewebtogether$, $\rotproc$ behaves as a
+one-dimensional Brownian motion on the horizontal axis until it hits
+$\origin$.
 By the same martingale argument which justifies
-Claim \ref{cl:tdv-hitting-back-0-estimate}, after hitting a point $(x,0)$ the
-probability of hitting $(P,0)$ before $\origin$ is $x/P$ for all $0\le x\le P$.
+Claim \ref{cl:tdv-hitting-back-0-estimate}, the
+probability of subsequently hitting $\rotfarpoint$ before $\origin$ is $x/2P$.
 Integrating this against the hitting density we get that the probability that
-$\rotproc$ started from some point in $Q$ hits $\Lp$
-between $\epsilon$ and $1$ and then travels to $\farpoint$ before returning
+$\rotproc$ started from some point in $Q$ hits the horizontal axis in $\segment$
+and then travels to $\rotfarpoint$ before returning
 to $\origin$ is at least
 \[
-\frac{K}{P} \int_{\epsilon}^{1} \frac{x/\epsilon}{1 + (x/\epsilon)^2}
+\frac{K}{2P} \int_{\epsilon}^{1} \frac{x/\epsilon}{1 + (x/\epsilon)^2}
 \, dx
 \]
 which is
 \[
-\frac{K\epsilon}{2P} \log\left(\frac{1 + (1/\epsilon)^2}{2}\right)
+\frac{K\epsilon}{4P} \log\left(\frac{1 + (1/\epsilon)^2}{2}\right)
 \]
 which is $\Omegaeloge$.
 \end{proof}
