@@ -197,7 +197,7 @@ $\rotproc=(\tdh,\tdv)=(\twodim^1+\twodim^2,\twodim^1-\twodim^2)$.
 \begin{proof}[Proof of Lemma \ref{lem:Phitboundaryline}]
 Consider the process $\twodim$ between times $\excursionstart_0$ and
 $\excursionstart_1$. Our goal is to show that with probability at least
-$1-o(\epsilon)$, $\twodim$ arrives in $\statewebtogether$, before hitting
+$1-O(\epsilon)$, $\twodim$ arrives in $\statewebtogether$, before hitting
 $\boundarylines$. That is because once it arrives at $\statewebtogether$ it
 can never hit $\boundarylines$ before hitting $\origin$. Next, we observe the
 following two auxiliary claims:
@@ -219,7 +219,7 @@ The reduction of Lemma \ref{lem:Phitboundaryline} to those two claims is
 similar to the proof of Lemma \ref{lem:prob-hit-boundary-o1loge}. Claims
 \ref{cl:tdv-together-estimate} and \ref{cl:tdv-hitting-back-0-estimate} imply
 that between two consecutive times when $\tdv=0$,
-\[ \frac{\P(\twodim\text{ hits }\boundarylines)}{\P(\twodim\text{arrives at }\statewebtogether)}\ge\frac{(1-C)(\epsilon/\delta)}{C} =o(\epsilon)\]
+\[ \frac{\P(\twodim\text{ hits }\boundarylines)}{\P(\twodim\text{arrives at }\statewebtogether)}\ge\frac{(1-C)(\epsilon/\delta)}{C} =O(\epsilon)\]
 \TODO{}{these probabilities are a bit confusing}
 where $C$ is the constant of Claim \ref{cl:tdv-together-estimate}. As the
 behavior of $\twodim$ is independent on those intervals, we deduce Lemma
