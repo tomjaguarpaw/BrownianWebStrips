@@ -205,7 +205,7 @@ can never hit $\boundarylines$ before hitting $\origin$. Next, we observe the
 following two auxiliary claims:
 
 \begin{claim}\label{cl:tdv-together-estimate}
-  Whenever $\rotproc=\origin$ the probability that subsequently $\twodim$
+  Whenever $\tdv=0$ the probability that subsequently $\twodim$
   arrives at $\statewebtogether$ before $\tdv$ hits $\pm\epsilon$ is at
   least a constant (independent of $\epsilon$).
 \end{claim}
@@ -223,7 +223,7 @@ standard Brownian motion).
 The reduction of Lemma \ref{lem:Phitboundaryline} to those two claims is
 similar to the proof of Lemma \ref{lem:prob-hit-boundary-o1loge}. Claims
 \ref{cl:tdv-together-estimate} and \ref{cl:tdv-hitting-back-0-estimate} imply
-that between two consecutive times when $\rotproc=\origin$,
+that between two consecutive times when $\tdv=0$,
 \[
 \frac{\P(\twodim\text{ hits }\boundarylines)}{\P(\twodim\text{arrives at }\statewebtogether)}
 \le \frac{(1-C)(\epsilon/\delta)}{C} =O(\epsilon)
