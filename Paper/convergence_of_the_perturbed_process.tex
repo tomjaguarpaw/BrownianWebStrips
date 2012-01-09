@@ -194,7 +194,7 @@ stated lemmas.
 In this section we give the proof of Lemmas \ref{lem:Phitboundaryline} and
 \ref{lem:Pabsorbedandtravelsfar}. For convenience we rotate (and scale)
 $\twodim=(\twodim^1,\twodim^2)$, defining
-$\rotproc=(\tdh,\tdv)=(\twodim^1+\twodim^2,\twodim^1-\twodim^2)$.
+\[\rotproc=(\tdh,\tdv)=\frac{1}{2}(\twodim^1+\twodim^2,\twodim^1-\twodim^2)\]
 
 \begin{proof}[Proof of Lemma \ref{lem:Phitboundaryline}]
 Consider the process $\twodim$ between times $\excursionstart_0$ and
@@ -206,13 +206,13 @@ following two auxiliary claims:
 
 \begin{claim}\label{cl:tdv-together-estimate}
   Whenever $\tdv=0$ the probability that subsequently $\twodim$
-  arrives at $\statewebtogether$ before $\tdv$ hits $\pm\epsilon$ is at
+  arrives at $\statewebtogether$ before $\tdv$ hits $\pm\epsilon/2$ is at
   least a constant (independent of $\epsilon$).
 \end{claim}
 
 \begin{claim}\label{cl:tdv-hitting-back-0-estimate}
-  Whenever $\tdv=\pm\epsilon$ then there is probability equal to
-  $\epsilon/\delta$ of $\tdv$ hitting $\pm\delta$ before it hits $0$.
+  Whenever $\tdv=\pm\epsilon/2$ then there is probability equal to
+  $\epsilon/\delta$ of $\tdv$ hitting $\pm\delta/2$ before it hits $0$.
 \end{claim}
 
 Claim \ref{cl:tdv-together-estimate} follows from scale invariance, while
@@ -237,7 +237,7 @@ behavior of $\twodim$ is independent on those intervals, we deduce Lemma
 \end{proof}
 
 \begin{proof}[Proof of Lemma \ref{lem:Pabsorbedandtravelsfar}]
-\newcommand{\rotfarpoint}{(2P,0)}
+\newcommand{\rotfarpoint}{(P,0)}
 \newcommand{\segment}{[\epsilon,1] \cross \{0\}}
 We bound below the probability that an excursion hits $\farpoint$,
 i.e.\ $\rotproc$ hits $\rotfarpoint$ before returning to $\origin$.
@@ -275,12 +275,12 @@ $\rotproc$ started from some point in $Q$ hits the horizontal axis in $\segment$
 and then travels to $\rotfarpoint$ before returning
 to $\origin$ is at least
 \[
-\frac{1}{2\pi P} \int_{\epsilon}^{1} \frac{x/\epsilon}{1 + (x/\epsilon)^2}
+\frac{1}{\pi P} \int_{\epsilon}^{1} \frac{x/\epsilon}{1 + (x/\epsilon)^2}
 \, dx
 \]
 which is
 \[
-\frac{\epsilon}{4\pi P} \log\left(\frac{1 + (1/\epsilon)^2}{2}\right)
+\frac{\epsilon}{2\pi P} \log\left(\frac{1 + (1/\epsilon)^2}{2}\right)
 \]
 which is $\Omegaeloge$.
 \end{proof}
