@@ -164,7 +164,9 @@ before hitting $\boundarylines$. This implies Lemma
 \ref{lem:prob-hit-boundary-o1}. This philosophy is
 realized through the next couple of lemmas.
 
-\newcommand{\Omegaeloge}{\Omega(\epsilon\log\epsilon)}
+\newcommand{\loger}{\log 1/\epsilon}
+
+\newcommand{\Omegaeloge}{\Omega(\epsilon\loger)}
 
 \begin{lemma}
   \label{lem:Phitboundaryline}
@@ -180,7 +182,7 @@ We are now in a position to prove something slightly stronger than
 Lemma \ref{lem:prob-hit-boundary-o1}.
 
 \begin{lemma}\label{lem:prob-hit-boundary-o1loge}
-  \probhitboundaryis{$O(\frac{1}{\log\epsilon})$}.
+  \probhitboundaryis{$O(\frac{1}{\loger})$}.
 \end{lemma}
 
 \newcommand{\Oe}{O(\epsilon)}
@@ -201,7 +203,7 @@ Lemma \ref{lem:prob-hit-boundary-o1}.
   condition occurs before the second is exactly the probability of the
   first as fraction of the sum of their probabilities, that is
   \[
-  \frac{\Oe}{\Omegaeloge + \Oe} = O\left(\frac{1}{\log\epsilon}\right)
+  \frac{\Oe}{\Omegaeloge + \Oe} = O\left(\frac{1}{\loger}\right)
   \]
 \end{proof}
 
