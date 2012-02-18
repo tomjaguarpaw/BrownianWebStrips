@@ -26,14 +26,18 @@ and \emph{is not} coalesced with $\sampled$ we say $\twodim$ is in state $\state
 \item If $\resamplede$ is in state $\statenowebO$
 we say $\twodim$ is in state $\statenoweb$.
 \end{itemize}
-Observe that $\twodim$ always starts
-in $\statewebtogether$. Further notice that from $\statewebtogether$ $\twodim$
-can only transition to $\statenoweb$ after hitting the origin, as the coalesced
+$\twodim$ starts
+in $\statewebtogether$.  From $\statewebtogether$, $\twodim$
+can only transition to $\statenoweb$.
+This transition occurs when $\twodim$ hits the origin, as the coalesced
 $\sampled$ and $\resamplede$ will continue together until they leave their
-current half-plane. From $\statenoweb$ the process will transition to
-$\statewebapart$ as soon as $\resamplede$ leaves the $(-\epsilon,\epsilon)$
-interval (i.e.\ $\twodim$ hits either of the $x=\pm\epsilon$ lines). From
-$\statewebapart$ the process can either transition to $\statewebtogether$
+current half-plane.
+From $\statenoweb$, $\twodim$ can only transition to
+$\statewebapart$.  This transition occurs when $\resamplede$
+leaves the $(-\epsilon,\epsilon)$
+interval (i.e.\ $\twodim$ hits either of the $x=\pm\epsilon$ lines).
+From
+$\statewebapart$, $\twodim$ can either transition to $\statewebtogether$
 if $\sampled$ and $\resamplede$ coalesce (i.e.\ $\twodim$ hits the line $x=y$)
 or transition to $\statenoweb$ if $\resamplede$ hits $0$ (i.e.\ $\twodim$ hits
 the $x=0$ line).
