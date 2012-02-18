@@ -75,6 +75,9 @@ to both the upper half-plane web and the lower half-plane one.
 \subsection{The perturbed process}
 \label{subsec:the-perturbed-process}
 
+\newcommand{\statewebO}{S_{\webnoargs}}
+\newcommand{\statenowebO}{S_{\indepbm}}
+
 {
 \newcommand{\joinernoargs}{\psi}
 \newcommand{\joiner}[2]{\joinernoargs_{{#1}{#2}}}
@@ -95,11 +98,12 @@ to both the upper half-plane web and the lower half-plane one.
   We say $\resamplede$ follows $\joinernoargs$ on $[s,u]$ if
   $\resamplede_t = \resamplede_s + \joinerval{t} - \joinerval{s}$ for $t \in [s,u]$.
 
-  The perturbed process alternates between two states.  In state A it follows
-  $\webnoargs$ while in state B it follows $\indepbm$.
-  The transition from state A to state B occurs
+  The perturbed process alternates between two states.
+  In state $\statewebO$ it follows
+  $\webnoargs$ while in state $\statenowebO$ it follows $\indepbm$.
+  The transition from state $\statewebO$ to state $\statenowebO$ occurs
   when $\resamplede$ hits $0$, while
-  the transition from state B to state A occurs when
+  the transition from state $\statenowebO$ to state $\statewebO$ occurs when
   $\resamplede$ hits $\pm \epsilon$.
 \end{definition}
 }
@@ -113,7 +117,7 @@ to both the upper half-plane web and the lower half-plane one.
    \includegraphics[scale=0.33]{resample.eps}
    \caption{
    A sample of the a web trajectory and the corresponding perturbed processes.
-   The top left image depicts the perturbed process, with state B in bold.
+   The top left image depicts the perturbed process, with state $\statenowebO$ in bold.
    The top right image depicts the original web trajectory. The centre image
    illustrates both processes together, showing the segments where they coalesce.
    }
