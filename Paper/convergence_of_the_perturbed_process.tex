@@ -95,24 +95,26 @@ We can now rephrase Lemma \ref{lem:resamplede-to-sampled} in terms of $\twodim$:
   \probhitboundaryis{$o(1)$ as $\epsilon \to 0$}.
 \end{lemma}
 
+
+
 \begin{proof}[Proof that Lemma \ref{lem:prob-hit-boundary-o1} implies Lemma \ref{lem:resamplede-to-sampled}]
 
 \TODO{}{We're implicitly assuming that the processes start at time $0$}
-Lemma \ref{lem:resamplede-to-sampled} is equivalent to: For all $\delta > 0$, $u > 0$
+Lemma \ref{lem:resamplede-to-sampled} is equivalent to: for all $\delta > 0$, $u > 0$
 \[
 \P(\twodim_t \in \{(x,y) \ :\  |x-y|<\delta \} \text{ for all } t \in [0,u])\to1 \text{ as } \epsilon\to 0
 \]
 The above statement can be rephrased as
-  For all $\delta > 0$, $u > 0$
-  The probability that before time $u$, $\twodim$ has hit $\boundarylines$
-  is $o(1)$ as $\epsilon \to 0$.
 
-We can prove this assuming Lemma \ref{lem:prob-hit-boundary-o1}.
+\vspace{12pt}
+For all $\delta > 0$, $u > 0$,
+the probability that before time $u$, $\twodim$ has hit $\boundarylines$
+is $o(1)$ as $\epsilon \to 0$.
+\TODO{}{Make this display better}
+\vspace{12pt}
 
-\RON{}{Too many lemmas}
-
-  Let $\eta > 0$.
-  Choose $P$ so that the probability that standard Brownian motion
+  We prove this as follows.  For any $\eta > 0$,
+  choose $P$ so that the probability that standard Brownian motion
   travels from $0$ to $P$ in time less than $u$ is less than
   $\eta$.
   Apply Lemma \ref{lem:prob-hit-boundary-o1} to
