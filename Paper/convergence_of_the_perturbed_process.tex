@@ -82,40 +82,39 @@ two-dimensional Brownian motion.
 \label{fig:twodimtranstab}
 \end{figure}
 
-We can now rephrase Lemma \ref{lem:resamplede-to-sampled} in terms of $\twodim$:
-\begin{lemma*}
-For all $\delta > 0$
-\[
-\P(\twodim_t \in \{(x,y) \ :\  |x-y|<\delta \} \text{ for all } t \in [0,1])\to1 \text{ as } \epsilon\to 0
-\]
-\end{lemma*}
-The reduction of Lemma \ref{lem:resamplede-to-sampled} to the above
-\RON{}{How?  Elaborate, since not a Brownian motion}
-follows from the scale-invariance properties of Brownian motion. Those
-imply that proving the convergence uniformly on the interval $[0,1]$
-suffices to prove the convergence on every bounded time interval.
 \newcommand{\boundarylines}{A}
-Choose arbitrarily $\delta>0$, and define $\boundarylines=\{(x,y) \ :\  |x-y|=\delta \}$.
-\TODO{}{Repetition of ``arbitrary'' is clumsy}
-Since $\delta$ is arbitrary, the above lemma can now be rephrased as
-\begin{lemma*}
-  The probability that before time $1$, $\twodim$ has hit $\boundarylines$
-  is $o(1)$ as $\epsilon \to 0$.
-\end{lemma*}
-This lemma can be further reduced to the following:
+
+Given $\delta>0$, define $\boundarylines=\{(x,y) \ :\  |x-y|=\delta \}$.
+We can now rephrase Lemma \ref{lem:resamplede-to-sampled} in terms of $\twodim$:
+
 \newcommand{\farpoint}{(P,P)}
 \newcommand{\probhitboundaryis}[1]{For given $P > 0$, the probability that $\twodim$
   hits $\boundarylines$ before it hits $\farpoint$ is #1}
-
-\RON{}{Too many lemmas}
 
 \begin{lemma}\label{lem:prob-hit-boundary-o1}
   \probhitboundaryis{$o(1)$ as $\epsilon \to 0$}.
 \end{lemma}
 
-\newcommand{\origin}{(0,0)}
+\begin{proof}[Proof that Lemma \ref{lem:prob-hit-boundary-o1} implies Lemma \ref{lem:resamplede-to-sampled}]
 
-\begin{proof}[The reduction proceeds as follows:]
+Lemma \ref{lem:resamplede-to-sampled} is equivalent to: For all $\delta > 0$
+\[
+\P(\twodim_t \in \{(x,y) \ :\  |x-y|<\delta \} \text{ for all } t \in [0,1])\to1 \text{ as } \epsilon\to 0
+\]
+The reduction of Lemma \ref{lem:resamplede-to-sampled} to the above
+\RON{}{How?  Elaborate, since not a Brownian motion}
+follows from the scale-invariance properties of Brownian motion. Those
+imply that proving the convergence uniformly on the interval $[0,1]$
+suffices to prove the convergence on every bounded time interval.
+Since $\delta$ is arbitrary, the above statement can now be rephrased as
+\[\text{
+  The probability that before time $1$, $\twodim$ has hit $\boundarylines$
+  is $o(1)$ as $\epsilon \to 0$.
+}\]
+We can prove this assuming Lemma \ref{lem:prob-hit-boundary-o1}.
+
+\RON{}{Too many lemmas}
+
   Let $\eta > 0$.
   Choose $P$ so that the probability that standard Brownian motion
   travels from $0$ to $P$ in time less than $1$ is less than
@@ -137,6 +136,8 @@ following section using the notion of excursions of $\twodim$.
 \subsection{Excursions of $\twodim$}
 
 \TODO{}{This whole section perhaps needs reorganising}
+
+\newcommand{\origin}{(0,0)}
 
 \newcommand{\excursionstart}{T}
 {
