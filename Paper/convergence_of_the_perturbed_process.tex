@@ -166,18 +166,13 @@ Lemma \ref{lem:prob-hit-boundary-o1}.
 
 \newcommand{\probexcursionhits}[1]{\P\left(\text{an excursion hits } #1\right)}
 
-Using this definition we can now use the following strategy to
-prove Lemma \ref{lem:prob-hit-boundary-o1}:
-\RON{}{What is a strategy?}
+Our approach to proving Lemma \ref{lem:prob-hit-boundary-o1loge} is to
+demonstrate that
 \[
-\frac{\probexcursionhits{\boundarylines}}
-     {\probexcursionhits{\farpoint}}
-        \to 0 \text{ as } \epsilon\to0
+\probexcursionhits{\farpoint} \gg
+\probexcursionhits{\boundarylines} \text { as } \epsilon \to 0
 \]
-As the hitting events on different excursions are independent we
-can deduce it is much more likely that hitting $\farpoint$ happens
-before hitting $\boundarylines$. This implies Lemma
-\ref{lem:prob-hit-boundary-o1}. This philosophy is
+This is
 realized through the next couple of lemmas whose proofs we delay until Section
 \ref{proofs-of-the-excursion-lemmas}.
 
