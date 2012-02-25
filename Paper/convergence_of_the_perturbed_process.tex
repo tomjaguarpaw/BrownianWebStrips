@@ -7,6 +7,8 @@
 \newcommand{\statewebtogether}{S^{1D}_{\webnoargs}}
 \newcommand{\twodim}{Y}
 
+\newcommand{\twodime}{\twodim^\epsilon}
+
 In this section we prove that
 \statementoflemresampledetosampled{}.  This statement depends only on the
 joint distribution of $\sampled$ and $\resamplede$.
@@ -126,12 +128,12 @@ $\epsilon < \epsilon_0$ the probability that $\twodim$ hits $\boundarylines$ ...
   travels from $0$ to $P$ in time less than $u$ is less than
   $\eta$.
   Apply Lemma \ref{lem:prob-hit-boundary-o1} to
-  choose $\epsilon$ such that the probability that $\twodim$ hits
+  choose $\epsilon_0$ such that, for all $\epsilon < \epsilon_0$, the probability that $\twodime$ hits
   $\boundarylines$ before $\farpoint$ is less than $\eta$.
-  Then the probability that $\twodim$ hits $\boundarylines$ before $\farpoint$
+  Then the probability that $\twodime$ hits $\boundarylines$ before $\farpoint$
   or takes less time than $1$ to reach $\farpoint$ is
   less than $2\eta$.
-  Thus the probability that $\twodim$ hits $\boundarylines$ before
+  Thus the probability that $\twodime$ hits $\boundarylines$ before
   time $1$ is less than $2\eta$.
 \end{proof}
 
@@ -157,8 +159,8 @@ Lemma \ref{lem:prob-hit-boundary-o1}.
   \excursionstart_1 < \cdots$. We say ``the probability that an excursion
   hits a set $U$ is $p$'' if $\P(\twodim_t\in U \text{
   for some } t\in [\excursionstart_0, \excursionstart_{1}]) = p$.
-  \FIXME{}{Provide a justification for the well-definedness of these
-    stopping times, perhaps in terms of the states}
+  \DOTHIS{}{Provide a justification for the well-definedness of these
+    stopping times, perhaps in terms of the states?}
 
   Observe that by equidistribution this probability is the same when
   $t$ ranges over $[\excursionstart_i, \excursionstart_{i+1}]$, and
