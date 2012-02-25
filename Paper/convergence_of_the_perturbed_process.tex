@@ -133,11 +133,19 @@ is $o(1)$ as $\epsilon \to 0$.
 \label{subsec:excursions-of-twodim}
 
 \TODO{}{This whole section perhaps needs reorganising}
+In this section we prove the following, which is slightly stronger than
+Lemma \ref{lem:prob-hit-boundary-o1}.
+
+\newcommand{\loger}{\log 1/\epsilon}
+
+\begin{lemma}\label{lem:prob-hit-boundary-o1loge}
+  \probhitboundaryis{$O(\frac{1}{\loger})$}.
+\end{lemma}
 
 \newcommand{\origin}{(0,0)}
 
 \newcommand{\excursionstart}{T}
-{
+  We begin by introducing the notion of an excursion of $\twodim$.
   Almost surely, the times at which $\twodim = \origin$ (which are stopping
   times) form an infinite discrete collection $\excursionstart_0 <
   \excursionstart_1 < \cdots$. We say ``the probability that an excursion
@@ -149,7 +157,6 @@ is $o(1)$ as $\epsilon \to 0$.
   Observe that by equidistribution the probability is the same when
   $t$ ranges over $[\excursionstart_i, \excursionstart_{i+1}]$, and
   note that the hitting events in question are independent.
-}
 
 \newcommand{\probexcursionhits}[1]{\P\left(\text{an excursion hits } #1\right)}
 
@@ -165,9 +172,8 @@ As the hitting events on different excursions are independent we
 can deduce it is much more likely that hitting $\farpoint$ happens
 before hitting $\boundarylines$. This implies Lemma
 \ref{lem:prob-hit-boundary-o1}. This philosophy is
-realized through the next couple of lemmas.
-
-\newcommand{\loger}{\log 1/\epsilon}
+realized through the next couple of lemmas whose proofs we delay until Section
+\ref{proofs-of-the-excursion-lemmas}.
 
 \newcommand{\Omegaeloge}{\Omega(\epsilon\loger)}
 
@@ -181,16 +187,9 @@ realized through the next couple of lemmas.
   For given $P > 0$, $\probexcursionhits{\farpoint}$ is $\Omegaeloge$.
 \end{lemma}
 
-We are now in a position to prove something slightly stronger than
-Lemma \ref{lem:prob-hit-boundary-o1}.
-
-\begin{lemma}\label{lem:prob-hit-boundary-o1loge}
-  \probhitboundaryis{$O(\frac{1}{\loger})$}.
-\end{lemma}
-
 \newcommand{\Oe}{O(\epsilon)}
 
-\begin{proof}
+\begin{proof}[Proof of Lemma \ref{lem:prob-hit-boundary-o1loge}]
   $\twodim$ consists of a sequence of excursions, each of which satisfies
   exactly one of the following conditions
   \begin{itemize}
@@ -211,6 +210,7 @@ Lemma \ref{lem:prob-hit-boundary-o1}.
 \end{proof}
 
 \subsection{Proofs of the excursion lemmas}
+\label{proofs-of-the-excursion-lemmas}
 \newcommand{\tdh}{\rotproc^1}
 \newcommand{\tdv}{\rotproc^2}
 \newcommand{\rotproc}{Z}
