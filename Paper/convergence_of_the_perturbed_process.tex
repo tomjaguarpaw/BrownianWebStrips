@@ -10,7 +10,7 @@
 In this section we prove that
 \statementoflemresampledetosampled{}.  This statement depends only on the
 joint distribution of $\sampled$ and $\resamplede$.
-We therefore define $\twodim=(\resamplede, \sampled)$ (suppressing
+We therefore define $\twodim^\epsilon = \twodim=(\resamplede, \sampled)$ (generally suppressing
 the $\epsilon$ dependence in the notation). Let us describe the distribution of
 $\twodim$
  as a two-dimensional random process.
@@ -52,6 +52,10 @@ Brownian motion.
 In $\statewebapart$ and $\statenoweb$, $\twodim$ follows the law of a
 two-dimensional Brownian motion.
 \end{observation*}
+
+Additionally observe that by the scale-invariance of Brownian motion,
+the distribution of the sample paths of $\twodim^\epsilon/\epsilon$ is
+independent of $\epsilon$.
 
 \begin{figure}
 \begin{center}
@@ -225,9 +229,11 @@ realized through the next couple of lemmas whose proofs we delay until Section
 In this section we give the proof of Lemmas \ref{lem:Phitboundaryline} and
 \ref{lem:Pabsorbedandtravelsfar}. For convenience we rotate (and scale)
 $\twodim=(\x,\y)$, defining
-\[\rotproc=(\tdh,\tdv)=\frac{1}{2}(\x+\y,\x-\y)\]
+\[\rotproc^\epsilon = \rotproc=(\tdh,\tdv)=\frac{1}{2}(\x+\y,\x-\y)\]
 
-\RON{}{Need to explain scale invariance here}
+As for $\twodim$, $\rotproc$ has the following ``scale invariance''
+property: the distribution of sample paths of $\rotproc^\epsilon /
+\epsilon$ is independent of $\epsilon$.
 
 \begin{proof}[Proof of Lemma \ref{lem:Phitboundaryline}]
 Consider the process $\twodim$ between times $\excursionstart_0$ and
