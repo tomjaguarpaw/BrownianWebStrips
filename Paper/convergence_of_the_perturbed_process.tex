@@ -82,13 +82,13 @@ two-dimensional Brownian motion.
 \label{fig:twodimtranstab}
 \end{figure}
 
-\newcommand{\boundarylines}{A}
+\newcommand{\boundarylines}{A_\delta}
 
-Given $\delta>0$, define $\boundarylines=\{(x,y) \ :\  |x-y|=\delta \}$.
+Define $\boundarylines=\{(x,y) \ :\  |x-y|=\delta \}$.
 We can now rephrase Lemma \ref{lem:resamplede-to-sampled} in terms of $\twodim$:
 
 \newcommand{\farpoint}{(P,P)}
-\newcommand{\probhitboundaryis}[1]{For given $P > 0$, the probability that $\twodim$
+\newcommand{\probhitboundaryis}[1]{For given $P > 0$, $\delta > 0$ the probability that $\twodim$
   hits $\boundarylines$ before it hits $\farpoint$ is #1}
 
 \begin{lemma}\label{lem:prob-hit-boundary-o1}
@@ -102,11 +102,11 @@ Lemma \ref{lem:resamplede-to-sampled} is equivalent to: For all $\delta > 0$, $u
 \[
 \P(\twodim_t \in \{(x,y) \ :\  |x-y|<\delta \} \text{ for all } t \in [0,u])\to1 \text{ as } \epsilon\to 0
 \]
-Since $\delta$ in the definition of $\boundarylines$ is arbitrary, the above statement can now be rephrased as
-\[\text{
+The above statement can be rephrased as
+  For all $\delta > 0$, $u > 0$
   The probability that before time $u$, $\twodim$ has hit $\boundarylines$
   is $o(1)$ as $\epsilon \to 0$.
-}\]
+
 We can prove this assuming Lemma \ref{lem:prob-hit-boundary-o1}.
 
 \RON{}{Too many lemmas}
@@ -172,7 +172,7 @@ realized through the next couple of lemmas.
 
 \begin{lemma}
   \label{lem:Phitboundaryline}
-  $\probexcursionhits{\boundarylines}$ is $O(\epsilon)$.
+  For given $\delta > 0$, $\probexcursionhits{\boundarylines}$ is $O(\epsilon)$.
 \end{lemma}
 
 \begin{lemma}
