@@ -85,7 +85,8 @@ two-dimensional Brownian motion.
 \newcommand{\boundarylines}{A_\delta}
 
 Define $\boundarylines=\{(x,y) \ :\  |x-y|=\delta \}$.
-We can now rephrase Lemma \ref{lem:resamplede-to-sampled} in terms of $\twodim$:
+To prove Lemma \ref{lem:resamplede-to-sampled} we use the following
+property of $\twodim$:
 
 \newcommand{\farpoint}{(P,P)}
 \newcommand{\probhitboundaryis}[1]{For given $P > 0$, $\delta > 0$ the probability that $\twodim$
@@ -95,9 +96,10 @@ We can now rephrase Lemma \ref{lem:resamplede-to-sampled} in terms of $\twodim$:
   \probhitboundaryis{$o(1)$ as $\epsilon \to 0$}.
 \end{lemma}
 
+We delay the proof of Lemma \ref{lem:prob-hit-boundary-o1} to Section
+\ref{subsec:excursions-of-twodim}.
 
-
-\begin{proof}[Proof that Lemma \ref{lem:prob-hit-boundary-o1} implies Lemma \ref{lem:resamplede-to-sampled}]
+\begin{proof}[Proof of Lemma \ref{lem:resamplede-to-sampled}]
 
 \TODO{}{We're implicitly assuming that the processes start at time $0$}
 Lemma \ref{lem:resamplede-to-sampled} is equivalent to: for all $\delta > 0$, $u > 0$
@@ -127,11 +129,8 @@ is $o(1)$ as $\epsilon \to 0$.
   time $1$ is less than $2\eta$.
 \end{proof}
 
-In summary, we have reduced Lemma \ref{lem:resamplede-to-sampled} to
-Lemma \ref{lem:prob-hit-boundary-o1}. We prove the latter in the
-following section using the notion of excursions of $\twodim$.
-
 \subsection{Excursions of $\twodim$}
+\label{subsec:excursions-of-twodim}
 
 \TODO{}{This whole section perhaps needs reorganising}
 
