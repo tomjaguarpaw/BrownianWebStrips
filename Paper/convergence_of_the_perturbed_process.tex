@@ -97,18 +97,14 @@ We can now rephrase Lemma \ref{lem:resamplede-to-sampled} in terms of $\twodim$:
 
 \begin{proof}[Proof that Lemma \ref{lem:prob-hit-boundary-o1} implies Lemma \ref{lem:resamplede-to-sampled}]
 
-Lemma \ref{lem:resamplede-to-sampled} is equivalent to: For all $\delta > 0$
+\TODO{}{We're implicitly assuming that the processes start at time $0$}
+Lemma \ref{lem:resamplede-to-sampled} is equivalent to: For all $\delta > 0$, $u > 0$
 \[
-\P(\twodim_t \in \{(x,y) \ :\  |x-y|<\delta \} \text{ for all } t \in [0,1])\to1 \text{ as } \epsilon\to 0
+\P(\twodim_t \in \{(x,y) \ :\  |x-y|<\delta \} \text{ for all } t \in [0,u])\to1 \text{ as } \epsilon\to 0
 \]
-The reduction of Lemma \ref{lem:resamplede-to-sampled} to the above
-\RON{}{How?  Elaborate, since not a Brownian motion}
-follows from the scale-invariance properties of Brownian motion. Those
-imply that proving the convergence uniformly on the interval $[0,1]$
-suffices to prove the convergence on every bounded time interval.
-Since $\delta$ is arbitrary, the above statement can now be rephrased as
+Since $\delta$ in the definition of $\boundarylines$ is arbitrary, the above statement can now be rephrased as
 \[\text{
-  The probability that before time $1$, $\twodim$ has hit $\boundarylines$
+  The probability that before time $u$, $\twodim$ has hit $\boundarylines$
   is $o(1)$ as $\epsilon \to 0$.
 }\]
 We can prove this assuming Lemma \ref{lem:prob-hit-boundary-o1}.
@@ -117,7 +113,7 @@ We can prove this assuming Lemma \ref{lem:prob-hit-boundary-o1}.
 
   Let $\eta > 0$.
   Choose $P$ so that the probability that standard Brownian motion
-  travels from $0$ to $P$ in time less than $1$ is less than
+  travels from $0$ to $P$ in time less than $u$ is less than
   $\eta$.
   Apply Lemma \ref{lem:prob-hit-boundary-o1} to
   choose $\epsilon$ such that the probability that $\twodim$ hits
