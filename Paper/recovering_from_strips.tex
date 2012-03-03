@@ -19,6 +19,8 @@ $(-\infty, \infty) \cross (y,z)$.
     leaving the interval $(y,z)$'' to be the map $\restrict{y}{z}{f} : [s,
       \infty) \to \R$ given by $\restrict{y}{z}{f}(t) = f(t \minsym \T)$
       where $\T = \inf\{ t : f(t) \not\in (y,z) \}$.
+  As in Section \ref{sec:recovering-from-half-planes}, if the path $f$ starts
+  outside the strip it is stopped immediately.
 
   \label{def:horizontal-factorization}
   Associate to each $y < z$ the \sigfield{}
@@ -26,9 +28,6 @@ $(-\infty, \infty) \cross (y,z)$.
   \restrict{y}{z}{\sampled} : \sampled \in \trajs \}$.  We call this
   associtaion the \emph{horizonal factorization of the Brownian web}.
 \end{definition}
-
-\TODO{}{Note that the path $f$ may start outside the strip, in which
-  case we consider it stopped immediately.}
 
 With these definitions, $\upperhp$ of Section \ref{sec:recovering-from-half-planes} is
 $\commafactor{0}{\infty}$ and $\lowerhp$ is
