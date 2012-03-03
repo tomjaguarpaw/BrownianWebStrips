@@ -109,7 +109,7 @@ We delay the proof of Lemma \ref{lem:prob-hit-boundary-o1} to Section
 \TODO{}{We're implicitly assuming that the processes start at time $0$}
 Lemma \ref{lem:resamplede-to-sampled} is equivalent to: for all $\delta > 0$, $u > 0$
 \[
-\P(\twodim_t \in \{(x,y) \ :\  |x-y|<\delta \} \text{ for all } t \in [0,u])\to1 \text{ as } \epsilon\to 0
+\P(\twodim_t \in \{(x,y) \ :\  |x-y|<\delta \} \text{ for all } t \in [0,u])\to1 \text{ as } \epsilon\to 0.
 \]
 The above statement can be rephrased as
 
@@ -167,7 +167,7 @@ Our approach to proving Lemma \ref{lem:prob-hit-boundary-o1loge} is to
 demonstrate that
 \[
 \probexcursionhits{\farpoint} \gg
-\probexcursionhits{\boundarylines} \text { as } \epsilon \to 0
+\probexcursionhits{\boundarylines} \text { as } \epsilon \to 0.
 \]
 This is
 realized through the next pair of lemmas whose proofs we delay until Section
@@ -192,16 +192,16 @@ realized through the next pair of lemmas whose proofs we delay until Section
   exactly one of the following conditions
   \begin{itemize}
   \item the excursion hits $\boundarylines$ (with probability
-    $O(\epsilon$))
+    $O(\epsilon$)),
   \item the excursion does not hit $\boundarylines$ but does hit
     $\farpoint$ (with probability $\Omegaeloge-\Oe$, which is itself
-    $\Omegaeloge$)
-  \item the excursion does not hit $\boundarylines$ or $\farpoint$
+    $\Omegaeloge$),
+  \item the excursion does not hit $\boundarylines$ or $\farpoint$.
   \end{itemize}
   The excursions are independent, so the probability that $\twodim$
   hits $\boundarylines$ before $\farpoint$ is
   \[
-  \frac{\Oe}{\Omegaeloge + \Oe} = O\left(\frac{1}{\loger}\right)
+  \frac{\Oe}{\Omegaeloge + \Oe} = O\left(\frac{1}{\loger}\right).
   \]
 \end{proof}
 
@@ -219,7 +219,7 @@ realized through the next pair of lemmas whose proofs we delay until Section
 In this section we give the proof of Lemmas \ref{lem:Phitboundaryline} and
 \ref{lem:Pabsorbedandtravelsfar}. For convenience we rotate (and scale)
 $\twodim=(\x,\y)$, defining
-\[\rotproc(\epsilon) = \rotproc=(\tdh,\tdv)=\frac{1}{2}(\x+\y,\x-\y)\]
+\[\rotproc(\epsilon) = \rotproc=(\tdh,\tdv)=\frac{1}{2}(\x+\y,\x-\y).\]
 
 As for $\twodim$, $\rotproc$ has the following ``scale invariance''
 property: the distribution of sample paths of $\rotproc(\epsilon) /
@@ -286,7 +286,7 @@ bound the hitting density of this process on the horizontal
 axis.  Regardless of the point in $Q$, this density for points on
 $\segment$ is at least
 \[
-\frac{1}{\pi\epsilon} \frac{1}{1 + (x/\epsilon)^2} dx
+\frac{1}{\pi\epsilon} \frac{1}{1 + (x/\epsilon)^2} dx.
 \]
 This follows directly from the classical result that the hitting density
 on a line of the two-dimensional Brownian motion is a Cauchy distribution
@@ -310,7 +310,7 @@ to $\origin$ is at least
 =
 \frac{\epsilon}{2\pi P} \log\left(\frac{1 + (1/\epsilon)^2}{2}\right)
 ,\text{ which is }
-\Omegaeloge
+\Omegaeloge.
 \]
 \TODO{}{This now looks slightly odd}
 \end{proof}
