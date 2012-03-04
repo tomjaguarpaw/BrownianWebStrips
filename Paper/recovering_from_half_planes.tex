@@ -58,38 +58,30 @@ our theorem reduces to the following lemma.
   $\sampled$ is $\twostrips$-measurable.
 \end{lemma}
 
-\RON{}{Ron wants clarification that this is an informal description,
-  and it should not use formal language}
-Equivalently, by using trajectories starting in the upper half-plane
-which ``die out'' when they hit $0$ and trajectories starting on
-the lower half-plane which ``die out'' when they hit $0$ as well we
-can recover all of the web's trajectories.
-To see that Lemma \ref{lem:sampled-twostrip-meas} is non-trivial,
-observe that the following does not work. We cannot recover a web's
-trajectory by following it on, say, the upper half-plane until it
-hits 0, then following a trajectory starting from that point on the
-lower half-plane. The reason for this is that trajectories starting at
-0 ``die out'' immediately. Observe that this problem does not arise when
-trying to use information about two overlapping half-planes, so it is
-not difficult to recover the web from such.
+To prove this we must show that $\sampled$ can be recovered using
+trajectories starting in the upper half-plane which stop when they hit
+$0$, and trajectories starting on the lower half-plane which stop when
+they hit $0$.
 
-To overcome this problem, for every starting point, say in the upper
-half-plane, we define the following process. While the process is in
-the upper half-plane, it follows the upper half-plane web until it hits
-$0$, at which point it starts to follow a Brownian motion entirely
-independent of the web. It follows this Brownian motion until it gets
-to distance $\epsilon$ from 0, and then follows the web of the appropriate
-half-plane.
+To do so, we might have liked to recover $X$ (starting on, say, the
+upper half-plane) by following it until it hits 0, then by following its
+continuation within the lower half-plane.  However, this is impossible
+because when trajectories of Brownian motion cross $0$ they do so
+infinitely often within a finite period of time.
 
-In Section \ref{subsec:the-perturbed-process} we define this process, called the
-``perturbed process'', formally.
-To conclude this section we show that if when taking $\epsilon$
-to 0, the perturbed process converges in probability to the trajectory of
-the web, then the web is indeed measurable with respect
-to both the upper half-plane web and the lower half-plane one.
+To overcome this problem we introduce in Section
+\ref{subsec:the-perturbed-process} a process $\resamplede$, for each
+$\epsilon > 0$, which is $\twostrips$-measurable.  In Section
+\ref{sec:proof-of-lem:resamplede-to-sampled} we show that
+$\resamplede$ is an approximation of $\sampled$ in the sense that
+$\resamplede$ converges to $\sampled$ as $\epsilon \to 0$.  This will
+imply that $\sampled$ itself is $\twostrips$-measurable.
 
 \subsection{The perturbed process}
 \label{subsec:the-perturbed-process}
+
+\FIXME{}{We have removed the informal definition of $\resamplede$
+  from the previous paragraph, so we need to add it here.}
 
 {
 \newcommand{\joinernoargs}{\psi}
