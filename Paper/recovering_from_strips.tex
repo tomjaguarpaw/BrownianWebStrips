@@ -57,6 +57,7 @@ Given the definition of $\factor{a}{b}$ and since $\sampled$ is
 arbitrary, Theorem \ref{thm:recoveringfromstrips} is a consequence of
 the following.
 \begin{lemma}
+  \label{lem:res-sampled-strips-meas}
   $\Res{\sampled}$ is $\factor{\bottom}{0} \tensor
   \factor{0}{\top}$-measurable.
 \end{lemma}
@@ -64,28 +65,28 @@ the following.
 \newcommand{\Resresamplede}{\Res{\resamplede}}
 \newcommand{\Ressampled}{\Res{\sampled}}
 
-\FIXME{}{We should explicitly proe the above, and clarify $\Resresamplede$ issues}
 Similarly to Section \ref{sec:recovering-from-half-planes}, $\Resresamplede$
 is constructed from information in $\factor{\bottom}{0}$,
 $\factor{0}{\top}$ and $\reservoir$ only.
 Formally,
   $\Res{\resamplede}$ is $\factor{\bottom}{0} \tensor \factor{0}{\top}
   \tensor \reservoir$-measurable.
-
-Furthermore, we will show that as $\epsilon \to 0$ we have that
-$\Resresamplede$ approaches $\Ressampled$.  We could show this
-directly by an extension of the argument we used for the half-planes
-in Section \ref{sec:recovering-from-half-planes}.  However, knowing that
-$\resamplede \toinP \sampled$ is nearly enough, and all that is required
-in addition is to show that this convergence is preserved by the
-restriction map $\Res{\cdot}$.
+Thus as in the reduction of Lemma \ref{lem:sampled-twostrip-meas} to
+Lemma \ref{lem:resamplede-to-sampled}, Lemma
+\ref{lem:res-sampled-strips-meas} is a consequence of the following:
 
 \begin{lemma}
     \label{lem:resamplede-to-sampled-strip}
     $\Res{\resamplede} \toinP \Res{\sampled}$ as $\epsilon \to 0$.
 \end{lemma}
 
-To show that the convergence is preserved we use the following
+We could show this convergence result
+directly by an extension of the argument we used for the half-planes
+in Section \ref{sec:recovering-from-half-planes}.  However, knowing that
+$\resamplede \toinP \sampled$ is nearly enough, and all that is required
+in addition is to show that this convergence is preserved by the
+restriction map $\Res{\cdot}$.
+For this we use the following
 straightforward result in classical analysis.
 \FIXME{}{Naomi wants a reference}
 
