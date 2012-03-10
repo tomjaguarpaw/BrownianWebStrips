@@ -106,15 +106,15 @@ We delay the proof of Lemma \ref{lem:prob-hit-boundary-o1} to Section
 
 \begin{proof}[Proof of Lemma \ref{lem:resamplede-to-sampled}]
 
-\FIXME{}{We're implicitly assuming that the processes start at time $0$}
-Lemma \ref{lem:resamplede-to-sampled} is equivalent to: for all $\delta > 0$, $u > 0$
+Write $s$ for the time at which $\twodim$ starts.
+Lemma \ref{lem:resamplede-to-sampled} is equivalent to: for all $\delta > 0$, $u > s$
 \[
-\P(\twodim_t \in \{(x,y) \ :\  |x-y|<\delta \} \text{ for all } t \in [0,u])\to1 \text{ as } \epsilon\to 0.
+\P(\twodim_t \in \{(x,y) \ :\  |x-y|<\delta \} \text{ for all } t \in [s,u])\to1 \text{ as } \epsilon\to 0.
 \]
 The above statement can be rephrased as
 
 \vspace{12pt}
-For all $\delta > 0$, $u > 0$,
+For all $\delta > 0$, $u > s$,
 the probability that before time $u$, $\twodim$ has hit $\boundarylines$
 is $o(1)$ as $\epsilon \to 0$.
 \DOTHIS{}{Make this display better}
@@ -122,16 +122,16 @@ is $o(1)$ as $\epsilon \to 0$.
 
   We prove this as follows.  For any $\eta > 0$,
   choose $P$ so that the probability that standard Brownian motion
-  travels from $0$ to $P$ in time less than $u$ is less than
+  travels from $0$ to $P$ in time less than $u-s$ is less than
   $\eta$.
   Apply Lemma \ref{lem:prob-hit-boundary-o1} to
   choose $\epsilon_0$ such that, for all $\epsilon < \epsilon_0$, the probability that $\twodime$ hits
   $\boundarylines$ before $\farpoint$ is less than $\eta$.
   Then the probability that $\twodime$ hits $\boundarylines$ before $\farpoint$
-  or takes less time than $1$ to reach $\farpoint$ is
+  or takes less time than $u-s$ to reach $\farpoint$ is
   less than $2\eta$.
   Thus the probability that $\twodime$ hits $\boundarylines$ before
-  time $1$ is less than $2\eta$.
+  time $u$ is less than $2\eta$.
 \end{proof}
 
 \subsection{Excursions of $\twodim$}
