@@ -106,7 +106,7 @@ We delay the proof of Lemma \ref{lem:prob-hit-boundary-o1} to Section
 
 \begin{proof}[Proof of Lemma \ref{lem:resamplede-to-sampled}]
 
-\TODO{}{We're implicitly assuming that the processes start at time $0$}
+\FIXME{}{We're implicitly assuming that the processes start at time $0$}
 Lemma \ref{lem:resamplede-to-sampled} is equivalent to: for all $\delta > 0$, $u > 0$
 \[
 \P(\twodim_t \in \{(x,y) \ :\  |x-y|<\delta \} \text{ for all } t \in [0,u])\to1 \text{ as } \epsilon\to 0.
@@ -117,7 +117,7 @@ The above statement can be rephrased as
 For all $\delta > 0$, $u > 0$,
 the probability that before time $u$, $\twodim$ has hit $\boundarylines$
 is $o(1)$ as $\epsilon \to 0$.
-\TODO{}{Make this display better}
+\DOTHIS{}{Make this display better}
 \vspace{12pt}
 
   We prove this as follows.  For any $\eta > 0$,
@@ -155,7 +155,7 @@ Lemma \ref{lem:prob-hit-boundary-o1}.
   \excursionstart_1 < \cdots$. We say ``the probability that an excursion
   hits a set $U$ is $p$'' if $\P(\twodim_t\in U \text{
   for some } t\in [\excursionstart_0, \excursionstart_{1}]) = p$.
-  \DOTHIS{}{Provide a justification for the well-definedness of these
+  \TODO{}{Provide a justification for the well-definedness of these
     stopping times, perhaps in terms of the states?}
   Observe that by equidistribution this probability is the same when
   $t$ ranges over $[\excursionstart_i, \excursionstart_{i+1}]$, and
@@ -211,7 +211,7 @@ realized through the next pair of lemmas whose proofs we delay until Section
 \newcommand{\tdv}{\rotproc^2}
 \newcommand{\rotproc}{Z}
 
-\TODO{}{Perhaps should introduce more consistency between $\rotproc$
+\DOTHIS{}{Perhaps should introduce more consistency between $\rotproc$
   and $\twodim$ in this proof}
 {
 \newcommand{\x}{\resamplede}
@@ -258,12 +258,12 @@ by times at which $\tdv = \pm\epsilon/2$,
 \frac{\P(\twodim\text{ hits }\boundarylines)}{\P(\twodim\text{arrives at }\statewebtogether)}
 \le \frac{(1-C)(\epsilon/\delta)}{C} =O(\epsilon)
 \]
-\TODO{}{these probabilities are a bit confusing}
+\DOTHIS{}{these probabilities are a bit confusing}
 where $C$ is the constant of Claim \ref{cl:tdv-together-estimate}. As the
 behavior of $\twodim$ is independent on those intervals, we deduce Lemma
 \ref{lem:Phitboundaryline}.
 
-\TODO{}{Why did we need independence?}
+\DOTHIS{}{Why did we need independence?}
 \end{proof}
 }
 \begin{proof}[Proof of Lemma \ref{lem:Pabsorbedandtravelsfar}]
