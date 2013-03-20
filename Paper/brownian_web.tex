@@ -8,13 +8,13 @@ independent-coalescing random walks (see
 continuum version raises several technical difficulties addressed in
 \cite{fontes-et-al},\cite{norris-turner},\cite{toth-werner}.
 Nonetheless, all the
-constructions share the following property, which we use as a
-definition:
+constructions share the following property which is all we need to
+establish our result:
 
 \newcommand{\simplex}{\mathcal{S}}
 
   Denote $\simplex=\{(s, t) \in \R^2 : s \le t\}$.
-  A Brownian web on a probability space $\Omega$ is a (jointly)
+  A Brownian web on a probability space $\Omega$ induces a (jointly)
   measurable mapping $\webnoargs : \Omega \cross \simplex \cross \R
   \to \R$, $(\omega, (s, t), x) \mapsto \web{s}{t}{x}$ (suppressing
   $\omega$ in the notation) such that for every finite collection of
@@ -22,6 +22,8 @@ definition:
   collection of processes $\web{s_1} {\cdot}{x_1},
   \web{s_2}{\cdot}{x_2},...,\web{s_n}{\cdot}{x_n}$
   forms a system of $n$ independent-coalescing Brownian motions.
+Such mappings are not unique but they all generate the same \sigfield{}
+so in this paper it does not matter which particular mapping is chosen.
 
   \newcommand{\bm}[1]{X^{#1}}
 
