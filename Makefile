@@ -2,7 +2,7 @@ all: brownianwebstrips.pdf
 
 # The version with images
 # This will end up in Paper/
-Paper/brownianwebstrips.pdf:
+Paper/brownianwebstrips.pdf: Paper/*.tex
 	cd Paper; latex brownianwebstrips.tex
 	cd Paper; dvips -o brownianwebstrips.ps brownianwebstrips.dvi
 	cd Paper; ps2pdf brownianwebstrips.ps
