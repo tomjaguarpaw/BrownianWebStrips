@@ -153,15 +153,21 @@ Lemma \ref{lem:prob-hit-boundary-o1}.
 \newcommand{\origin}{(0,0)}
 
 \newcommand{\excursionstart}{T}
-  We begin by introducing the notion of an excursion of $\twodim$.
-  Almost surely, the times at which $\twodim = \origin$ (which are stopping
-  times) form an infinite discrete collection $\excursionstart_0 <
-  \excursionstart_1 < \cdots$. We say ``the probability that an excursion
-  hits a set $U$ is $p$'' if $\P(\twodim_t\in U \text{
-  for some } t\in [\excursionstart_0, \excursionstart_{1}]) = p$.
-  Observe that by equidistribution this probability is the same when
-  $t$ ranges over $[\excursionstart_i, \excursionstart_{i+1}]$, and
-  note that the hitting events in question are independent.
+\newcommand{\hitset}{U}
+\newcommand{\hitevent}[1]{H_{#1}}
+\newcommand{\hiteventi}{\hitevent{i}}
+
+The random set $\{t \ge 0 : \twodim_t = \origin\}$ is almost surely
+infinite and discrete. We can therefore order this set, writing $T_0$
+for its smallest element, $T_1$ for the next, and so on.
+
+Let $\hitset \subset \R^2$ and write $\hiteventi$ for the event
+$\{\twodim_t \in \hitset \text{ for some } t \in
+[T_i,T_{i+1}]\}$. Observe that since our process starts and ends every
+time interval of the form $[T_i,T_{i+1}]$ at $\origin$ (and in state
+$S_\psi^{2D}$) the events $\{\hiteventi : i \ge 0\}$ are independent
+and have the same probability.  We call this probability ``the
+probability that an excursion hits a set $U$''.
   \TODO{}{Provide a justification for the well-definedness of these
     stopping times, perhaps in terms of the states?}
 
