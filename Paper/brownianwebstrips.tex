@@ -55,9 +55,14 @@
 \newcommand{\sampled}{X}
 \newcommand{\resamplede}{X^{\epsilon}}
 
-\newcommand{\factor}[2]{\mathcal{F}_{#1 #2}}
+% PTRF review asked us to change phi_{ab} to phi_{a,b}
+% I did this in an adhoc way, but if we were going
+% to do substantial further work on this paper it
+% should be done for phi, F and R at once with a common
+% newcommand
 \newcommand{\commafactor}[2]{\mathcal{F}_{#1,#2}}
-\newcommand{\restrict}[3]{\mathcal{R}_{{#1}{#2}}(#3)}
+\newcommand{\factor}[2]{\commafactor{#1}{#2}}
+\newcommand{\restrict}[3]{\mathcal{R}_{{#1},{#2}}(#3)}
 \newcommand{\Res}[1]{\mathcal{R}(#1)}
 \newcommand{\stripleavetime}[1]{T_{#1}}
 \newcommand{\reservoir}{\mathcal{G}}
