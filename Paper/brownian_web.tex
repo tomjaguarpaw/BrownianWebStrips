@@ -12,23 +12,34 @@ the give the Brownian web a unique distribution on each of those
 spaces (see Theorem 2.1 of \cite{fontes-et-al}, and Theorem 5.1 of
 \cite{norris-turner}).
 Nonetheless, all the
-constructions share the following property which is all we need to
-establish our result:
+definitions share the following defining property.
 
+\begin{definition}
+\label{def:web}
 \newcommand{\simplex}{\mathcal{S}}
 
   Denote $\simplex=\{(s, t) \in \R^2 : s \le t\}$.
+\begin{itemize}
+  \item
   A Brownian web on a probability space $\Omega$ induces a (jointly)
   measurable mapping $\webnoargs : \Omega \cross \simplex \cross \R
   \to \R$, $(\omega, (s, t), x) \mapsto \web{s}{t}{x}$ (suppressing
-  $\omega$ in the notation) such that for every finite collection of
+  $\omega$ in the notation).
+
+  \item
+  On every finite collection of
   starting points $(s_1, x_1),(s_2, x_2),...,(s_n, x_n)$, the
   collection of processes $\web{s_1} {\cdot}{x_1},
   \web{s_2}{\cdot}{x_2},...,\web{s_n}{\cdot}{x_n}$
   forms a system of $n$ independent-coalescing Brownian motions.
 
-  \newcommand{\bm}[1]{X^{#1}}
+  \item
+  There exists a countable subset $S \subseteq \R^2$ such that the
+  collection $\{\web{s}{t}{x} : s,t \in S\}$ generates the entire
+  \sigfield{} of the Brownian web.
+\end{itemize}
 
+  \newcommand{\bm}[1]{X^{#1}}
   A system of $n$ independent-coalescing Brownian motions is a finite
   collection of stochastic processes $(\bm{1}, \bm{2},...,\bm{n})$ such that
   each $\bm{i}$ starts at some point $x_i$ at some time $s_i$, and $(\bm{1},
@@ -36,6 +47,20 @@ establish our result:
   $\bm{i}(T)=\bm{j}(T)$ for some $i\neq j$. From this time onwards $\bm{i}(T)$
   and $\bm{j}(T)$ coalesce and continue with the rest of the $\bm{k}$ (for
   $k\neq i,j$) as a system of $n-1$ independent-coalescing Brownian motions.
+\end{definition}
+
+To observe that the last property is indeed a property of the Brownian
+web, see for example equation (2.6) in \cite{toth-werner}.  In this
+equation we can see that $\Lambda$ (which is the same as our
+$\webnoargs$) can be recovered from the countable collection $F_n =
+\Lambda_{(s_n,t_n)}$.  There $\{(s_n,t_n) : n \in \mathbb{N}\}$ is
+some ordering of $D \times D$ where $D \subseteq \R^2$ is the
+collection of diadic rationals.
+
+For the equivalent construction in \cite{fontes-et-al}, item (2) of
+Theorem~2.1 guarantees that the third property in our definition
+holds.
+
   Several trajectories of a Brownian web can be seen in Figure
   \ref{fig:bw-trajectories}.
 
