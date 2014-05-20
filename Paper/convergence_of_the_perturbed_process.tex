@@ -28,8 +28,8 @@ and \emph{is not} coalesced with $\sampled$ we say $\twodim$ is in state $\state
 \item If $\resamplede$ is in state $\statenowebO$
 we say $\twodim$ is in state $\statenoweb$.
 \end{itemize}
-$\twodim$ starts
-in $\statewebtogether$.  From $\statewebtogether$, $\twodim$
+$\twodim$ starts at point $(\startvalue, \startvalue)$ at time $\starttime$
+in state $\statewebtogether$.  From $\statewebtogether$, $\twodim$
 can only transition to $\statenoweb$.
 This transition occurs when $\twodim$ hits the origin, as the coalesced
 $\sampled$ and $\resamplede$ will continue together until they leave their
@@ -102,23 +102,21 @@ property of $\twodim$:
 \end{lemma}
 
 Recall that $\twodim$ starts in state $\statewebtogether$, with
-$\sampled$ equal to $\resamplede$.  (If $\sampled$ and $\resamplede$
-start at 0 then $\twodim$ immediately transitions to state
-$\statenoweb$).
+$\sampled$ equal to $\resamplede$.  (If $\startvalue = 0$ then $\twodim$
+immediately transitions to state $\statenoweb$).
 We delay the proof of Lemma \ref{lem:prob-hit-boundary-o1} to Section
 \ref{subsec:excursions-of-twodim}.
 
 \begin{proof}[Proof of Lemma \ref{lem:resamplede-to-sampled}]
 
-Write $s$ for the time at which $\twodim$ starts.
-Lemma \ref{lem:resamplede-to-sampled} is equivalent to: for all $\delta > 0$, $u > s$
+Lemma \ref{lem:resamplede-to-sampled} is equivalent to: for all $\delta > 0$, $u > \starttime$
 \[
-\P(\twodim_t \in \{(x,y) \ :\  |x-y|<\delta \} \text{ for all } t \in [s,u])\to1 \text{ as } \epsilon\to 0.
+\P(\twodim_t \in \{(x,y) \ :\  |x-y|<\delta \} \text{ for all } t \in [\starttime,u])\to1 \text{ as } \epsilon\to 0.
 \]
 The above statement can be rephrased as
 
 \vspace{12pt}
-For all $\delta > 0$, $u > s$,
+For all $\delta > 0$, $u > \starttime$,
 the probability that before time $u$, $\twodim$ has hit $\boundarylines$
 is $o(1)$ as $\epsilon \to 0$.
 \DOTHIS{}{Make this display better}
@@ -126,13 +124,13 @@ is $o(1)$ as $\epsilon \to 0$.
 
   We prove this as follows.  For any $\eta > 0$,
   choose $P$ so that the probability that standard Brownian motion
-  travels from $0$ to $P$ in time less than $u-s$ is less than
+  travels from $0$ to $P$ in time less than $u-\starttime$ is less than
   $\eta$.
   Apply Lemma \ref{lem:prob-hit-boundary-o1} to
   choose $\epsilon_0$ such that, for all $\epsilon < \epsilon_0$, the probability that $\twodime$ hits
   $\boundarylines$ before $\farpoint$ is less than $\eta$.
   Then the probability that $\twodime$ hits $\boundarylines$ before $\farpoint$
-  or takes less time than $u-s$ to reach $\farpoint$ is
+  or takes less time than $u-\starttime$ to reach $\farpoint$ is
   less than $2\eta$.
   Thus the probability that $\twodime$ hits $\boundarylines$ before
   time $u$ is less than $2\eta$.
@@ -157,7 +155,7 @@ Lemma \ref{lem:prob-hit-boundary-o1}.
 \newcommand{\hitevent}[1]{H_{#1}}
 \newcommand{\hiteventi}{\hitevent{i}}
 
-The random set $\{t \ge 0 : \twodim_t = \origin\}$ is almost surely
+The random set $\{t \ge \starttime : \twodim_t = \origin\}$ is almost surely
 infinite and discrete. We can therefore order this set, writing $T_0$
 for its smallest element, $T_1$ for the next, and so on.
 
